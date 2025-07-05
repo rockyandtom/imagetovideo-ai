@@ -1,41 +1,36 @@
 {
-  "template": "shipany-template-one",
+  "template": "imagetovideoai-template-one",
   "theme": "light",
   "header": {
     "brand": {
-      "title": "ShipAny",
+      "title": "Image To Video AI",
       "logo": {
         "src": "/logo.png",
-        "alt": "ShipAny"
+        "alt": "Image To Video AI"
       },
       "url": "/"
     },
     "nav": {
       "items": [
         {
-          "title": "Features",
-          "url": "/#feature",
-          "icon": "RiSparkling2Line"
+          "title": "Showcase",
+          "url": "/showcase",
+          "icon": "RiApps2Line"
         },
         {
           "title": "Pricing",
           "url": "/pricing",
           "icon": "RiMoneyDollarCircleLine"
-        },
-        {
-          "title": "Showcase",
-          "url": "/showcase",
-          "icon": "RiApps2Line"
         }
       ]
     },
     "buttons": [
       {
-        "title": "Get ShipAny",
-        "url": "https://shipany.ai",
-        "target": "_blank",
+        "title": "Dashboard",
+        "url": "/dashboard",
+        "target": "_self",
         "variant": "link",
-        "icon": "RiArrowRightUpLine"
+        "icon": "RiDashboardLine"
       }
     ],
     "show_sign": true,
@@ -43,28 +38,28 @@
     "show_locale": true
   },
   "hero": {
-    "title": "Ship Any AI Startups in hours, not days",
-    "highlight_text": "Ship Any",
-    "description": "ShipAny is a NextJS boilerplate for building AI SaaS startups.<br/>Ship Fast with a variety of templates and components.",
+    "title": "Transform Your Photos into Dynamic Videos with AI",
+    "highlight_text": "Image To Video AI",
+    "description": "Unleash the power of our leading AI to effortlessly create captivating videos from your static images.<br/>Experience a seamless, high-speed process with professional-grade results.",
     "announcement": {
-      "label": "2025",
-      "title": "🎉 Happy New Year",
+      "label": "NEW",
+      "title": "Now Featuring Our Next-Gen V3 Animation Engine",
       "url": "/#pricing"
     },
-    "tip": "🎁 50% off before 2025",
+    "tip": "🎁 New Release",
     "buttons": [
       {
         "title": "Get Started",
-        "icon": "RiFlashlightFill",
+        "icon": "RiPlayFill",
         "url": "/#pricing",
         "target": "_self",
         "variant": "default"
       },
       {
-        "title": "Join Discord",
-        "icon": "RiDiscordFill",
-        "url": "https://discord.gg/HQNnrzjZQS",
-        "target": "_blank",
+        "title": "View Showcase",
+        "icon": "RiImageLine",
+        "url": "/showcase",
+        "target": "_self",
         "variant": "outline"
       }
     ],
@@ -72,7 +67,7 @@
     "show_badge": false
   },
   "branding": {
-    "title": "ShipAny is built on the shoulders of giants",
+    "title": "Image To Video AI is built on cutting-edge technology",
     "items": [
       {
         "title": "Next.js",
@@ -113,56 +108,56 @@
   },
   "introduce": {
     "name": "introduce",
-    "title": "What is ShipAny",
-    "label": "Introduce",
-    "description": "ShipAny is a NextJS boilerplate for building AI SaaS startups. Built in a variety of templates and components.",
+    "title": "Core Capabilities of Our Image To Video AI",
+    "label": "Features",
+    "description": "Explore the foundational features that make our Image To Video AI the ultimate tool for visual storytelling. From automated creation to pristine output, we provide the tools for excellence.",
     "image": {
       "src": "/imgs/features/1.png"
     },
     "items": [
       {
-        "title": "Ready-to-use Templates",
-        "description": "Choose from dozens of production-ready AI SaaS templates to quickly start your project.",
-        "icon": "RiNextjsFill"
+        "title": "Intelligent Motion Automation",
+        "description": "Just upload your image and our AI intelligently analyzes and animates it, creating dynamic motion with a single click. No manual editing required.",
+        "icon": "RiMagicLine"
       },
       {
-        "title": "Infrastructure Setup",
-        "description": "Get instant access to scalable infrastructure with best practices built-in.",
-        "icon": "RiDatabase2Line"
+        "title": "Pristine HD+ Resolution",
+        "description": "Your videos are rendered in high-definition, preserving the details and clarity of your original photos for a polished, professional look.",
+        "icon": "RiHdLine"
       },
       {
-        "title": "Quick Deployment",
-        "description": "Deploy your AI SaaS application to production in hours, not days.",
-        "icon": "RiCloudyFill"
+        "title": "Intuitive Creation Studio",
+        "description": "Our clean, straightforward interface is designed for creators of all skill levels. Bring your ideas to life without a steep learning curve.",
+        "icon": "RiUserLine"
       }
     ]
   },
   "benefit": {
     "name": "benefit",
-    "title": "Why Choose ShipAny",
+    "title": "Why Creators Choose Image To Video AI",
     "label": "Benefits",
-    "description": "Get everything you need to launch your AI startup - from ready-to-use templates to technical support.",
+    "description": "Discover the competitive advantages our platform offers. Boost your efficiency, reduce production costs, and lead with innovative content that captures attention.",
     "items": [
       {
-        "title": "Complete Framework",
-        "description": "Built on Next.js with authentication, payments, and AI integration - everything works out of the box.",
-        "icon": "RiNextjsFill",
+        "title": "Accelerated Workflow",
+        "description": "Generate videos in under two minutes, transforming your content production from hours to moments. Increase your output and stay ahead of schedule.",
+        "icon": "RiSpeedLine",
         "image": {
           "src": "/imgs/features/2.png"
         }
       },
       {
-        "title": "Rich Templates Library",
-        "description": "Choose from various AI SaaS templates to kickstart your project - chatbots, image generation, and more.",
-        "icon": "RiClapperboardAiLine",
+        "title": "Budget-Friendly Production",
+        "description": "Achieve the results of a professional video studio without the high cost. Our Image To Video AI is an affordable alternative to expensive software and agencies.",
+        "icon": "RiMoneyDollarCircleLine",
         "image": {
           "src": "/imgs/features/3.png"
         }
       },
       {
-        "title": "Technical Guidance",
-        "description": "Get dedicated support and join our developer community to ensure your successful launch.",
-        "icon": "RiCodeFill",
+        "title": "Continuous Advancement",
+        "description": "We are committed to innovation. Our AI models are constantly updated, ensuring you always have access to the latest advancements in video generation technology.",
+        "icon": "RiRocketLine",
         "image": {
           "src": "/imgs/features/4.png"
         }
@@ -171,8 +166,8 @@
   },
   "usage": {
     "name": "usage",
-    "title": "How to Launch with ShipAny",
-    "description": "Get your AI SaaS startup running in three simple steps:",
+    "title": "Your Creative Process in Four Simple Steps",
+    "description": "See how simple it is to bring your static images to life. Our streamlined workflow makes creating stunning videos with Image To Video AI a breeze.",
     "image": {
       "src": "/imgs/features/1.png"
     },
@@ -180,29 +175,29 @@
     "text_align": "center",
     "items": [
       {
-        "title": "Get ShipAny",
-        "description": "Buy ShipAny with a one-time payment. Check your email for the code and documentation.",
+        "title": "1. Select Your Visual",
+        "description": "Begin with any photo from your collection. High-resolution images in a 16:9 aspect ratio yield the best results.",
         "image": {
           "src": "/imgs/features/5.png"
         }
       },
       {
-        "title": "Start Your Project",
-        "description": "Read the documentation and clone the code of ShipAny. Start building your AI SaaS startup.",
+        "title": "2. Upload to the Studio",
+        "description": "Securely upload your image to our platform. You can also generate a new visual using our integrated AI image generator.",
         "image": {
           "src": "/imgs/features/6.png"
         }
       },
       {
-        "title": "Customize Your Project",
-        "description": "Modify the template with your data and contents. Specific AI functionality needs.",
+        "title": "3. Let the AI Work",
+        "description": "Our system instantly analyzes your image to identify key subjects, backgrounds, and potential motion paths.",
         "image": {
           "src": "/imgs/features/7.png"
         }
       },
       {
-        "title": "Deploy to Production",
-        "description": "Deploy your project to production with a few steps and start serving customers immediately.",
+        "title": "4. Generate & Download",
+        "description": "In 30 to 120 seconds, your dynamic video will be ready to download and share with the world.",
         "image": {
           "src": "/imgs/features/8.png"
         }
@@ -211,116 +206,116 @@
   },
   "feature": {
     "name": "feature",
-    "title": "Key Features of ShipAny",
-    "description": "Everything you need to launch your AI SaaS startup quickly and efficiently.",
+    "title": "Everything You Need for Exceptional Video Content",
+    "description": "Our platform is packed with powerful features designed to give you full creative control and produce outstanding results every time.",
     "items": [
       {
-        "title": "Next.js Boilerplate",
-        "description": "Production-ready Next.js templates with SEO-friendly structure and i18n support.",
-        "icon": "RiNextjsFill"
+        "title": "Rapid Video Synthesis",
+        "description": "Our optimized processing core delivers your video in 30-120 seconds, perfect for fast-paced projects.",
+        "icon": "RiFlashLine"
       },
       {
-        "title": "Authentication & Payments",
-        "description": "Integrated Google OAuth, one-tap login, and Stripe payment processing.",
-        "icon": "RiKey2Fill"
+        "title": "Total Privacy Control",
+        "description": "Your creations are your own. Easily manage visibility with private/public toggles and optional watermarking.",
+        "icon": "RiShieldLine"
       },
       {
-        "title": "Data Infrastructure",
-        "description": "Built-in Supabase integration for reliable and scalable data storage.",
-        "icon": "RiDatabase2Line"
-      },
-      {
-        "title": "One-Click Deployment",
-        "description": "Seamless deployment to Vercel or Cloudflare with automated setup.",
-        "icon": "RiCloudy2Fill"
-      },
-      {
-        "title": "Business Analytics",
-        "description": "Integrated Google Analytics and Search Console for tracking growth.",
-        "icon": "RiBarChart2Line"
-      },
-      {
-        "title": "AI-Ready Infrastructure",
-        "description": "Pre-configured AI integration with built-in credits system and API sales.",
+        "title": "Next-Generation Motion AI",
+        "description": "Powered by a sophisticated neural network, our AI creates realistic movement and captivating visual effects.",
         "icon": "RiRobot2Line"
+      },
+      {
+        "title": "Universal Aspect Ratios",
+        "description": "Our tool supports both landscape (16:9) and portrait (9:16) formats, making it ideal for any social media platform.",
+        "icon": "RiAspectRatioLine"
+      },
+      {
+        "title": "Turbo Generation Mode",
+        "description": "Need it even faster? Engage Turbo mode to prioritize speed for time-sensitive tasks.",
+        "icon": "RiSpeedUpLine"
+      },
+      {
+        "title": "Broadcast-Ready Output",
+        "description": "Export high-quality videos suitable for marketing campaigns, artistic portfolios, and professional presentations.",
+        "icon": "RiStarLine"
       }
     ]
   },
   "stats": {
     "name": "stats",
     "label": "Stats",
-    "title": "People Love ShipAny",
-    "description": "for it's easy to use and fast to ship.",
+    "title": "Trusted by Creators Worldwide",
+    "description": "Join thousands of satisfied users creating amazing videos",
     "icon": "FaRegHeart",
     "items": [
       {
-        "title": "Trusted by",
-        "label": "99+",
-        "description": "Customers"
+        "title": "Videos Created",
+        "label": "10K+",
+        "description": "And counting"
       },
       {
-        "title": "Built in",
-        "label": "20+",
-        "description": "Components"
+        "title": "Generation Time",
+        "label": "30-120",
+        "description": "Seconds"
       },
       {
-        "title": "Ship Fast in",
-        "label": "5",
-        "description": "Minutes"
+        "title": "User Satisfaction",
+        "label": "99%",
+        "description": "Happy Users"
       }
     ]
   },
   "testimonial": {
     "name": "testimonial",
     "label": "Testimonial",
-    "title": "What Users Say About ShipAny",
-    "description": "Hear from developers and founders who launched their AI startups with ShipAny.",
+    "title": "What Users Say About Image To Video AI",
+    "description": "Hear from creators who are transforming their content with our AI technology.",
     "icon": "GoThumbsup",
     "items": [
       {
-        "title": "David Chen",
-        "label": "Founder of AIWallpaper.shop",
-        "description": "ShipAny saved us months of development time. We launched our AI wallpaper business in just 2 days and got our first paying customer within a week!",
+        "title": "Sarah Johnson",
+        "label": "Content Creator",
+        "description": "Image To Video AI has revolutionized my content creation process. I can now turn my photography into engaging videos in minutes, not hours!",
         "image": {
           "src": "/imgs/users/1.png"
         }
       },
       {
-        "title": "Rachel Kim",
-        "label": "CTO at HeyBeauty.ai",
-        "description": "The pre-built AI infrastructure is a game-changer. We didn't have to worry about architecture - just focused on our AI beauty tech and went live fast.",
+        "title": "Mike Chen",
+        "label": "Marketing Director",
+        "description": "The quality of videos generated is incredible. Our social media engagement has increased by 300% since we started using Image To Video AI.",
         "image": {
           "src": "/imgs/users/2.png"
         }
       },
       {
-        "title": "Marcus Thompson",
-        "label": "Solo Developer",
-        "description": "As a solo developer, ShipAny gave me everything I needed - auth, payments, AI integration, and beautiful UI. Launched my SaaS in a weekend!",
+        "title": "Emily Rodriguez",
+        "label": "Digital Artist",
+        "description": "As a digital artist, I love how this tool brings my static artwork to life. The AI understands the nuances of my art style perfectly.",
         "image": {
           "src": "/imgs/users/3.png"
         }
       },
       {
-        "title": "Sofia Garcia",
-        "label": "CEO of Melodisco",
-        "description": "The templates are production-ready and highly customizable. We built our AI music platform in hours instead of months. Incredible time-to-market!",
+        "title": "David Kim",
+        "label": "Small Business Owner",
+        "description": "Cost-effective and incredibly easy to use. I've created dozens of promotional videos for my business without any technical expertise.",
         "image": {
           "src": "/imgs/users/4.png"
         }
       },
       {
-        "title": "James Wilson",
-        "label": "Tech Lead at GPTs.works",
-        "description": "ShipAny's infrastructure is rock-solid. We scaled from 0 to 10k users without touching the backend. Best investment for our AI startup.",
+        "title": "Lisa Thompson",
+        "label": "Social Media Manager",
+        "description": "The speed is unmatched. I can create multiple video variations for A/B testing in the time it used to take for one video.",
         "image": {
           "src": "/imgs/users/5.png"
         }
       },
       {
-        "title": "Anna Zhang",
-        "label": "Startup Founder",
-        "description": "From idea to launch in 3 days! ShipAny's templates and deployment tools made it possible to test our AI business concept incredibly fast.",
+        "title": "Alex Wang",
+        "label": "Freelance Designer",
+        "description": "Image To Video AI has become an essential tool in my creative workflow. My clients are amazed by the dynamic videos I can produce.",
         "image": {
           "src": "/imgs/users/6.png"
         }
@@ -330,50 +325,50 @@
   "faq": {
     "name": "faq",
     "label": "FAQ",
-    "title": "Frequently Asked Questions About ShipAny",
-    "description": "Have another question? Contact us on Discord or by email.",
+    "title": "Have Questions? We Have Answers.",
+    "description": "Find answers to the most common queries about our Image To Video AI platform. If you don't see your question here, feel free to reach out.",
     "items": [
       {
-        "title": "What exactly is ShipAny and how does it work?",
-        "description": "ShipAny is a comprehensive NextJS boilerplate designed specifically for building AI SaaS startups. It provides ready-to-use templates, infrastructure setup, and deployment tools that help you launch your AI business in hours instead of days."
+        "title": "What is the typical video generation time?",
+        "description": "Most videos are generated in 30 to 120 seconds. Generation time can vary based on image complexity and current server load. Our Turbo mode can expedite this process."
       },
       {
-        "title": "Do I need advanced technical skills to use ShipAny?",
-        "description": "While basic programming knowledge is helpful, ShipAny is designed to be developer-friendly. Our templates and documentation make it easy to get started, even if you're not an expert in AI or cloud infrastructure."
+        "title": "Is an account required to use the service?",
+        "description": "Yes, an account is necessary to manage your projects, track your credits, and access your video library. Signing up is free and takes less than a minute."
       },
       {
-        "title": "What types of AI SaaS can I build with ShipAny?",
-        "description": "ShipAny supports a wide range of AI applications, from content generation to data analysis tools. Our templates cover popular use cases like AI chatbots, content generators, image processing apps, and more."
+        "title": "Do you offer a free trial or plan?",
+        "description": "We provide all new users with complimentary credits to try our Image To Video AI. For more extensive use, please explore our competitive pricing plans."
       },
       {
-        "title": "How long does it typically take to launch with ShipAny?",
-        "description": "With ShipAny, you can have a working prototype in hours and a production-ready application in hours. Our one-click deployment and pre-configured infrastructure significantly reduce the traditional months-long development cycle."
+        "title": "Is the platform mobile-friendly?",
+        "description": "Absolutely. Our website is fully responsive, offering a seamless experience on desktops, tablets, and smartphones. Create on the go, anytime."
       },
       {
-        "title": "What's included in the ShipAny infrastructure?",
-        "description": "ShipAny provides a complete infrastructure stack including authentication, database setup, API integration, payment processing, and scalable cloud deployment. Everything is pre-configured following industry best practices."
+        "title": "Which image formats are compatible?",
+        "description": "We support standard formats like JPEG, PNG, and WEBP. For optimal results, we suggest using high-resolution images."
       },
       {
-        "title": "Can I customize the templates to match my brand?",
-        "description": "Absolutely! All ShipAny templates are fully customizable. You can modify the design, features, and functionality to match your brand identity and specific business requirements while maintaining the robust underlying infrastructure."
+        "title": "How do I manage the privacy of my creations?",
+        "description": "You have complete control. In your dashboard, you can set each video to be public or private and decide whether or not to include a watermark."
       }
     ]
   },
   "cta": {
     "name": "cta",
-    "title": "Ship your first AI SaaS Startup",
-    "description": "Start from here, ship with ShipAny.",
+    "title": "Ready to Animate Your Images?",
+    "description": "Join thousands of creators and start bringing your photos to life. Sign up today and experience the power of Image To Video AI.",
     "buttons": [
       {
-        "title": "Get ShipAny",
-        "url": "https://shipany.ai",
-        "target": "_blank",
-        "icon": "GoArrowUpRight"
+        "title": "Get Started",
+        "url": "/#pricing",
+        "target": "_self",
+        "icon": "RiPlayFill"
       },
       {
-        "title": "Read Document",
-        "url": "https://docs.shipany.ai",
-        "target": "_blank",
+        "title": "View Showcase",
+        "url": "/showcase",
+        "target": "_self",
         "variant": "outline"
       }
     ]
@@ -381,33 +376,28 @@
   "footer": {
     "name": "footer",
     "brand": {
-      "title": "ShipAny",
-      "description": "ShipAny is a NextJS boilerplate for building AI SaaS startups. Ship Fast with a variety of templates and components.",
+      "title": "Image To Video AI",
+      "description": "The leading platform for converting static images into dynamic, engaging videos using the power of artificial intelligence.",
       "logo": {
         "src": "/logo.png",
-        "alt": "ShipAny"
+        "alt": "Image To Video AI"
       },
       "url": "/"
     },
-    "copyright": "© 2025 • ShipAny All rights reserved.",
+    "copyright": "© 2025 Image To Video AI. All rights reserved.",
     "nav": {
       "items": [
         {
-          "title": "About",
+          "title": "Services",
           "children": [
             {
-              "title": "Features",
-              "url": "/#feature",
+              "title": "Video Generator",
+              "url": "/",
               "target": "_self"
             },
             {
-              "title": "Showcases",
-              "url": "/#showcase",
-              "target": "_self"
-            },
-            {
-              "title": "Pricing",
-              "url": "/#pricing",
+              "title": "Video History",
+              "url": "/dashboard",
               "target": "_self"
             }
           ]
@@ -416,39 +406,39 @@
           "title": "Resources",
           "children": [
             {
-              "title": "Documents",
-              "url": "https://docs.shipany.ai",
-              "target": "_blank"
+              "title": "Pricing",
+              "url": "/pricing",
+              "target": "_self"
             },
             {
-              "title": "Components",
-              "url": "https://shipany.ai/components",
-              "target": "_blank"
+              "title": "Portal",
+              "url": "/dashboard",
+              "target": "_self"
             },
             {
-              "title": "Templates",
-              "url": "https://shipany.ai/templates",
-              "target": "_blank"
+              "title": "FAQ",
+              "url": "/#faq",
+              "target": "_self"
             }
           ]
         },
         {
-          "title": "Friends",
+          "title": "Legal",
           "children": [
             {
-              "title": "ThinkAny",
-              "url": "https://thinkany.ai",
-              "target": "_blank"
+              "title": "Privacy Policy",
+              "url": "/privacy-policy",
+              "target": "_self"
             },
             {
-              "title": "HeyBeauty",
-              "url": "https://heybeauty.ai",
-              "target": "_blank"
+              "title": "Terms of Service",
+              "url": "/terms-of-service",
+              "target": "_self"
             },
             {
-              "title": "Pagen",
-              "url": "https://pagen.so",
-              "target": "_blank"
+              "title": "Refund Policy",
+              "url": "/refund-policy",
+              "target": "_self"
             }
           ]
         }
@@ -459,25 +449,13 @@
         {
           "title": "X",
           "icon": "RiTwitterXFill",
-          "url": "https://x.com/shipanyai",
-          "target": "_blank"
-        },
-        {
-          "title": "Github",
-          "icon": "RiGithubFill",
-          "url": "https://github.com/shipanyai",
-          "target": "_blank"
-        },
-        {
-          "title": "Discord",
-          "icon": "RiDiscordFill",
-          "url": "https://discord.gg/HQNnrzjZQS",
+          "url": "https://x.com/imgtovideoai",
           "target": "_blank"
         },
         {
           "title": "Email",
           "icon": "RiMailLine",
-          "url": "mailto:support@shipany.ai",
+          "url": "mailto:support@imgtovideoai.com",
           "target": "_self"
         }
       ]

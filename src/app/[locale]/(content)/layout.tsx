@@ -1,17 +1,15 @@
 import { ReactNode } from "react";
 import Link from 'next/link';
 
-export default async function DefaultLayout({
+export default function ContentLayout({
   children,
   params,
 }: {
   children: ReactNode;
-  params: Promise<{ locale: string }>;
+  params: { locale: string };
 }) {
-  const { locale } = await params;
-
   return (
-    <>
+    <div className="min-h-screen bg-white">
       {/* Header Navigation */}
       <header className="bg-white border-b border-gray-200">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -65,7 +63,29 @@ export default async function DefaultLayout({
           </div>
         </nav>
       </header>
-      <main className="overflow-x-hidden">{children}</main>
+
+      {/* Breadcrumb Navigation */}
+      <div className="bg-gray-50 border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center space-x-2 py-3 text-sm">
+            <Link href="/" className="text-purple-600 hover:text-purple-800">
+              Home
+            </Link>
+            <span className="text-gray-400">/</span>
+            <Link href="/posts" className="text-purple-600 hover:text-purple-800">
+              Blog
+            </Link>
+            <span className="text-gray-400">/</span>
+            <span className="text-gray-600">Post Title</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Content */}
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {children}
+      </main>
+
       {/* Footer with Internal Links */}
       <footer className="bg-gray-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -140,6 +160,7 @@ export default async function DefaultLayout({
           </div>
         </div>
       </footer>
-    </>
+    </div>
   );
 }
+
