@@ -1,6 +1,6 @@
 {
-  "template": "imagetovideoai-template-one",
-  "theme": "light",
+  "template": "imagetovideoai-template-modern",
+  "theme": "dark",
   "header": {
     "brand": {
       "title": "Image To Video AI",
@@ -11,198 +11,178 @@
       "url": "/"
     },
     "nav": {
+      "trigger": "hover",
+      "closeOnClick": true,
+      "highlightActive": true,
+      "orientation": "horizontal",
+      "position": "center",
+      "delayDuration": 200,
+      "skipDelayDuration": 300,
       "items": [
+        {
+          "title": "AI Generator",
+          "url": "/#hero",
+          "icon": "RiSparkling2Line",
+          "trigger": "hover",
+          "highlightOnHover": true,
+          "align": "start",
+          "sideOffset": 4,
+          "children": [
+            {
+              "title": "Create Stunning Videos",
+              "url": "/#hero",
+              "description": "Transform images into dynamic videos"
+            },
+            {
+              "title": "How It Works",
+              "url": "/#introduce",
+              "description": "Experience the future of content creation"
+            }
+          ]
+        },
+        {
+          "title": "Features",
+          "url": "/#feature",
+          "icon": "RiStarLine",
+          "trigger": "hover",
+          "highlightOnHover": true,
+          "align": "center",
+          "sideOffset": 4,
+          "children": [
+            {
+              "title": "Core Features",
+              "url": "/#feature",
+              "description": "Explore powerful capabilities"
+            },
+            {
+              "title": "Benefits",
+              "url": "/#benefit",
+              "description": "Why choose our platform"
+            }
+          ]
+        },
         {
           "title": "Showcase",
           "url": "/showcase",
-          "icon": "RiApps2Line"
+          "icon": "RiImageLine",
+          "trigger": "hover",
+          "highlightOnHover": true,
+          "align": "center",
+          "sideOffset": 4
         },
         {
-          "title": "Pricing",
-          "url": "/pricing",
-          "icon": "RiMoneyDollarCircleLine"
+          "title": "Support",
+          "url": "/#faq",
+          "icon": "RiQuestionLine",
+          "trigger": "hover",
+          "highlightOnHover": true,
+          "align": "end",
+          "sideOffset": 4,
+          "children": [
+            {
+              "title": "FAQ",
+              "url": "/#faq",
+              "description": "Common questions answered"
+            },
+            {
+              "title": "Testimonials",
+              "url": "/#testimonial",
+              "description": "User testimonials and reviews"
+            },
+            {
+              "title": "Statistics",
+              "url": "/#stats",
+              "description": "Platform statistics"
+            }
+          ]
         }
       ]
     },
-    "buttons": [
-      {
-        "title": "Dashboard",
-        "url": "/dashboard",
-        "target": "_self",
-        "variant": "link",
-        "icon": "RiDashboardLine"
-      }
-    ],
-    "show_sign": true,
+    "buttons": [],
+    "show_sign": false,
     "show_theme": true,
-    "show_locale": true
+    "show_locale": false
   },
   "hero": {
-    "title": "Transform Your Photos into Dynamic Videos with AI",
-    "highlight_text": "Image To Video AI",
-    "description": "Unleash the power of our leading AI to effortlessly create captivating videos from your static images.<br/>Experience a seamless, high-speed process with professional-grade results.",
-    "announcement": {
-      "label": "NEW",
-      "title": "Now Featuring Our Next-Gen V3 Animation Engine",
-      "url": "/#pricing"
-    },
-    "tip": "🎁 New Release",
+    "title": "Create Stunning Videos from Static Images with Advanced AI",
+    "highlight_text": "Advanced AI",
+    "description": "Transform your photos into captivating videos in seconds. Our cutting-edge AI technology brings your images to life with smooth animations and professional quality.",
     "buttons": [
       {
-        "title": "Get Started",
-        "icon": "RiPlayFill",
-        "url": "/#pricing",
+        "title": "Start Creating",
+        "icon": "RiMagicLine",
+        "url": "/Image-to-Video",
         "target": "_self",
         "variant": "default"
-      },
-      {
-        "title": "View Showcase",
-        "icon": "RiImageLine",
-        "url": "/showcase",
-        "target": "_self",
-        "variant": "outline"
       }
     ],
-    "show_happy_users": true,
+    "show_happy_users": false,
     "show_badge": false
   },
   "branding": {
-    "title": "Image To Video AI is built on cutting-edge technology",
-    "items": [
-      {
-        "title": "Next.js",
-        "image": {
-          "src": "/imgs/logos/nextjs.svg",
-          "alt": "Next.js"
-        }
-      },
-      {
-        "title": "React",
-        "image": {
-          "src": "/imgs/logos/react.svg",
-          "alt": "React"
-        }
-      },
-      {
-        "title": "TailwindCSS",
-        "image": {
-          "src": "/imgs/logos/tailwindcss.svg",
-          "alt": "TailwindCSS"
-        }
-      },
-      {
-        "title": "Shadcn/UI",
-        "image": {
-          "src": "/imgs/logos/shadcn.svg",
-          "alt": "Shadcn/UI"
-        }
-      },
-      {
-        "title": "Vercel",
-        "image": {
-          "src": "/imgs/logos/vercel.svg",
-          "alt": "Vercel"
-        }
-      }
-    ]
+    "disabled": true
   },
   "introduce": {
     "name": "introduce",
-    "title": "Core Capabilities of Our Image To Video AI",
-    "label": "Features",
-    "description": "Explore the foundational features that make our Image To Video AI the ultimate tool for visual storytelling. From automated creation to pristine output, we provide the tools for excellence.",
+    "title": "Revolutionary AI-Powered Video Creation",
+    "label": "How It Works",
+    "description": "Our advanced AI technology analyzes your images and creates stunning video animations automatically. Experience the future of content creation with just a few clicks.",
     "image": {
-      "src": "/imgs/features/1.png"
+      "src": "/imgs/features/1.mp4"
     },
     "items": [
       {
-        "title": "Intelligent Motion Automation",
-        "description": "Just upload your image and our AI intelligently analyzes and animates it, creating dynamic motion with a single click. No manual editing required.",
-        "icon": "RiMagicLine"
+        "title": "Smart Scene Analysis",
+        "description": "Our AI instantly identifies objects, depth, and composition in your images to create natural, realistic motion patterns.",
+        "icon": "RiEyeLine"
       },
       {
-        "title": "Pristine HD+ Resolution",
-        "description": "Your videos are rendered in high-definition, preserving the details and clarity of your original photos for a polished, professional look.",
-        "icon": "RiHdLine"
+        "title": "Cinematic Motion Effects",
+        "description": "Generate professional-grade animations with parallax effects, smooth transitions, and dynamic camera movements.",
+        "icon": "RiCameraLine"
       },
       {
-        "title": "Intuitive Creation Studio",
-        "description": "Our clean, straightforward interface is designed for creators of all skill levels. Bring your ideas to life without a steep learning curve.",
-        "icon": "RiUserLine"
+        "title": "One-Click Generation",
+        "description": "Transform any image into a captivating video with a single click. No technical skills or complex editing required.",
+        "icon": "RiMouseLine"
       }
     ]
   },
   "benefit": {
     "name": "benefit",
-    "title": "Why Creators Choose Image To Video AI",
-    "label": "Benefits",
-    "description": "Discover the competitive advantages our platform offers. Boost your efficiency, reduce production costs, and lead with innovative content that captures attention.",
+    "title": "Transform Your Creative Workflow",
+    "label": "Why Choose Us",
+    "description": "Join thousands of creators who have revolutionized their content production with our AI-powered platform. Experience unmatched speed, quality, and ease of use.",
     "items": [
       {
-        "title": "Accelerated Workflow",
-        "description": "Generate videos in under two minutes, transforming your content production from hours to moments. Increase your output and stay ahead of schedule.",
-        "icon": "RiSpeedLine",
+        "title": "Lightning-Fast Processing",
+        "description": "Create professional videos in under 60 seconds. Our optimized AI engine delivers results 10x faster than traditional video editing software.",
+        "icon": "RiThunderboltLine",
         "image": {
-          "src": "/imgs/features/2.png"
+          "src": "/imgs/features/2.mp4"
         }
       },
       {
-        "title": "Budget-Friendly Production",
-        "description": "Achieve the results of a professional video studio without the high cost. Our Image To Video AI is an affordable alternative to expensive software and agencies.",
-        "icon": "RiMoneyDollarCircleLine",
+        "title": "Studio-Quality Results",
+        "description": "Achieve broadcast-quality videos with advanced AI algorithms that understand depth, lighting, and natural motion patterns.",
+        "icon": "RiAwardLine",
         "image": {
-          "src": "/imgs/features/3.png"
+          "src": "/imgs/features/1.mp4"
         }
       },
       {
-        "title": "Continuous Advancement",
-        "description": "We are committed to innovation. Our AI models are constantly updated, ensuring you always have access to the latest advancements in video generation technology.",
-        "icon": "RiRocketLine",
+        "title": "Zero Learning Curve",
+        "description": "No complex software to learn. Our intuitive interface lets anyone create stunning videos, regardless of technical expertise.",
+        "icon": "RiUserSmileLine",
         "image": {
-          "src": "/imgs/features/4.png"
+          "src": "/imgs/features/2.mp4"
         }
       }
     ]
   },
   "usage": {
     "name": "usage",
-    "title": "Your Creative Process in Four Simple Steps",
-    "description": "See how simple it is to bring your static images to life. Our streamlined workflow makes creating stunning videos with Image To Video AI a breeze.",
-    "image": {
-      "src": "/imgs/features/1.png"
-    },
-    "image_position": "left",
-    "text_align": "center",
-    "items": [
-      {
-        "title": "1. Select Your Visual",
-        "description": "Begin with any photo from your collection. High-resolution images in a 16:9 aspect ratio yield the best results.",
-        "image": {
-          "src": "/imgs/features/5.png"
-        }
-      },
-      {
-        "title": "2. Upload to the Studio",
-        "description": "Securely upload your image to our platform. You can also generate a new visual using our integrated AI image generator.",
-        "image": {
-          "src": "/imgs/features/6.png"
-        }
-      },
-      {
-        "title": "3. Let the AI Work",
-        "description": "Our system instantly analyzes your image to identify key subjects, backgrounds, and potential motion paths.",
-        "image": {
-          "src": "/imgs/features/7.png"
-        }
-      },
-      {
-        "title": "4. Generate & Download",
-        "description": "In 30 to 120 seconds, your dynamic video will be ready to download and share with the world.",
-        "image": {
-          "src": "/imgs/features/8.png"
-        }
-      }
-    ]
+    "disabled": true
   },
   "feature": {
     "name": "feature",
@@ -277,7 +257,7 @@
         "label": "Content Creator",
         "description": "Image To Video AI has revolutionized my content creation process. I can now turn my photography into engaging videos in minutes, not hours!",
         "image": {
-          "src": "/imgs/users/1.png"
+          "src": "/imgs/users/1.mp4"
         }
       },
       {
@@ -285,7 +265,7 @@
         "label": "Marketing Director",
         "description": "The quality of videos generated is incredible. Our social media engagement has increased by 300% since we started using Image To Video AI.",
         "image": {
-          "src": "/imgs/users/2.png"
+          "src": "/imgs/users/2.mp4"
         }
       },
       {
@@ -293,7 +273,7 @@
         "label": "Digital Artist",
         "description": "As a digital artist, I love how this tool brings my static artwork to life. The AI understands the nuances of my art style perfectly.",
         "image": {
-          "src": "/imgs/users/3.png"
+          "src": "/imgs/users/3.mp4"
         }
       },
       {
@@ -301,7 +281,7 @@
         "label": "Small Business Owner",
         "description": "Cost-effective and incredibly easy to use. I've created dozens of promotional videos for my business without any technical expertise.",
         "image": {
-          "src": "/imgs/users/4.png"
+          "src": "/imgs/users/4.mp4"
         }
       },
       {
@@ -309,7 +289,7 @@
         "label": "Social Media Manager",
         "description": "The speed is unmatched. I can create multiple video variations for A/B testing in the time it used to take for one video.",
         "image": {
-          "src": "/imgs/users/5.png"
+          "src": "/imgs/users/5.mp4"
         }
       },
       {
@@ -317,7 +297,7 @@
         "label": "Freelance Designer",
         "description": "Image To Video AI has become an essential tool in my creative workflow. My clients are amazed by the dynamic videos I can produce.",
         "image": {
-          "src": "/imgs/users/6.png"
+          "src": "/imgs/users/6.mp4"
         }
       }
     ]
@@ -356,22 +336,7 @@
   },
   "cta": {
     "name": "cta",
-    "title": "Ready to Animate Your Images?",
-    "description": "Join thousands of creators and start bringing your photos to life. Sign up today and experience the power of Image To Video AI.",
-    "buttons": [
-      {
-        "title": "Get Started",
-        "url": "/#pricing",
-        "target": "_self",
-        "icon": "RiPlayFill"
-      },
-      {
-        "title": "View Showcase",
-        "url": "/showcase",
-        "target": "_self",
-        "variant": "outline"
-      }
-    ]
+    "disabled": true
   },
   "footer": {
     "name": "footer",
@@ -388,31 +353,36 @@
     "nav": {
       "items": [
         {
-          "title": "Services",
+          "title": "Features",
           "children": [
             {
-              "title": "Video Generator",
-              "url": "/",
+              "title": "How It Works",
+              "url": "/#introduce",
               "target": "_self"
             },
             {
-              "title": "Video History",
-              "url": "/dashboard",
+              "title": "Core Features",
+              "url": "/#feature",
+              "target": "_self"
+            },
+            {
+              "title": "Benefits",
+              "url": "/#benefit",
               "target": "_self"
             }
           ]
         },
         {
-          "title": "Resources",
+          "title": "Community",
           "children": [
             {
-              "title": "Pricing",
-              "url": "/pricing",
+              "title": "Statistics",
+              "url": "/#stats",
               "target": "_self"
             },
             {
-              "title": "Portal",
-              "url": "/dashboard",
+              "title": "Testimonials",
+              "url": "/#testimonial",
               "target": "_self"
             },
             {

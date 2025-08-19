@@ -23,6 +23,12 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 import { Header as HeaderType } from "@/types/blocks/header";
 import Icon from "@/components/icon";
@@ -32,16 +38,20 @@ import { Menu } from "lucide-react";
 import SignToggle from "@/components/sign/toggle";
 import ThemeToggle from "@/components/theme/toggle";
 import { cn } from "@/lib/utils";
+import React, { useState } from "react";
 
-export default function Header({ header }: { header: HeaderType }) {
+export default function Header({ header = {} }) {
   if (header.disabled) {
     return null;
   }
 
+  // 用于控制所有下拉菜单的展开状态
+  const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(null);
+
   return (
-    <section className="py-3">
+    <section className="py-3 bg-white/90 backdrop-blur-sm border-b border-slate-100/60">
       <div className="container">
-        <nav className="hidden justify-between lg:flex">
+        <nav className="hidden justify-between lg:flex items-center">
           <div className="flex items-center gap-6">
             <Link
               href={(header.brand?.url as any) || "/"}
@@ -55,7 +65,7 @@ export default function Header({ header }: { header: HeaderType }) {
                 />
               )}
               {header.brand?.title && (
-                <span className="text-xl text-primary font-bold">
+                <span className="text-2xl gradient-text font-bold">
                   {header.brand?.title || ""}
                 </span>
               )}
@@ -66,52 +76,56 @@ export default function Header({ header }: { header: HeaderType }) {
                   {header.nav?.items?.map((item, i) => {
                     if (item.children && item.children.length > 0) {
                       return (
-                        <NavigationMenuItem
+                        <DropdownMenu
                           key={i}
-                          className="text-muted-foreground"
+                          open={openDropdownIndex === i}
+                          onOpenChange={(open) => setOpenDropdownIndex(open ? i : null)}
                         >
-                          <NavigationMenuTrigger>
-                            {item.icon && (
-                              <Icon
-                                name={item.icon}
-                                className="size-4 shrink-0 mr-2"
-                              />
-                            )}
-                            <span>{item.title}</span>
-                          </NavigationMenuTrigger>
-                          <NavigationMenuContent>
-                            <ul className="w-80 p-3">
-                              <NavigationMenuLink>
-                                {item.children.map((iitem, ii) => (
-                                  <li key={ii}>
-                                    <Link
-                                      className={cn(
-                                        "flex select-none gap-4 rounded-md p-3 leading-none no-underline outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                                      )}
-                                      href={iitem.url as any}
-                                      target={iitem.target}
-                                    >
-                                      {iitem.icon && (
-                                        <Icon
-                                          name={iitem.icon}
-                                          className="size-5 shrink-0"
-                                        />
-                                      )}
-                                      <div>
-                                        <div className="text-sm font-semibold">
-                                          {iitem.title}
-                                        </div>
-                                        <p className="text-sm leading-snug text-muted-foreground">
-                                          {iitem.description}
-                                        </p>
-                                      </div>
-                                    </Link>
-                                  </li>
-                                ))}
-                              </NavigationMenuLink>
-                            </ul>
-                          </NavigationMenuContent>
-                        </NavigationMenuItem>
+                          <DropdownMenuTrigger asChild>
+                            <button
+                              className="text-slate-700 hover:text-blue-600 relative group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-slate-100 focus:bg-slate-100 focus:outline-hidden"
+                              onMouseEnter={() => setOpenDropdownIndex(i)}
+                              onMouseLeave={() => setOpenDropdownIndex(null)}
+                              onFocus={() => setOpenDropdownIndex(i)}
+                              onBlur={() => setOpenDropdownIndex(null)}
+                            >
+                              {item.icon && (
+                                <Icon name={item.icon} className="size-4 shrink-0 mr-2" />
+                              )}
+                              <span>{item.title}</span>
+                            </button>
+                          </DropdownMenuTrigger>
+                          <DropdownMenuContent
+                            sideOffset={8}
+                            align="start"
+                            className="min-w-[200px]"
+                            onMouseEnter={() => setOpenDropdownIndex(i)}
+                            onMouseLeave={() => setOpenDropdownIndex(null)}
+                          >
+                            {item.children.map((iitem, ii) => (
+                              <DropdownMenuItem key={ii} asChild>
+                                <Link
+                                  className={cn(
+                                    "flex select-none gap-4 rounded-md p-3 leading-none no-underline outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                                  )}
+                                  href={iitem.url as any}
+                                  target={iitem.target}
+                                >
+                                  <div>
+                                    <div className="text-sm font-semibold text-slate-700">
+                                      {iitem.title}
+                                    </div>
+                                    {iitem.description && (
+                                      <p className="text-sm leading-snug text-slate-500">
+                                        {iitem.description}
+                                      </p>
+                                    )}
+                                  </div>
+                                </Link>
+                              </DropdownMenuItem>
+                            ))}
+                          </DropdownMenuContent>
+                        </DropdownMenu>
                       );
                     }
 
@@ -119,7 +133,7 @@ export default function Header({ header }: { header: HeaderType }) {
                       <NavigationMenuItem key={i}>
                         <Link
                           className={cn(
-                            "text-muted-foreground",
+                            "text-slate-700 hover:text-blue-600 font-medium",
                             navigationMenuTriggerStyle,
                             buttonVariants({
                               variant: "ghost",
@@ -145,8 +159,6 @@ export default function Header({ header }: { header: HeaderType }) {
           </div>
           <div className="shrink-0 flex gap-2 items-center">
             {header.show_locale && <LocaleToggle />}
-            {header.show_theme && <ThemeToggle />}
-
             {header.buttons?.map((item, i) => {
               return (
                 <Button key={i} variant={item.variant}>
@@ -181,7 +193,7 @@ export default function Header({ header }: { header: HeaderType }) {
                 />
               )}
               {header.brand?.title && (
-                <span className="text-xl font-bold">
+                <span className="text-xl gradient-text font-bold">
                   {header.brand?.title || ""}
                 </span>
               )}
@@ -207,7 +219,7 @@ export default function Header({ header }: { header: HeaderType }) {
                         />
                       )}
                       {header.brand?.title && (
-                        <span className="text-xl font-bold">
+                        <span className="text-xl gradient-text font-bold">
                           {header.brand?.title || ""}
                         </span>
                       )}
@@ -224,7 +236,7 @@ export default function Header({ header }: { header: HeaderType }) {
                             value={item.title || ""}
                             className="border-b-0"
                           >
-                            <AccordionTrigger className="mb-4 py-0 font-semibold hover:no-underline text-left">
+                            <AccordionTrigger className="mb-4 py-0 font-semibold hover:no-underline text-left text-slate-700">
                               {item.title}
                             </AccordionTrigger>
                             <AccordionContent className="mt-2">
@@ -244,10 +256,10 @@ export default function Header({ header }: { header: HeaderType }) {
                                     />
                                   )}
                                   <div>
-                                    <div className="text-sm font-semibold">
+                                    <div className="text-sm font-semibold text-slate-700">
                                       {iitem.title}
                                     </div>
-                                    <p className="text-sm leading-snug text-muted-foreground">
+                                    <p className="text-sm leading-snug text-slate-500">
                                       {iitem.description}
                                     </p>
                                   </div>
@@ -262,7 +274,7 @@ export default function Header({ header }: { header: HeaderType }) {
                           key={i}
                           href={item.url as any}
                           target={item.target}
-                          className="font-semibold my-4 flex items-center gap-2 px-4"
+                          className="font-semibold my-4 flex items-center gap-2 px-4 text-slate-700 hover:text-blue-600"
                         >
                           {item.icon && (
                             <Icon

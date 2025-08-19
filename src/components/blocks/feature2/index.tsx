@@ -72,13 +72,13 @@ export default function Feature2({ section }: { section: SectionType }) {
                   value={(i + 1).toString()}
                   className="border-b-0 border-secondary"
                 >
-                  <AccordionTrigger className="text-left data-[state=closed]:text-muted-foreground">
+                  <AccordionTrigger className="text-left data-[state=closed]:text-slate-600">
                     <div className="flex items-center justify-between gap-2">
                       {item.icon && (
                         <p className="flex size-9 items-center justify-center rounded-lg bg-muted">
                           <Icon
                             name={item.icon}
-                            className="size-5 shrink-0 lg:size-6"
+                            className="size-5 shrink-0 lg:size-6 text-blue-500"
                           />
                         </p>
                       )}
@@ -87,7 +87,7 @@ export default function Feature2({ section }: { section: SectionType }) {
                       </span>
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground lg:text-base">
+                  <AccordionContent className="text-slate-600 lg:text-base">
                     {item.description}
                     <div className="mt-8 h-px bg-muted">
                       <div
@@ -114,11 +114,22 @@ export default function Feature2({ section }: { section: SectionType }) {
                 {section.items?.map((item, i) => (
                   <CarouselItem key={i}>
                     <div>
-                      <img
-                        src={item.image?.src}
-                        alt={item.image?.alt || item.title}
-                        className="max-h-auto w-full object-cover lg:max-h-none rounded-md"
-                      />
+                      {item.image?.src?.endsWith('.mp4') || item.image?.src?.endsWith('.mov') || item.image?.src?.endsWith('.webm') ? (
+                        <video
+                          src={item.image.src}
+                          className="max-h-auto w-full object-cover lg:max-h-none rounded-md"
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                        />
+                      ) : (
+                        <img
+                          src={item.image?.src}
+                          alt={item.image?.alt || item.title}
+                          className="max-h-auto w-full object-cover lg:max-h-none rounded-md"
+                        />
+                      )}
                     </div>
                   </CarouselItem>
                 ))}

@@ -7,24 +7,17 @@ export default function Feature1({ section }: { section: SectionType }) {
   }
 
   return (
-    <section id={section.name} className="py-16">
-      <div className="container">
-        <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
-          {section.image && (
-            <img
-              src={section.image?.src}
-              alt="placeholder hero"
-              className="max-h-full w-full rounded-md object-cover"
-            />
-          )}
-          <div className="flex flex-col lg:text-left">
+    <section id={section.name} className="py-12 md:py-16 bg-gradient-to-br from-slate-50/30 to-white/80">
+      <div className="container px-8">
+        <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-20">
+          <div className="flex flex-col justify-center lg:text-left lg:pr-10 order-2 lg:order-1">
             {section.title && (
               <h2 className="mb-6 text-pretty text-3xl font-bold lg:text-4xl">
                 {section.title}
               </h2>
             )}
             {section.description && (
-              <p className="mb-8 max-w-xl text-muted-foreground lg:max-w-none lg:text-lg">
+              <p className="mb-8 max-w-xl text-slate-600 lg:max-w-none lg:text-lg">
                 {section.description}
               </p>
             )}
@@ -34,14 +27,14 @@ export default function Feature1({ section }: { section: SectionType }) {
                   {item.icon && (
                     <Icon
                       name={item.icon}
-                      className="mr-2 size-6 shrink-0 lg:mr-2 lg:size-6"
+                      className="mr-2 size-6 shrink-0 lg:mr-2 lg:size-6 text-blue-500"
                     />
                   )}
                   <div>
-                    <div className="mb-3 h-5 text-sm font-semibold text-accent-foreground md:text-base">
+                    <div className="mb-3 h-5 text-sm font-semibold text-slate-700 md:text-base">
                       {item.title}
                     </div>
-                    <div className="text-sm font-medium text-muted-foreground md:text-base">
+                    <div className="text-sm font-medium text-slate-600 md:text-base">
                       {item.description}
                     </div>
                   </div>
@@ -49,6 +42,26 @@ export default function Feature1({ section }: { section: SectionType }) {
               ))}
             </ul>
           </div>
+          {section.image && (
+            <div className="modern-card p-2 lg:pl-10 order-1 lg:order-2 flex items-center">
+              {section.image.src?.endsWith('.mp4') || section.image.src?.endsWith('.mov') || section.image.src?.endsWith('.webm') ? (
+                <video
+                  src={section.image.src}
+                  className="w-full h-auto max-h-[400px] rounded-xl object-cover shadow-md"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                />
+              ) : (
+                <img
+                  src={section.image.src}
+                  alt="placeholder hero"
+                  className="w-full h-auto max-h-[400px] rounded-xl object-cover shadow-md"
+                />
+              )}
+            </div>
+          )}
         </div>
       </div>
     </section>

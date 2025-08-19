@@ -52,11 +52,22 @@ export default function Feature3({ section }: { section: SectionType }) {
                     {item.image && (
                       <div className="mt-6 block border bg-muted/50 px-4 py-6 lg:hidden">
                         <div className="aspect-video">
-                          <img
-                            src={item.image?.src}
-                            alt={item.image?.alt || item.title}
-                            className="h-full w-full rounded-md border object-cover shadow-sm"
-                          />
+                          {item.image?.src?.endsWith('.mp4') || item.image?.src?.endsWith('.mov') || item.image?.src?.endsWith('.webm') ? (
+                            <video
+                              src={item.image.src}
+                              className="h-full w-full rounded-md border object-cover shadow-sm"
+                              autoPlay
+                              loop
+                              muted
+                              playsInline
+                            />
+                          ) : (
+                            <img
+                              src={item.image?.src}
+                              alt={item.image?.alt || item.title}
+                              className="h-full w-full rounded-md border object-cover shadow-sm"
+                            />
+                          )}
                         </div>
                       </div>
                     )}
@@ -75,11 +86,24 @@ export default function Feature3({ section }: { section: SectionType }) {
                     className="aspect-video"
                   >
                     {item.image && (
-                      <img
-                        src={item.image.src}
-                        alt={item.image.alt || item.title}
-                        className="h-full w-full rounded-xl border object-cover shadow-sm"
-                      />
+                      <>
+                        {item.image.src?.endsWith('.mp4') || item.image.src?.endsWith('.mov') || item.image.src?.endsWith('.webm') ? (
+                          <video
+                            src={item.image.src}
+                            className="h-full w-full rounded-xl border object-cover shadow-sm"
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                          />
+                        ) : (
+                          <img
+                            src={item.image.src}
+                            alt={item.image.alt || item.title}
+                            className="h-full w-full rounded-xl border object-cover shadow-sm"
+                          />
+                        )}
+                      </>
                     )}
                   </TabsContent>
                 );

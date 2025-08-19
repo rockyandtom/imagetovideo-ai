@@ -10,9 +10,10 @@ import { Metadata } from "next";
 export async function generateMetadata({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-  // 根据需要可以在这里添加多语言支持
+  const { locale } = await params;
+  // Multi-language support can be added here if needed
   const title = "Image to Video AI Free: Create Videos from Photos Instantly";
   const description = "Discover the best way to turn any image into a dynamic video with our free AI generator. Create stunning, high-quality videos from your photos effortlessly. No credit card required to start.";
 
@@ -20,7 +21,7 @@ export async function generateMetadata({
     title: title,
     description: description,
     alternates: {
-      canonical: `/${params.locale}/make/image-to-video-ai-free`,
+      canonical: `/${locale}/make/image-to-video-ai-free`,
     },
   };
 }
@@ -37,14 +38,14 @@ export default function AiVideoGeneratorPage() {
         icon: "RiPlayFill",
         url: "/auth/signin",
         target: "_self",
-        variant: "default",
+        variant: "default" as const,
       },
       {
         title: "View Showcase",
         icon: "RiImageLine",
         url: "/showcase",
         target: "_self",
-        variant: "outline",
+        variant: "outline" as const,
       },
     ],
     show_happy_users: true,

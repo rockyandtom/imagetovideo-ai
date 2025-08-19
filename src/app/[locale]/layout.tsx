@@ -7,7 +7,7 @@ import { AppContextProvider } from "@/contexts/app";
 import { Metadata } from "next";
 import { NextAuthSessionProvider } from "@/auth/session";
 import { NextIntlClientProvider } from "next-intl";
-import { ThemeProvider } from "@/providers/theme";
+// ThemeProvider removed
 
 export async function generateMetadata({
   params,
@@ -45,9 +45,7 @@ export default async function LocaleLayout({
     <NextIntlClientProvider messages={messages}>
       <NextAuthSessionProvider>
         <AppContextProvider>
-          <ThemeProvider attribute="class" disableTransitionOnChange>
-            {children}
-          </ThemeProvider>
+          {children}
         </AppContextProvider>
       </NextAuthSessionProvider>
     </NextIntlClientProvider>
