@@ -40,7 +40,7 @@ import ThemeToggle from "@/components/theme/toggle";
 import { cn } from "@/lib/utils";
 import React, { useState } from "react";
 
-export default function Header({ header = {} }) {
+export default function Header({ header = {} }: { header?: HeaderType }) {
   if (header.disabled) {
     return null;
   }

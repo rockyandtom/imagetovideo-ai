@@ -45,7 +45,20 @@ export async function POST(request: NextRequest) {
     console.log('API响应:', JSON.stringify(result, null, 2));
 
     // 分析结果
-    const analysis = {
+    const analysis: {
+      webappId: number;
+      apiKey: string;
+      success: boolean;
+      status: number;
+      response: any;
+      diagnosis: {
+        webappExists: boolean;
+        apiKeyValid: boolean;
+        permissionOk: boolean;
+        errorType: any;
+      };
+      recommendations?: string[];
+    } = {
       webappId: correctWebAppId,
       apiKey: API_KEY,
       success: response.ok && result.code === 0,
