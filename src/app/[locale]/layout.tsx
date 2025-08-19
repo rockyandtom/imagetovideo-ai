@@ -7,6 +7,7 @@ import { AppContextProvider } from "@/contexts/app";
 import { Metadata } from "next";
 import { NextAuthSessionProvider } from "@/auth/session";
 import { NextIntlClientProvider } from "next-intl";
+import Script from "next/script";
 // ThemeProvider removed
 
 export async function generateMetadata({
@@ -45,6 +46,19 @@ export default async function LocaleLayout({
     <NextIntlClientProvider messages={messages}>
       <NextAuthSessionProvider>
         <AppContextProvider>
+          <Script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-9YPHKGTMZG"
+          ></Script>
+          <Script id="google-analytics">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+            
+              gtag('config', 'G-9YPHKGTMZG');
+            `}
+          </Script>
           {children}
         </AppContextProvider>
       </NextAuthSessionProvider>
