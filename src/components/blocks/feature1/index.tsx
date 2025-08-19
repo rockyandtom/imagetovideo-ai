@@ -43,11 +43,12 @@ export default function Feature1({ section }: { section: SectionType }) {
             </ul>
           </div>
           {section.image && (
-            <div className="modern-card p-2 lg:pl-10 order-1 lg:order-2 flex items-center">
+            <div className="order-1 lg:order-2 flex items-center">
+              <div className="bg-white/60 rounded-3xl shadow-lg overflow-hidden">
               {section.image.src?.endsWith('.mp4') || section.image.src?.endsWith('.mov') || section.image.src?.endsWith('.webm') ? (
                 <video
                   src={section.image.src}
-                  className="w-full h-auto max-h-[400px] rounded-xl object-cover shadow-md"
+                  className="w-full h-auto max-h-[500px] object-cover"
                   autoPlay
                   loop
                   muted
@@ -57,9 +58,10 @@ export default function Feature1({ section }: { section: SectionType }) {
                 <img
                   src={section.image.src}
                   alt="placeholder hero"
-                  className="w-full h-auto max-h-[400px] rounded-xl object-cover shadow-md"
+                  className="w-full h-auto max-h-[500px] object-cover"
                 />
               )}
+              </div>
             </div>
           )}
         </div>

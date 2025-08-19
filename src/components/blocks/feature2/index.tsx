@@ -44,8 +44,8 @@ export default function Feature2({ section }: { section: SectionType }) {
   return (
     <section id={section.name} className="py-32">
       <div className="container">
-        <div className="mx-auto grid gap-20 lg:grid-cols-2">
-          <div>
+        <div className="mx-auto grid items-center gap-20 lg:grid-cols-2">
+          <div className="lg:order-2">
             {section.label && (
               <Badge variant="outline" className="mb-4">
                 {section.label}
@@ -102,7 +102,7 @@ export default function Feature2({ section }: { section: SectionType }) {
               ))}
             </Accordion>
           </div>
-          <div>
+          <div className="lg:order-1">
             <Carousel
               opts={{
                 duration: 50,
@@ -117,7 +117,7 @@ export default function Feature2({ section }: { section: SectionType }) {
                       {item.image?.src?.endsWith('.mp4') || item.image?.src?.endsWith('.mov') || item.image?.src?.endsWith('.webm') ? (
                         <video
                           src={item.image.src}
-                          className="max-h-auto w-full object-cover lg:max-h-none rounded-md"
+                          className="max-h-[500px] w-full object-cover lg:max-h-none rounded-md"
                           autoPlay
                           loop
                           muted
@@ -127,7 +127,7 @@ export default function Feature2({ section }: { section: SectionType }) {
                         <img
                           src={item.image?.src}
                           alt={item.image?.alt || item.title}
-                          className="max-h-auto w-full object-cover lg:max-h-none rounded-md"
+                          className="max-h-[500px] w-full object-cover lg:max-h-none rounded-md"
                         />
                       )}
                     </div>
