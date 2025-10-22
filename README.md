@@ -6,6 +6,23 @@ Ship Any AI SaaS Startups in hours. Now featuring advanced Text to Image generat
 
 ## 🆕 Latest Updates
 
+### Privacy Policy Page Enhancement (2024-10-22)
+- ✅ 完全重构隐私政策页面布局和设计
+- ✅ 使用与首页一致的品牌标题"Image To Video AI"
+- ✅ 添加现代化的头部导航栏，包含返回按钮和品牌Logo
+- ✅ 实现完整的页脚信息，与首页格式保持一致
+- ✅ 全英文版本，符合网站整体语言风格
+- ✅ 优化内容结构，增加11个详细章节
+- ✅ 添加视觉元素：渐变背景、图标、彩色卡片
+- ✅ 实现响应式设计，支持移动端和桌面端
+- ✅ 增加数据保护表格和权利说明
+- ✅ 符合GDPR、CCPA等国际隐私法规要求
+- ✅ 使用正确的联系邮箱：support@imgtovideoai.com
+- ✅ 添加深色模式支持
+- ✅ 去掉不必要的生效日期信息
+- ✅ 优化布局：左侧目录导航 + 右侧主要内容，充分利用屏幕宽度
+- ✅ 添加粘性目录导航，提升用户体验
+
 ### Text to Image Feature Added (2025-01-22)
 - ✅ 新增Text to Image页面 (`/text-to-image`)
 - ✅ 集成RunningHub文生图API (webappId: 1980827034278608897)
