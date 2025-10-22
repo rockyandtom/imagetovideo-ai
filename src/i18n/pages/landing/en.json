@@ -1,0 +1,455 @@
+{
+  "template": "imagetovideoai-template-modern",
+  "theme": "dark",
+  "header": {
+    "brand": {
+      "title": "Image To Video AI",
+      "logo": {
+        "src": "/logo.png",
+        "alt": "Image To Video AI"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "trigger": "hover",
+      "closeOnClick": true,
+      "highlightActive": true,
+      "orientation": "horizontal",
+      "position": "center",
+      "delayDuration": 200,
+      "skipDelayDuration": 300,
+      "items": [
+        {
+          "title": "AI Generator",
+          "url": "/#hero",
+          "icon": "RiSparkling2Line",
+          "trigger": "hover",
+          "highlightOnHover": true,
+          "align": "start",
+          "sideOffset": 4,
+          "children": [
+            {
+              "title": "Create Stunning Videos",
+              "url": "/#hero",
+              "description": "Transform images into dynamic videos"
+            },
+            {
+              "title": "How It Works",
+              "url": "/#introduce",
+              "description": "Experience the future of content creation"
+            }
+          ]
+        },
+        {
+          "title": "Features",
+          "url": "/#feature",
+          "icon": "RiStarLine",
+          "trigger": "hover",
+          "highlightOnHover": true,
+          "align": "center",
+          "sideOffset": 4,
+          "children": [
+            {
+              "title": "Core Features",
+              "url": "/#feature",
+              "description": "Explore powerful capabilities"
+            },
+            {
+              "title": "Benefits",
+              "url": "/#benefit",
+              "description": "Why choose our platform"
+            }
+          ]
+        },
+        {
+          "title": "Text to Image",
+          "url": "/text-to-image",
+          "icon": "RiImageAddLine",
+          "trigger": "hover",
+          "highlightOnHover": true,
+          "align": "center",
+          "sideOffset": 4
+        },
+        {
+          "title": "Showcase",
+          "url": "/showcase",
+          "icon": "RiImageLine",
+          "trigger": "hover",
+          "highlightOnHover": true,
+          "align": "center",
+          "sideOffset": 4
+        },
+        {
+          "title": "Support",
+          "url": "/#faq",
+          "icon": "RiQuestionLine",
+          "trigger": "hover",
+          "highlightOnHover": true,
+          "align": "end",
+          "sideOffset": 4,
+          "children": [
+            {
+              "title": "FAQ",
+              "url": "/#faq",
+              "description": "Common questions answered"
+            },
+            {
+              "title": "Testimonials",
+              "url": "/#testimonial",
+              "description": "User testimonials and reviews"
+            },
+            {
+              "title": "Statistics",
+              "url": "/#stats",
+              "description": "Platform statistics"
+            }
+          ]
+        }
+      ]
+    },
+    "buttons": [],
+    "show_sign": false,
+    "show_theme": true,
+    "show_locale": false
+  },
+  "hero": {
+    "title": "Create Stunning Videos from Static Images with Advanced AI",
+    "highlight_text": "Advanced AI",
+    "description": "Transform your photos into captivating videos in seconds. Our cutting-edge AI technology brings your images to life with smooth animations and professional quality.",
+    "buttons": [
+      {
+        "title": "Start Creating",
+        "icon": "RiMagicLine",
+        "url": "/Image-to-Video",
+        "target": "_self",
+        "variant": "default"
+      }
+    ],
+    "show_happy_users": false,
+    "show_badge": false
+  },
+  "branding": {
+    "disabled": true
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "Revolutionary AI-Powered Video Creation",
+    "label": "How It Works",
+    "description": "Our advanced AI technology analyzes your images and creates stunning video animations automatically. Experience the future of content creation with just a few clicks.",
+    "image": {
+      "src": "/imgs/features/1.mp4"
+    },
+    "items": [
+      {
+        "title": "Smart Scene Analysis",
+        "description": "Our AI instantly identifies objects, depth, and composition in your images to create natural, realistic motion patterns.",
+        "icon": "RiEyeLine"
+      },
+      {
+        "title": "Cinematic Motion Effects",
+        "description": "Generate professional-grade animations with parallax effects, smooth transitions, and dynamic camera movements.",
+        "icon": "RiCameraLine"
+      },
+      {
+        "title": "One-Click Generation",
+        "description": "Transform any image into a captivating video with a single click. No technical skills or complex editing required.",
+        "icon": "RiMouseLine"
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Transform Your Creative Workflow",
+    "label": "Why Choose Us",
+    "description": "Join thousands of creators who have revolutionized their content production with our AI-powered platform. Experience unmatched speed, quality, and ease of use.",
+    "items": [
+      {
+        "title": "Lightning-Fast Processing",
+        "description": "Create professional videos in under 60 seconds. Our optimized AI engine delivers results 10x faster than traditional video editing software.",
+        "icon": "RiThunderboltLine",
+        "image": {
+          "src": "/imgs/features/2.mp4"
+        }
+      },
+      {
+        "title": "Studio-Quality Results",
+        "description": "Achieve broadcast-quality videos with advanced AI algorithms that understand depth, lighting, and natural motion patterns.",
+        "icon": "RiAwardLine",
+        "image": {
+          "src": "/imgs/features/1.mp4"
+        }
+      },
+      {
+        "title": "Zero Learning Curve",
+        "description": "No complex software to learn. Our intuitive interface lets anyone create stunning videos, regardless of technical expertise.",
+        "icon": "RiUserSmileLine",
+        "image": {
+          "src": "/imgs/features/2.mp4"
+        }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "disabled": true
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Everything You Need for Exceptional Video Content",
+    "description": "Our platform is packed with powerful features designed to give you full creative control and produce outstanding results every time.",
+    "items": [
+      {
+        "title": "Rapid Video Synthesis",
+        "description": "Our optimized processing core delivers your video in 30-120 seconds, perfect for fast-paced projects.",
+        "icon": "RiFlashLine"
+      },
+      {
+        "title": "Total Privacy Control",
+        "description": "Your creations are your own. Easily manage visibility with private/public toggles and optional watermarking.",
+        "icon": "RiShieldLine"
+      },
+      {
+        "title": "Next-Generation Motion AI",
+        "description": "Powered by a sophisticated neural network, our AI creates realistic movement and captivating visual effects.",
+        "icon": "RiRobot2Line"
+      },
+      {
+        "title": "Universal Aspect Ratios",
+        "description": "Our tool supports both landscape (16:9) and portrait (9:16) formats, making it ideal for any social media platform.",
+        "icon": "RiAspectRatioLine"
+      },
+      {
+        "title": "Turbo Generation Mode",
+        "description": "Need it even faster? Engage Turbo mode to prioritize speed for time-sensitive tasks.",
+        "icon": "RiSpeedUpLine"
+      },
+      {
+        "title": "Broadcast-Ready Output",
+        "description": "Export high-quality videos suitable for marketing campaigns, artistic portfolios, and professional presentations.",
+        "icon": "RiStarLine"
+      }
+    ]
+  },
+  "stats": {
+    "name": "stats",
+    "label": "Stats",
+    "title": "Trusted by Creators Worldwide",
+    "description": "Join thousands of satisfied users creating amazing videos",
+    "icon": "FaRegHeart",
+    "items": [
+      {
+        "title": "Videos Created",
+        "label": "10K+",
+        "description": "And counting"
+      },
+      {
+        "title": "Generation Time",
+        "label": "30-120",
+        "description": "Seconds"
+      },
+      {
+        "title": "User Satisfaction",
+        "label": "99%",
+        "description": "Happy Users"
+      }
+    ]
+  },
+  "testimonial": {
+    "name": "testimonial",
+    "label": "Testimonial",
+    "title": "What Users Say About Image To Video AI",
+    "description": "Hear from creators who are transforming their content with our AI technology.",
+    "icon": "GoThumbsup",
+    "items": [
+      {
+        "title": "Sarah Johnson",
+        "label": "Content Creator",
+        "description": "Image To Video AI has revolutionized my content creation process. I can now turn my photography into engaging videos in minutes, not hours!",
+        "image": {
+          "src": "/imgs/users/1.mp4"
+        }
+      },
+      {
+        "title": "Mike Chen",
+        "label": "Marketing Director",
+        "description": "The quality of videos generated is incredible. Our social media engagement has increased by 300% since we started using Image To Video AI.",
+        "image": {
+          "src": "/imgs/users/2.mp4"
+        }
+      },
+      {
+        "title": "Emily Rodriguez",
+        "label": "Digital Artist",
+        "description": "As a digital artist, I love how this tool brings my static artwork to life. The AI understands the nuances of my art style perfectly.",
+        "image": {
+          "src": "/imgs/users/3.mp4"
+        }
+      },
+      {
+        "title": "David Kim",
+        "label": "Small Business Owner",
+        "description": "Cost-effective and incredibly easy to use. I've created dozens of promotional videos for my business without any technical expertise.",
+        "image": {
+          "src": "/imgs/users/4.mp4"
+        }
+      },
+      {
+        "title": "Lisa Thompson",
+        "label": "Social Media Manager",
+        "description": "The speed is unmatched. I can create multiple video variations for A/B testing in the time it used to take for one video.",
+        "image": {
+          "src": "/imgs/users/5.mp4"
+        }
+      },
+      {
+        "title": "Alex Wang",
+        "label": "Freelance Designer",
+        "description": "Image To Video AI has become an essential tool in my creative workflow. My clients are amazed by the dynamic videos I can produce.",
+        "image": {
+          "src": "/imgs/users/6.mp4"
+        }
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Have Questions? We Have Answers.",
+    "description": "Find answers to the most common queries about our Image To Video AI platform. If you don't see your question here, feel free to reach out.",
+    "items": [
+      {
+        "title": "What is the typical video generation time?",
+        "description": "Most videos are generated in 30 to 120 seconds. Generation time can vary based on image complexity and current server load. Our Turbo mode can expedite this process."
+      },
+      {
+        "title": "Is an account required to use the service?",
+        "description": "Yes, an account is necessary to manage your projects, track your credits, and access your video library. Signing up is free and takes less than a minute."
+      },
+      {
+        "title": "Do you offer a free trial or plan?",
+        "description": "We provide all new users with complimentary credits to try our Image To Video AI. For more extensive use, please explore our competitive pricing plans."
+      },
+      {
+        "title": "Is the platform mobile-friendly?",
+        "description": "Absolutely. Our website is fully responsive, offering a seamless experience on desktops, tablets, and smartphones. Create on the go, anytime."
+      },
+      {
+        "title": "Which image formats are compatible?",
+        "description": "We support standard formats like JPEG, PNG, and WEBP. For optimal results, we suggest using high-resolution images."
+      },
+      {
+        "title": "How do I manage the privacy of my creations?",
+        "description": "You have complete control. In your dashboard, you can set each video to be public or private and decide whether or not to include a watermark."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "disabled": true
+  },
+  "footer": {
+    "name": "footer",
+    "brand": {
+      "title": "Image To Video AI",
+      "description": "The leading platform for converting static images into dynamic, engaging videos using the power of artificial intelligence.",
+      "logo": {
+        "src": "/logo.png",
+        "alt": "Image To Video AI"
+      },
+      "url": "/"
+    },
+    "copyright": "© 2025 Image To Video AI. All rights reserved.",
+    "nav": {
+      "items": [
+        {
+          "title": "Features",
+          "children": [
+            {
+              "title": "How It Works",
+              "url": "/#introduce",
+              "target": "_self"
+            },
+            {
+              "title": "Core Features",
+              "url": "/#feature",
+              "target": "_self"
+            },
+            {
+              "title": "Benefits",
+              "url": "/#benefit",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "Community",
+          "children": [
+            {
+              "title": "Statistics",
+              "url": "/#stats",
+              "target": "_self"
+            },
+            {
+              "title": "Testimonials",
+              "url": "/#testimonial",
+              "target": "_self"
+            },
+            {
+              "title": "FAQ",
+              "url": "/#faq",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "Legal",
+          "children": [
+            {
+              "title": "Privacy Policy",
+              "url": "/privacy-policy",
+              "target": "_self"
+            },
+            {
+              "title": "Terms of Service",
+              "url": "/terms-of-service",
+              "target": "_self"
+            },
+            {
+              "title": "Refund Policy",
+              "url": "/refund-policy",
+              "target": "_self"
+            }
+          ]
+        }
+      ]
+    },
+    "social": {
+      "items": [
+        {
+          "title": "X",
+          "icon": "RiTwitterXFill",
+          "url": "https://x.com/imgtovideoai",
+          "target": "_blank"
+        },
+        {
+          "title": "Email",
+          "icon": "RiMailLine",
+          "url": "mailto:support@imgtovideoai.com",
+          "target": "_self"
+        }
+      ]
+    },
+    "agreement": {
+      "items": [
+        {
+          "title": "Privacy Policy",
+          "url": "/privacy-policy"
+        },
+        {
+          "title": "Terms of Service",
+          "url": "/terms-of-service"
+        }
+      ]
+    }
+  }
+}

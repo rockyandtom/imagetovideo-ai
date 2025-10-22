@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文本框调试</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #0a0a0a, #1a1a2e, #16213e);
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .test-textarea {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 12px;
+            font-size: 16px;
+            color: white;
+            resize: none;
+            outline: none;
+        }
+        .test-textarea:focus {
+            outline: none;
+            ring: 2px;
+            ring-color: #3b82f6;
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+        }
+        .test-textarea::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        .debug-info {
+            margin-top: 20px;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>文本框输入测试</h1>
+    
+    <div>
+        <h3>测试1: 基础textarea</h3>
+        <textarea 
+            class="test-textarea"
+            rows="3"
+            placeholder="请输入描述，如：怪兽抬头嘴巴喷火"
+            id="test1"
+        ></textarea>
+    </div>
+    
+    <div style="margin-top: 20px;">
+        <h3>测试2: 带事件监听的textarea</h3>
+        <textarea 
+            class="test-textarea"
+            rows="3"
+            placeholder="请输入描述，如：怪兽抬头嘴巴喷火"
+            id="test2"
+        ></textarea>
+    </div>
+    
+    <div class="debug-info">
+        <h3>调试信息:</h3>
+        <div id="debug-output">等待输入...</div>
+    </div>
+    
+    <script>
+        const test1 = document.getElementById('test1');
+        const test2 = document.getElementById('test2');
+        const debugOutput = document.getElementById('debug-output');
+        
+        function updateDebug(source, value) {
+            debugOutput.innerHTML = `
+                <strong>${source}:</strong><br>
+                值: "${value}"<br>
+                长度: ${value.length}<br>
+                时间: ${new Date().toLocaleTimeString()}
+            `;
+        }
+        
+        test1.addEventListener('input', (e) => {
+            updateDebug('测试1', e.target.value);
+        });
+        
+        test2.addEventListener('input', (e) => {
+            updateDebug('测试2', e.target.value);
+        });
+        
+        test1.addEventListener('focus', () => {
+            console.log('测试1获得焦点');
+        });
+        
+        test2.addEventListener('focus', () => {
+            console.log('测试2获得焦点');
+        });
+        
+        // 检查是否有其他元素阻止事件
+        document.addEventListener('click', (e) => {
+            console.log('点击事件:', e.target);
+        });
+        
+        // 检查CSS样式
+        console.log('测试1样式:', window.getComputedStyle(test1));
+        console.log('测试2样式:', window.getComputedStyle(test2));
+    </script>
+</body>
+</html>
