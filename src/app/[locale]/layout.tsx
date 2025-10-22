@@ -71,7 +71,7 @@ export default async function LocaleLayout({
             <Header header={header} />
           </div>
           {children}
-          <Footer footer={footer} />
+          {footer && <Footer footer={footer} />}
         </AppContextProvider>
       </NextAuthSessionProvider>
     </NextIntlClientProvider>
