@@ -56,19 +56,19 @@
           "sideOffset": 4,
           "children": [
             {
-              "title": "FAQ",
-              "url": "/#faq",
-              "description": "Common questions answered"
+              "title": "Privacy Policy",
+              "url": "/privacy-policy",
+              "description": "How we protect your data and privacy"
             },
             {
-              "title": "Testimonials",
-              "url": "/#testimonial",
-              "description": "User testimonials and reviews"
+              "title": "Terms of Service",
+              "url": "/terms-of-service",
+              "description": "Terms and conditions of service"
             },
             {
-              "title": "Statistics",
-              "url": "/#stats",
-              "description": "Platform statistics"
+              "title": "Refund Policy",
+              "url": "/refund-policy",
+              "description": "Our refund and cancellation policy"
             }
           ]
         }
