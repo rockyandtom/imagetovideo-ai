@@ -6,6 +6,13 @@ Ship Any AI SaaS Startups in hours. Now featuring advanced Text to Image generat
 
 ## 🆕 Latest Updates
 
+### NextAuth.js 配置修复 (2025-10-23)
+- ✅ 修复 NextAuth.js MissingSecret 错误
+- ✅ 在 auth/config.ts 中添加必需的 secret 配置
+- ✅ 添加 fallback secret 用于开发环境
+- ✅ 更新 README 文档，添加环境变量配置说明
+- ✅ 提供完整的 OAuth 配置示例
+
 ### Text to Video Feature Added (2025-01-22)
 - ✅ Added Text to Video page (`/text-to-video`)
 - ✅ Integrated RunningHub text-to-video API (webappId: 1980924375140581377)
@@ -88,8 +95,26 @@ pnpm dev
 - Set your environment variables
 
 ```bash
-cp .env.example .env.development
+cp .env.example .env.local
 ```
+
+**重要：NextAuth.js 配置**
+
+为了修复认证错误，需要在 `.env.local` 文件中添加以下必需配置：
+
+```bash
+# NextAuth.js 必需配置
+NEXTAUTH_SECRET=your-super-secret-key-change-this-in-production
+NEXTAUTH_URL=http://localhost:3000
+
+# 可选：OAuth 提供商配置
+AUTH_GOOGLE_ID=your-google-client-id
+AUTH_GOOGLE_SECRET=your-google-client-secret
+AUTH_GITHUB_ID=your-github-client-id  
+AUTH_GITHUB_SECRET=your-github-client-secret
+```
+
+**注意：** 如果不配置 `NEXTAUTH_SECRET`，会出现 "MissingSecret" 错误导致认证功能无法使用。
 
 - Set your theme in `src/app/theme.css`
 

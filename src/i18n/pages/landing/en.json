@@ -329,47 +329,22 @@
     "nav": {
       "items": [
         {
-          "title": "Features",
-          "children": [
-            {
-              "title": "How It Works",
-              "url": "/#introduce",
-              "target": "_self"
-            },
-            {
-              "title": "Core Features",
-              "url": "/#feature",
-              "target": "_self"
-            },
-            {
-              "title": "Benefits",
-              "url": "/#benefit",
-              "target": "_self"
-            }
-          ]
+          "title": "Text to Image",
+          "url": "/text-to-image",
+          "children": []
         },
         {
-          "title": "Community",
-          "children": [
-            {
-              "title": "Statistics",
-              "url": "/#stats",
-              "target": "_self"
-            },
-            {
-              "title": "Testimonials",
-              "url": "/#testimonial",
-              "target": "_self"
-            },
-            {
-              "title": "FAQ",
-              "url": "/#faq",
-              "target": "_self"
-            }
-          ]
+          "title": "Text to Video", 
+          "url": "/text-to-video",
+          "children": []
         },
         {
-          "title": "Legal",
+          "title": "Image to Video",
+          "url": "/Image-to-Video", 
+          "children": []
+        },
+        {
+          "title": "Support",
           "children": [
             {
               "title": "Privacy Policy",

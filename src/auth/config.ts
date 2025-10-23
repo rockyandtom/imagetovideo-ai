@@ -117,6 +117,8 @@ export const providerMap = providers
 
 export const authOptions: NextAuthConfig = {
   providers,
+  // 添加必需的 secret 配置用于加密 JWT tokens 和会话数据
+  secret: process.env.NEXTAUTH_SECRET || "fallback-secret-key-for-development-only-change-in-production",
   pages: {
     signIn: "/auth/signin",
   },
