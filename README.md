@@ -6,6 +6,34 @@ Ship Any AI SaaS Startups in hours. Now featuring advanced Text to Image generat
 
 ## 🆕 Latest Updates
 
+### Text to Video Feature Added (2025-01-22)
+- ✅ Added Text to Video page (`/text-to-video`)
+- ✅ Integrated RunningHub text-to-video API (webappId: 1980924375140581377)
+- ✅ Support for 5 video aspect ratios (1:1, 3:4, 4:3, 9:16, 16:9)
+- ✅ Real-time progress tracking and status display
+- ✅ Video preview and download functionality
+- ✅ Added Text to Video link to navigation bar in second position
+- ✅ Complete page structure based on texttovideo.json content
+- ✅ UI design style referencing Image-to-Video page
+- ✅ Keyboard shortcut support (Ctrl+Enter to generate)
+- ✅ Smart text input suggestions and usage tips
+- ✅ Comprehensive FAQ section and feature showcase
+- ✅ Professional workflow instructions and user guidance
+- ✅ Full English localization for global users
+- ✅ English error messages and API responses
+- ✅ Fixed RunningHub API response handling (code: 0 = success)
+- ✅ Updated to Next.js 15 async params requirements
+- ✅ Robust error handling for different response formats
+- ✅ Fixed empty href attribute warnings in React components
+- ✅ Cleaned up temporary files and completed integration
+- ✅ Enhanced comprehensive logging system for debugging
+- ✅ Fixed SUCCESS status video URL retrieval using outputs API
+- ✅ Resolved frontend not responding to completed tasks
+- ✅ Implemented proper RunningHub workflow: status → outputs
+- ✅ Added queue full error handling with user-friendly messages
+- ✅ Verified complete end-to-end text-to-video generation workflow
+- ✅ Successfully generated and validated multiple test videos
+
 ### Privacy Policy Page Enhancement (2024-10-22)
 - ✅ 完全重构隐私政策页面布局和设计
 - ✅ 使用与首页一致的品牌标题"Image To Video AI"

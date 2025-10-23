@@ -29,7 +29,7 @@ export default function ({
       {items.map((item, index) => (
         <Link
           key={index}
-          href={item.url as any}
+          href={item.url || "#"}
           className={cn(
             buttonVariants({ variant: "ghost" }),
             item.is_active || pathname.includes(item.url as any)

@@ -20,51 +20,27 @@
       "skipDelayDuration": 300,
       "items": [
         {
-          "title": "AI Generator",
-          "url": "/#hero",
-          "icon": "RiSparkling2Line",
-          "trigger": "hover",
-          "highlightOnHover": true,
-          "align": "start",
-          "sideOffset": 4,
-          "children": [
-            {
-              "title": "Create Stunning Videos",
-              "url": "/#hero",
-              "description": "Transform images into dynamic videos"
-            },
-            {
-              "title": "How It Works",
-              "url": "/#introduce",
-              "description": "Experience the future of content creation"
-            }
-          ]
-        },
-        {
-          "title": "Features",
-          "url": "/#feature",
-          "icon": "RiStarLine",
-          "trigger": "hover",
-          "highlightOnHover": true,
-          "align": "center",
-          "sideOffset": 4,
-          "children": [
-            {
-              "title": "Core Features",
-              "url": "/#feature",
-              "description": "Explore powerful capabilities"
-            },
-            {
-              "title": "Benefits",
-              "url": "/#benefit",
-              "description": "Why choose our platform"
-            }
-          ]
-        },
-        {
           "title": "Text to Image",
           "url": "/text-to-image",
           "icon": "RiImageAddLine",
+          "trigger": "hover",
+          "highlightOnHover": true,
+          "align": "center",
+          "sideOffset": 4
+        },
+        {
+          "title": "Text to Video",
+          "url": "/text-to-video",
+          "icon": "RiVideoLine",
+          "trigger": "hover",
+          "highlightOnHover": true,
+          "align": "center",
+          "sideOffset": 4
+        },
+        {
+          "title": "Image to Video",
+          "url": "/Image-to-Video",
+          "icon": "RiVideoAddLine",
           "trigger": "hover",
           "highlightOnHover": true,
           "align": "center",

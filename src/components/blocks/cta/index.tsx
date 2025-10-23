@@ -24,7 +24,7 @@ export default function CTA({ section }: { section: SectionType }) {
                 {section.buttons.map((item, idx) => (
                   <Button key={idx} variant={item.variant || "default"}>
                     <Link
-                      href={item.url || ""}
+                      href={item.url || "#"}
                       target={item.target}
                       className="flex items-center justify-center gap-1"
                     >

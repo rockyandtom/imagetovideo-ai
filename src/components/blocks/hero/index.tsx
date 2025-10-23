@@ -77,7 +77,7 @@ export default function Hero({ hero }: { hero: HeroType }) {
                     return (
                       <Link
                         key={i}
-                        href={item.url as any}
+                        href={item.url || "#"}
                         target={item.target || ""}
                         className="flex items-center"
                       >

@@ -121,5 +121,13 @@
     "contact_tip": "Other ways to contact us",
     "rating_tip": "How do you feel about ImageToVideoAI?",
     "placeholder": "Leave your words here..."
+  },
+  "header": {
+    "text_to_video": "Text to Video",
+    "text_to_image": "Text to Image",
+    "image_to_video": "Image to Video",
+    "pricing": "Pricing",
+    "blog": "Blog",
+    "contact": "Contact"
   }
 }

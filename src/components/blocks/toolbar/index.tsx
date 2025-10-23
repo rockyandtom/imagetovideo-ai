@@ -14,7 +14,7 @@ export default function Toolbar({ items }: { items?: ButtonType[] }) {
           className={item.className}
         >
           <Link
-            href={item.url as any}
+            href={item.url || "#"}
             target={item.target}
             className="flex items-center gap-1"
           >
