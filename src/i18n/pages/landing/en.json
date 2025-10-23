@@ -382,16 +382,7 @@
       ]
     },
     "agreement": {
-      "items": [
-        {
-          "title": "Privacy Policy",
-          "url": "/privacy-policy"
-        },
-        {
-          "title": "Terms of Service",
-          "url": "/terms-of-service"
-        }
-      ]
+      "items": []
     }
   }
 }

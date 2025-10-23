@@ -102,16 +102,8 @@ export default function SignForm({
           </div>
         </CardContent>
       </Card>
-      <div className="text-balance text-center text-xs text-muted-foreground [&_a]:underline [&_a]:underline-offset-4 hover:[&_a]:text-primary  ">
-        By clicking continue, you agree to our{" "}
-        <a href="/terms-of-service" target="_blank">
-          Terms of Service
-        </a>{" "}
-        and{" "}
-        <a href="/privacy-policy" target="_blank">
-          Privacy Policy
-        </a>
-        .
+      <div className="text-balance text-center text-xs text-muted-foreground">
+        By clicking continue, you agree to use our service responsibly.
       </div>
     </div>
   );
