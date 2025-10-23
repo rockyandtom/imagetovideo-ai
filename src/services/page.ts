@@ -1,4 +1,4 @@
-import { LandingPage, PricingPage, ShowcasePage } from "@/types/pages/landing";
+import { LandingPage, PricingPage } from "@/types/pages/landing";
 
 export async function getLandingPage(locale: string): Promise<LandingPage> {
   return (await getPage("landing", locale)) as LandingPage;
@@ -8,14 +8,11 @@ export async function getPricingPage(locale: string): Promise<PricingPage> {
   return (await getPage("pricing", locale)) as PricingPage;
 }
 
-export async function getShowcasePage(locale: string): Promise<ShowcasePage> {
-  return (await getPage("showcase", locale)) as ShowcasePage;
-}
 
 export async function getPage(
   name: string,
   locale: string
-): Promise<LandingPage | PricingPage | ShowcasePage> {
+): Promise<LandingPage | PricingPage> {
   try {
     return await import(
       `@/i18n/pages/${name}/${locale.toLowerCase()}.json`

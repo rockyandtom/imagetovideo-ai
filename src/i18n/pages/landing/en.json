@@ -47,15 +47,6 @@
           "sideOffset": 4
         },
         {
-          "title": "Showcase",
-          "url": "/showcase",
-          "icon": "RiImageLine",
-          "trigger": "hover",
-          "highlightOnHover": true,
-          "align": "center",
-          "sideOffset": 4
-        },
-        {
           "title": "Support",
           "url": "/#faq",
           "icon": "RiQuestionLine",

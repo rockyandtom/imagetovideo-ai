@@ -12,7 +12,6 @@ export interface LandingPage {
   benefit?: Section;
   usage?: Section;
   feature?: Section;
-  showcase?: Section;
   stats?: Section;
   pricing?: Pricing;
   testimonial?: Section;
@@ -25,6 +24,3 @@ export interface PricingPage {
   pricing?: Pricing;
 }
 
-export interface ShowcasePage {
-  showcase?: Section;
-}
