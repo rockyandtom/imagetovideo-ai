@@ -31,6 +31,14 @@ const RUNNINGHUB_CONFIG = {
             prompt: "73"
         }
     },
+    // AI Image Enhancer 应用配置
+    aiImageEnhancerApp: {
+        webappId: '1958797744955613186',
+        apiKey: 'fb88fac46b0349c1986c9cbb4f14d44e',
+        nodes: {
+            image: "2"
+        }
+    },
     headers: {
         'Host': 'www.runninghub.cn',
         'Content-Type': 'application/json',
@@ -51,9 +59,11 @@ export async function POST(request: NextRequest) {
             return await handleGenerate(image, lastImage, prompt)
         } else if (action === 'qwen-image-edit') {
             return await handleQwenImageEdit(webappId, apiKey, nodeInfoList)
+        } else if (action === 'enhance-image') {
+            return await handleImageEnhancement(webappId, apiKey, nodeInfoList)
         } else {
             return NextResponse.json(
-                { error: 'Invalid action. Use "generate", "qwen-image-edit", or "status"' },
+                { error: 'Invalid action. Use "generate", "qwen-image-edit", "enhance-image", or "status"' },
                 { status: 400 }
             )
         }
@@ -435,6 +445,72 @@ async function handleQwenImageEdit(webappId: string, apiKey: string, nodeInfoLis
         return NextResponse.json({
             success: false,
             error: 'Failed to process Qwen Image Edit',
+            details: error instanceof Error ? error.message : 'Unknown error'
+        }, { status: 500 })
+    }
+}
+
+// 处理图片增强请求
+async function handleImageEnhancement(webappId: string, apiKey: string, nodeInfoList: any[]) {
+    if (!webappId || !apiKey || !nodeInfoList) {
+        return NextResponse.json(
+            { error: 'webappId, apiKey, and nodeInfoList are required for Image Enhancement' },
+            { status: 400 }
+        )
+    }
+
+    console.log('Starting AI Image Enhancement:', {
+        webappId,
+        nodeInfoList
+    })
+
+    try {
+        const requestBody = {
+            webappId,
+            apiKey,
+            nodeInfoList
+        };
+
+        console.log('Sending AI Image Enhancement request to RunningHub:', JSON.stringify(requestBody, null, 2));
+
+        const response = await fetch(`${RUNNINGHUB_CONFIG.baseUrl}/ai-app/run`, {
+            method: 'POST',
+            headers: RUNNINGHUB_CONFIG.headers,
+            body: JSON.stringify(requestBody)
+        })
+
+        console.log('RunningHub AI Image Enhancement response status:', response.status);
+
+        if (!response.ok) {
+            const errorText = await response.text();
+            console.error('RunningHub AI Image Enhancement API error response:', errorText);
+            throw new Error(`RunningHub API failed with HTTP ${response.status}: ${errorText}`);
+        }
+
+        const data = await response.json()
+        console.log('RunningHub AI Image Enhancement response:', data)
+
+        if (data.code === 0 && data.data && data.data.taskId) {
+            return NextResponse.json({
+                success: true,
+                data: {
+                    taskId: data.data.taskId,
+                    status: 'started',
+                    message: 'AI Image Enhancement task started'
+                }
+            })
+        } else {
+            return NextResponse.json({
+                success: false,
+                error: data.msg || 'Failed to start AI Image Enhancement task'
+            }, { status: 500 })
+        }
+
+    } catch (error) {
+        console.error('AI Image Enhancement error:', error)
+        return NextResponse.json({
+            success: false,
+            error: 'Failed to process AI Image Enhancement',
             details: error instanceof Error ? error.message : 'Unknown error'
         }, { status: 500 })
     }

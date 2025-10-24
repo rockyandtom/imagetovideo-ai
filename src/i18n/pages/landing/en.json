@@ -59,6 +59,11 @@
               "title": "Qwen Image Edit",
               "url": "/image-editor/qwen-image-edit",
               "description": "Transform your imagination with AI-powered image editing"
+            },
+            {
+              "title": "AI Image Enhancer",
+              "url": "/image-editor/AI-Image-Enhancer",
+              "description": "Elevate your images to stunning quality with cutting-edge AI technology"
             }
           ]
         },
@@ -366,6 +371,11 @@
             {
               "title": "Qwen Image Edit",
               "url": "/image-editor/qwen-image-edit",
+              "target": "_self"
+            },
+            {
+              "title": "AI Image Enhancer",
+              "url": "/image-editor/AI-Image-Enhancer",
               "target": "_self"
             }
           ]

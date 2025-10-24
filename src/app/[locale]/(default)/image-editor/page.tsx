@@ -93,15 +93,32 @@ export default async function ImageEditorPage({
             </div>
           </a>
 
-          <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-              <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          {/* AI Image Enhancer 功能卡片 */}
+          <a 
+            href="/image-editor/AI-Image-Enhancer"
+            className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer group"
+          >
+            <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:from-green-600 group-hover:to-blue-700 transition-all duration-300">
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">AI Enhancement</h3>
-            <p className="text-gray-600">Automatically enhance image quality, brightness, and clarity with AI algorithms.</p>
-          </div>
+            <div className="flex items-center gap-2 mb-2">
+              <h3 className="text-xl font-semibold text-gray-900 group-hover:text-green-600 transition-colors duration-300">AI Image Enhancer</h3>
+              <span className="bg-gradient-to-r from-green-500 to-blue-600 text-white text-xs px-2 py-1 rounded-full font-medium">
+                HOT
+              </span>
+            </div>
+            <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
+              Elevate your images to stunning quality with our cutting-edge AI Image Enhancer. Professional results in seconds.
+            </p>
+            <div className="mt-4 flex items-center text-green-600 text-sm font-medium group-hover:text-green-700 transition-colors duration-300">
+              <span>Start Enhancing</span>
+              <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </div>
+          </a>
 
           <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
             <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
