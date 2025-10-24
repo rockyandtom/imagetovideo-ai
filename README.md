@@ -6,6 +6,20 @@ Ship Any AI SaaS Startups in hours. Now featuring advanced Text to Image generat
 
 ## 🆕 Latest Updates
 
+### Image Editor 页面和导航栏更新 (2025-10-24)
+- ✅ 在导航栏Support标题前添加"Image Editor"链接
+- ✅ 创建新的Image Editor内页 (`/image-editor`)
+- ✅ 复用首页的导航栏和页脚结构
+- ✅ 修改页脚布局，将主标题横向一字排开
+- ✅ 除Support外的其他主标题全部做成可点击链接
+- ✅ 在页脚添加Image Editor锚文本链接
+- ✅ 实现响应式设计，支持移动端和桌面端
+- ✅ 添加AI功能预览卡片（AI Enhancement, Background Removal, Smart Filters）
+- ✅ 设计"Coming Soon"提示区域，为未来功能做准备
+- ✅ 完善SEO元数据，包括OpenGraph和Twitter卡片
+- ✅ 修复国际化配置，确保页面正常渲染
+- ✅ 清理Next.js构建缓存，解决Internal Server Error问题
+
 ### NextAuth.js 配置修复 (2025-10-23)
 - ✅ 修复 NextAuth.js MissingSecret 错误
 - ✅ 在 auth/config.ts 中添加必需的 secret 配置

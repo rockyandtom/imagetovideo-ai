@@ -49,19 +49,34 @@ export default function Footer({ footer }: { footer: FooterType }) {
                 </ul>
               )}
             </div>
-            <div className="grid grid-cols-3 gap-6 lg:gap-20">
+            <div className="flex flex-wrap gap-6 lg:gap-12 justify-center lg:justify-start">
               {footer.nav?.items?.map((item, i) => (
-                <div key={i}>
-                  <p className="mb-6 font-bold">{item.title}</p>
-                  <ul className="space-y-4 text-sm text-muted-foreground">
-                    {item.children?.map((iitem, ii) => (
-                      <li key={ii} className="font-medium hover:text-primary">
-                        <a href={iitem.url} target={iitem.target}>
-                          {iitem.title}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
+                <div key={i} className="text-center lg:text-left">
+                  {/* 主标题 */}
+                  {item.title === "Support" || !item.url ? (
+                    <p className="font-bold text-lg mb-4">{item.title}</p>
+                  ) : (
+                    <a 
+                      href={item.url} 
+                      target={item.target || "_self"}
+                      className="font-bold text-lg hover:text-primary transition-colors duration-200 block mb-4"
+                    >
+                      {item.title}
+                    </a>
+                  )}
+                  
+                  {/* 子菜单垂直排列在对应主标题下方 */}
+                  {item.children && item.children.length > 0 && (
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      {item.children.map((iitem, ii) => (
+                        <li key={ii} className="font-medium hover:text-primary">
+                          <a href={iitem.url} target={iitem.target}>
+                            {iitem.title}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               ))}
             </div>

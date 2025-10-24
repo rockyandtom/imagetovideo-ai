@@ -47,6 +47,22 @@
           "sideOffset": 4
         },
         {
+          "title": "Image Editor",
+          "url": "/image-editor",
+          "icon": "RiEditLine",
+          "trigger": "hover",
+          "highlightOnHover": true,
+          "align": "center",
+          "sideOffset": 4,
+          "children": [
+            {
+              "title": "Qwen Image Edit",
+              "url": "/image-editor/qwen-image-edit",
+              "description": "Transform your imagination with AI-powered image editing"
+            }
+          ]
+        },
+        {
           "title": "Support",
           "url": "/#faq",
           "icon": "RiQuestionLine",
@@ -342,6 +358,17 @@
           "title": "Image to Video",
           "url": "/Image-to-Video", 
           "children": []
+        },
+        {
+          "title": "Image Editor",
+          "url": "/image-editor",
+          "children": [
+            {
+              "title": "Qwen Image Edit",
+              "url": "/image-editor/qwen-image-edit",
+              "target": "_self"
+            }
+          ]
         },
         {
           "title": "Support",

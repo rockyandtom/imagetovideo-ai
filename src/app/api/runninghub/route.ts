@@ -22,6 +22,15 @@ const RUNNINGHUB_CONFIG = {
             lastImage: "125"
         }
     },
+    // Qwen Image Edit 应用配置
+    qwenImageEditApp: {
+        webappId: '1958091611945185282',
+        apiKey: 'fb88fac46b0349c1986c9cbb4f14d44e',
+        nodes: {
+            image: "71",
+            prompt: "73"
+        }
+    },
     headers: {
         'Host': 'www.runninghub.cn',
         'Content-Type': 'application/json',
@@ -33,16 +42,18 @@ export async function POST(request: NextRequest) {
         const body = await request.json()
         console.log('RunningHub API received:', body)
 
-        const { image, lastImage, prompt, action } = body
+        const { image, lastImage, prompt, action, webappId, apiKey, nodeInfoList } = body
 
         // 处理不同的操作类型
         if (action === 'status') {
             return await handleStatusCheck(body.taskId)
         } else if (action === 'generate') {
             return await handleGenerate(image, lastImage, prompt)
+        } else if (action === 'qwen-image-edit') {
+            return await handleQwenImageEdit(webappId, apiKey, nodeInfoList)
         } else {
             return NextResponse.json(
-                { error: 'Invalid action. Use "generate" or "status"' },
+                { error: 'Invalid action. Use "generate", "qwen-image-edit", or "status"' },
                 { status: 400 }
             )
         }
@@ -242,6 +253,20 @@ async function handleStatusCheck(taskId: string) {
                             )
                         )
 
+                        // 查找图片文件（用于Qwen Image Edit）
+                        const imageItem = outputData.data.find((item: any) =>
+                            item.fileUrl && (
+                                item.fileType && (
+                                    item.fileType.toLowerCase().includes('png') ||
+                                    item.fileType.toLowerCase().includes('jpg') ||
+                                    item.fileType.toLowerCase().includes('jpeg') ||
+                                    item.fileType.toLowerCase().includes('gif') ||
+                                    item.fileType.toLowerCase().includes('webp') ||
+                                    item.fileType.toLowerCase().includes('image')
+                                )
+                            )
+                        )
+
                         if (videoItem && videoItem.fileUrl) {
                             return NextResponse.json({
                                 success: true,
@@ -252,23 +277,46 @@ async function handleStatusCheck(taskId: string) {
                                     fileType: videoItem.fileType || 'video/mp4'
                                 }
                             })
+                        } else if (imageItem && imageItem.fileUrl) {
+                            // 返回图片结果（用于Qwen Image Edit）
+                            return NextResponse.json({
+                                success: true,
+                                data: {
+                                    taskId,
+                                    status: 'completed',
+                                    imageUrl: imageItem.fileUrl,
+                                    fileType: imageItem.fileType || 'image/png'
+                                }
+                            })
                         } else {
-                            // 如果没有找到视频，返回第一个文件
+                            // 如果没有找到视频或图片，返回第一个文件
                             const firstFile = outputData.data[0]
                             if (firstFile && firstFile.fileUrl) {
+                                // 根据文件类型判断是视频还是图片
+                                const isImage = firstFile.fileType && (
+                                    firstFile.fileType.toLowerCase().includes('png') ||
+                                    firstFile.fileType.toLowerCase().includes('jpg') ||
+                                    firstFile.fileType.toLowerCase().includes('jpeg') ||
+                                    firstFile.fileType.toLowerCase().includes('gif') ||
+                                    firstFile.fileType.toLowerCase().includes('webp') ||
+                                    firstFile.fileType.toLowerCase().includes('image')
+                                )
+                                
                                 return NextResponse.json({
                                     success: true,
                                     data: {
                                         taskId,
                                         status: 'completed',
-                                        videoUrl: firstFile.fileUrl,
-                                        fileType: firstFile.fileType || 'video/mp4'
+                                        ...(isImage ? 
+                                            { imageUrl: firstFile.fileUrl, fileType: firstFile.fileType || 'image/png' } :
+                                            { videoUrl: firstFile.fileUrl, fileType: firstFile.fileType || 'video/mp4' }
+                                        )
                                     }
                                 })
                             } else {
                                 return NextResponse.json({
                                     success: false,
-                                    error: 'Task completed but no valid video found in results'
+                                    error: 'Task completed but no valid file found in results'
                                 }, { status: 500 })
                             }
                         }
@@ -321,6 +369,72 @@ async function handleStatusCheck(taskId: string) {
         return NextResponse.json({
             success: false,
             error: 'Failed to check task status',
+            details: error instanceof Error ? error.message : 'Unknown error'
+        }, { status: 500 })
+    }
+}
+
+// 处理Qwen Image Edit请求
+async function handleQwenImageEdit(webappId: string, apiKey: string, nodeInfoList: any[]) {
+    if (!webappId || !apiKey || !nodeInfoList) {
+        return NextResponse.json(
+            { error: 'webappId, apiKey, and nodeInfoList are required for Qwen Image Edit' },
+            { status: 400 }
+        )
+    }
+
+    console.log('Starting Qwen Image Edit:', {
+        webappId,
+        nodeInfoList
+    })
+
+    try {
+        const requestBody = {
+            webappId,
+            apiKey,
+            nodeInfoList
+        };
+
+        console.log('Sending Qwen Image Edit request to RunningHub:', JSON.stringify(requestBody, null, 2));
+
+        const response = await fetch(`${RUNNINGHUB_CONFIG.baseUrl}/ai-app/run`, {
+            method: 'POST',
+            headers: RUNNINGHUB_CONFIG.headers,
+            body: JSON.stringify(requestBody)
+        })
+
+        console.log('RunningHub Qwen Image Edit response status:', response.status);
+
+        if (!response.ok) {
+            const errorText = await response.text();
+            console.error('RunningHub Qwen Image Edit API error response:', errorText);
+            throw new Error(`RunningHub API failed with HTTP ${response.status}: ${errorText}`);
+        }
+
+        const data = await response.json()
+        console.log('RunningHub Qwen Image Edit response:', data)
+
+        if (data.code === 0 && data.data && data.data.taskId) {
+            return NextResponse.json({
+                success: true,
+                data: {
+                    taskId: data.data.taskId,
+                    status: 'started',
+                    message: 'Qwen Image Edit task started'
+                }
+            })
+        } else {
+            return NextResponse.json({
+                success: false,
+                error: data.msg || 'Failed to start Qwen Image Edit task'
+            }, { status: 500 })
+        }
+
+    } catch (error) {
+        console.error('Qwen Image Edit error:', error)
+        return NextResponse.json({
+            success: false,
+            error: 'Failed to process Qwen Image Edit',
             details: error instanceof Error ? error.message : 'Unknown error'
         }, { status: 500 })
     }
