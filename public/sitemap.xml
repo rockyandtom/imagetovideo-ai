@@ -43,6 +43,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.imagetovideo-ai.net/image-editor/image-upscaler</loc>
+    <lastmod>2025-10-25T10:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.imagetovideo-ai.net/privacy-policy</loc>
     <lastmod>2025-10-23T10:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>

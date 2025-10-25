@@ -64,6 +64,11 @@
               "title": "AI Image Enhancer",
               "url": "/image-editor/AI-Image-Enhancer",
               "description": "Elevate your images to stunning quality with cutting-edge AI technology"
+            },
+            {
+              "title": "AI Image Upscaler",
+              "url": "/image-editor/image-upscaler",
+              "description": "Enhance your images with powerful AI upscaling technology"
             }
           ]
         },
@@ -376,6 +381,11 @@
             {
               "title": "AI Image Enhancer",
               "url": "/image-editor/AI-Image-Enhancer",
+              "target": "_self"
+            },
+            {
+              "title": "AI Image Upscaler",
+              "url": "/image-editor/image-upscaler",
               "target": "_self"
             }
           ]
