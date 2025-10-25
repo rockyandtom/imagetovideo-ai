@@ -27,6 +27,7 @@ export default function ImageUpscalerClient() {
     right: 304,
   });
   const [isDragOver, setIsDragOver] = useState(false);
+  const [isDownloading, setIsDownloading] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   // 处理图片上传
@@ -208,14 +209,74 @@ export default function ImageUpscalerClient() {
   };
 
   // 下载处理后的图片
-  const downloadResult = () => {
-    if (resultUrl) {
-      const link = document.createElement("a");
+  const downloadResult = async () => {
+    if (!resultUrl || isDownloading) return;
+    
+    setIsDownloading(true);
+    try {
+      console.log('开始下载图片:', resultUrl);
+      
+      // 使用fetch获取图片数据
+      const response = await fetch(resultUrl);
+      if (!response.ok) {
+        throw new Error('Failed to fetch image');
+      }
+      
+      const blob = await response.blob();
+      console.log('图片blob创建成功, 大小:', blob.size, '类型:', blob.type);
+      
+      // 确定文件扩展名
+      let fileExtension = 'png';
+      if (blob.type.includes('jpeg') || blob.type.includes('jpg')) {
+        fileExtension = 'jpg';
+      } else if (blob.type.includes('webp')) {
+        fileExtension = 'webp';
+      } else if (blob.type.includes('gif')) {
+        fileExtension = 'gif';
+      }
+      
+      // 生成文件名
+      const timestamp = new Date().toISOString().slice(0, 19).replace(/[:-]/g, '');
+      const baseName = selectedImage?.name ? selectedImage.name.replace(/\.[^/.]+$/, '') : 'image';
+      const filename = `upscaled-${baseName}-${timestamp}.${fileExtension}`;
+      
+      // 创建对象URL
+      const url = window.URL.createObjectURL(blob);
+      
+      // 创建下载链接
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = filename;
+      link.style.display = 'none';
+      
+      // 触发下载
+      document.body.appendChild(link);
+      link.click();
+      
+      // 清理
+      setTimeout(() => {
+        document.body.removeChild(link);
+        window.URL.revokeObjectURL(url);
+      }, 100);
+      
+      console.log('图片下载成功');
+      toast.success('Image download started!');
+      
+    } catch (error) {
+      console.error('下载图片失败:', error);
+      toast.error('Failed to download image. Please try again.');
+      
+      // 如果fetch失败，回退到直接链接方式（虽然可能打开新页面）
+      const link = document.createElement('a');
       link.href = resultUrl;
       link.download = `upscaled_${selectedImage?.name || "image.png"}`;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
+    } finally {
+      setIsDownloading(false);
     }
   };
 
@@ -455,11 +516,21 @@ export default function ImageUpscalerClient() {
                 {resultUrl && (
                   <Button
                     onClick={downloadResult}
+                    disabled={isDownloading}
                     variant="outline"
                     className="px-8 py-3 text-lg"
                   >
-                    <Download className="mr-2 h-4 w-4" />
-                    Download Result
+                    {isDownloading ? (
+                      <>
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                        Downloading...
+                      </>
+                    ) : (
+                      <>
+                        <Download className="mr-2 h-4 w-4" />
+                        Download Result
+                      </>
+                    )}
                   </Button>
                 )}
               </div>
