@@ -25,6 +25,21 @@ export default function Stats({ section }: { section: SectionType }) {
         <p className="text-center text-slate-600 lg:text-lg">
           {section.description}
         </p>
+
+        {/* 展示案例图片 */}
+        {section.image && (
+          <div className="mt-8 mb-8">
+            <div className="mx-auto max-w-4xl">
+              <img
+                src={section.image.src}
+                alt={section.image.alt || section.title}
+                className="w-full h-auto rounded-xl shadow-lg"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        )}
+
         <div className="w-full grid gap-10 md:grid-cols-3 lg:gap-0 mt-8">
           {section.items?.map((item, index) => {
             return (

@@ -105,6 +105,20 @@ export default function Hero({ hero }: { hero: HeroType }) {
                 <HappyUsers />
               </div>
             )}
+
+            {/* 展示案例图片 */}
+            {hero.image && (
+              <div className="fade-in-up stagger-5 mt-12">
+                <div className="mx-auto max-w-4xl">
+                  <img
+                    src={hero.image.src}
+                    alt={hero.image.alt || hero.title}
+                    className="w-full h-auto rounded-2xl shadow-2xl border border-white/20"
+                    loading="eager"
+                  />
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>

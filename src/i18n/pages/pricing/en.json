@@ -4,6 +4,10 @@
     "label": "Pricing",
     "title": "Pricing",
     "description": "Get all features of ShipAny, Ship your AI SaaS startups fast.",
+    "image": {
+      "src": "/imgs/showcases/flexible-pricing-plans-comparison.webp",
+      "alt": "Flexible AI video generation pricing plans and features comparison"
+    },
     "groups": [],
     "items": [
       {

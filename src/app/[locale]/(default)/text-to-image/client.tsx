@@ -234,8 +234,8 @@ export default function TextToImageClient() {
       />
       
       <div className="min-h-screen bg-background">
-        <div className="container py-8">
-          <div className="max-w-4xl mx-auto space-y-8">
+        <div className="px-16 sm:px-20 lg:px-24 xl:px-32 py-8">
+          <div className="space-y-8">
             {/* 页面标题 */}
             <div className="text-center space-y-4">
               <h1 className="text-3xl font-bold text-foreground">
@@ -481,263 +481,382 @@ export default function TextToImageClient() {
 
             {/* 内容区域 - 基于texttovideo.json完整内容 */}
             <div className="space-y-8">
-              {/* 技术介绍 */}
+              {/* 技术介绍 - 左图右文 */}
               <Card>
                 <CardHeader>
                   <CardTitle>The Core Technology Behind Our Advanced Text to Image System</CardTitle>
                 </CardHeader>
-                <CardContent className="prose prose-slate dark:prose-invert max-w-none">
-                  <p>
-                    The future of content creation is here, and it's powered by AI. At imagetovideo-ai, our system employs 
-                    state-of-the-art diffusion models, which represent the pinnacle of <strong>text to image</strong> technology. 
-                    These models have been trained on vast, curated datasets to understand the nuanced relationship between 
-                    language and visual elements.
-                  </p>
-                  <p>
-                    When you input a descriptive text prompt, the AI doesn't just pull up a matching image; it synthesizes 
-                    a completely new, unique visual piece. This sophisticated process involves interpreting the semantics of 
-                    your prompt, including style, mood, composition, and specific subject matter, to produce a high-fidelity output.
-                  </p>
-                  <p>
-                    The resulting <strong>AI-generated image</strong> is not a mere compilation of existing parts but a novel creation 
-                    that perfectly aligns with your textual command. This meticulous approach ensures that every <strong>text to image</strong> 
-                    result from imagetovideo-ai is a work of digital art, ready for use in commercial projects, social media, or personal artistic endeavors.
-                  </p>
+                <CardContent>
+                  <div className="grid lg:grid-cols-2 gap-8 xl:gap-12 items-center">
+                    {/* 左侧图片 */}
+                    <div className="order-2 lg:order-1">
+                      <div className="relative overflow-hidden rounded-xl shadow-lg w-4/5 mx-auto">
+                        <img
+                          src="/imgs/showcases/diffusion-model-text-processing-demo.webp"
+                          alt="AI diffusion model processing text prompts into high-quality images"
+                          className="w-full h-auto object-cover"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                    
+                    {/* 右侧文字 */}
+                    <div className="order-1 lg:order-2 prose prose-slate dark:prose-invert max-w-none">
+                      <p>
+                        The future of content creation is here, and it's powered by AI. At imagetovideo-ai, our system employs 
+                        state-of-the-art diffusion models, which represent the pinnacle of <strong>text to image</strong> technology. 
+                        These models have been trained on vast, curated datasets to understand the nuanced relationship between 
+                        language and visual elements.
+                      </p>
+                      <p>
+                        When you input a descriptive text prompt, the AI doesn't just pull up a matching image; it synthesizes 
+                        a completely new, unique visual piece. This sophisticated process involves interpreting the semantics of 
+                        your prompt, including style, mood, composition, and specific subject matter, to produce a high-fidelity output.
+                      </p>
+                      <p>
+                        The resulting <strong>AI-generated image</strong> is not a mere compilation of existing parts but a novel creation 
+                        that perfectly aligns with your textual command. This meticulous approach ensures that every <strong>text to image</strong> 
+                        result from imagetovideo-ai is a work of digital art, ready for use in commercial projects, social media, or personal artistic endeavors.
+                      </p>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
 
-              {/* 工作流程 */}
+              {/* 工作流程 - 右图左文 */}
               <Card>
                 <CardHeader>
                   <CardTitle>From Simple Concept to Stunning Visuals: The Text to Image Workflow</CardTitle>
                 </CardHeader>
-                <CardContent className="prose prose-slate dark:prose-invert max-w-none">
-                  <p>
-                    The simplicity of our workflow belies the complexity of the AI working under the hood. Generating a 
-                    high-quality <strong>AI image</strong> with imagetovideo-ai is a straightforward process, designed for 
-                    maximum efficiency and ease of use. It begins with your text prompt—the single most crucial element in the 
-                    <strong>text to image</strong> process.
-                  </p>
-                  <div className="space-y-4">
-                    <div className="flex gap-4">
-                      <div className="flex-shrink-0 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold">1</div>
-                      <div>
-                        <h4 className="font-semibold">The Prompt</h4>
-                        <p className="text-sm text-muted-foreground">
-                          Craft a clear, detailed, and expressive prompt. Think of your text as the director's script for the AI. 
-                          High-quality input is the key to high-quality <strong>text to image</strong> output.
-                        </p>
+                <CardContent>
+                  <div className="grid lg:grid-cols-2 gap-8 xl:gap-12 items-center">
+                    {/* 左侧文字 */}
+                    <div className="prose prose-slate dark:prose-invert max-w-none">
+                      <p>
+                        The simplicity of our workflow belies the complexity of the AI working under the hood. Generating a 
+                        high-quality <strong>AI image</strong> with imagetovideo-ai is a straightforward process, designed for 
+                        maximum efficiency and ease of use. It begins with your text prompt—the single most crucial element in the 
+                        <strong>text to image</strong> process.
+                      </p>
+                      <div className="space-y-4">
+                        <div className="flex gap-4">
+                          <div className="flex-shrink-0 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold">1</div>
+                          <div>
+                            <h4 className="font-semibold">The Prompt</h4>
+                            <p className="text-sm text-muted-foreground">
+                              Craft a clear, detailed, and expressive prompt. Think of your text as the director's script for the AI. 
+                              High-quality input is the key to high-quality <strong>text to image</strong> output.
+                            </p>
+                          </div>
+                        </div>
+                        <div className="flex gap-4">
+                          <div className="flex-shrink-0 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold">2</div>
+                          <div>
+                            <h4 className="font-semibold">Generation</h4>
+                            <p className="text-sm text-muted-foreground">
+                              Our platform processes the textual data through its deep learning model. Within moments, the AI starts 
+                              'painting' pixel by pixel, iteratively refining the image based on the prompt's instructions.
+                            </p>
+                          </div>
+                        </div>
+                        <div className="flex gap-4">
+                          <div className="flex-shrink-0 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold">3</div>
+                          <div>
+                            <h4 className="font-semibold">Refinement and Iteration</h4>
+                            <p className="text-sm text-muted-foreground">
+                              Users can then fine-tune the results. If the initial <strong>text to image</strong> output is close but not perfect, 
+                              minor adjustments to the prompt, or the use of in-built style modifiers and aspect ratio controls, allow for rapid iteration.
+                            </p>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div className="flex gap-4">
-                      <div className="flex-shrink-0 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold">2</div>
-                      <div>
-                        <h4 className="font-semibold">Generation</h4>
-                        <p className="text-sm text-muted-foreground">
-                          Our platform processes the textual data through its deep learning model. Within moments, the AI starts 
-                          'painting' pixel by pixel, iteratively refining the image based on the prompt's instructions.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex gap-4">
-                      <div className="flex-shrink-0 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold">3</div>
-                      <div>
-                        <h4 className="font-semibold">Refinement and Iteration</h4>
-                        <p className="text-sm text-muted-foreground">
-                          Users can then fine-tune the results. If the initial <strong>text to image</strong> output is close but not perfect, 
-                          minor adjustments to the prompt, or the use of in-built style modifiers and aspect ratio controls, allow for rapid iteration.
-                        </p>
+                    
+                    {/* 右侧图片 */}
+                    <div>
+                      <div className="relative overflow-hidden rounded-xl shadow-lg w-4/5 mx-auto">
+                        <img
+                          src="/imgs/showcases/text-to-image-workflow-steps-guide.webp"
+                          alt="Step-by-step text to image generation workflow and process guide"
+                          className="w-full h-auto object-cover"
+                          loading="lazy"
+                        />
                       </div>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
-              {/* 内容策略提升 */}
+              {/* 内容策略提升 - 左图右文 */}
               <Card>
                 <CardHeader>
                   <CardTitle>Elevating Your Content Strategy with Powerful Text to Image Capabilities</CardTitle>
                 </CardHeader>
-                <CardContent className="prose prose-slate dark:prose-invert max-w-none">
-                  <p>
-                    In the digital age, content is king, and speed is the currency of creativity. imagetovideo-ai's <strong>text to image</strong> 
-                    functionality offers significant advantages across various industries and creative pursuits.
-                  </p>
-                  <div className="grid md:grid-cols-2 gap-6 mt-6">
-                    <div className="space-y-3">
-                      <h4 className="font-semibold text-primary">Marketing Professionals</h4>
-                      <p className="text-sm text-muted-foreground">
-                        Rapid prototyping of ad creatives, banner images, and social media content, drastically reducing time-to-market. 
-                        Generate unique visuals for entire campaigns with descriptive text prompts.
-                      </p>
+                <CardContent>
+                  <div className="grid lg:grid-cols-2 gap-8 xl:gap-12 items-center">
+                    {/* 左侧图片 */}
+                    <div className="order-2 lg:order-1">
+                      <div className="relative overflow-hidden rounded-xl shadow-lg w-4/5 mx-auto">
+                        <img
+                          src="/imgs/showcases/ai-image-generation-use-cases-examples.webp"
+                          alt="Diverse AI image generation use cases for marketing and creative projects"
+                          className="w-full h-auto object-cover"
+                          loading="lazy"
+                        />
+                      </div>
                     </div>
-                    <div className="space-y-3">
-                      <h4 className="font-semibold text-primary">Game Developers & Artists</h4>
-                      <p className="text-sm text-muted-foreground">
-                        <strong>AI image generation</strong> provides an inexhaustible source of inspiration, quickly visualizing 
-                        environments, characters, and assets that can then be refined by human hands.
+                    
+                    {/* 右侧文字 */}
+                    <div className="order-1 lg:order-2 prose prose-slate dark:prose-invert max-w-none">
+                      <p>
+                        In the digital age, content is king, and speed is the currency of creativity. imagetovideo-ai's <strong>text to image</strong> 
+                        functionality offers significant advantages across various industries and creative pursuits.
                       </p>
-                    </div>
-                    <div className="space-y-3">
-                      <h4 className="font-semibold text-primary">Writers & Authors</h4>
-                      <p className="text-sm text-muted-foreground">
-                        Bring scenes from novels to life, transforming complex narrative descriptions into vivid 
-                        <strong>text to image</strong> illustrations.
-                      </p>
-                    </div>
-                    <div className="space-y-3">
-                      <h4 className="font-semibold text-primary">Creative Enthusiasts</h4>
-                      <p className="text-sm text-muted-foreground">
-                        This feature democratizes art, empowering anyone to create museum-quality pieces with just a few lines of text. 
-                        The efficiency is unmatched for modern creators.
-                      </p>
+                      <div className="grid md:grid-cols-2 gap-6 mt-6">
+                        <div className="space-y-3">
+                          <h4 className="font-semibold text-primary">Marketing Professionals</h4>
+                          <p className="text-sm text-muted-foreground">
+                            Rapid prototyping of ad creatives, banner images, and social media content, drastically reducing time-to-market. 
+                            Generate unique visuals for entire campaigns with descriptive text prompts.
+                          </p>
+                        </div>
+                        <div className="space-y-3">
+                          <h4 className="font-semibold text-primary">Game Developers & Artists</h4>
+                          <p className="text-sm text-muted-foreground">
+                            <strong>AI image generation</strong> provides an inexhaustible source of inspiration, quickly visualizing 
+                            environments, characters, and assets that can then be refined by human hands.
+                          </p>
+                        </div>
+                        <div className="space-y-3">
+                          <h4 className="font-semibold text-primary">Writers & Authors</h4>
+                          <p className="text-sm text-muted-foreground">
+                            Bring scenes from novels to life, transforming complex narrative descriptions into vivid 
+                            <strong>text to image</strong> illustrations.
+                          </p>
+                        </div>
+                        <div className="space-y-3">
+                          <h4 className="font-semibold text-primary">Creative Enthusiasts</h4>
+                          <p className="text-sm text-muted-foreground">
+                            This feature democratizes art, empowering anyone to create museum-quality pieces with just a few lines of text. 
+                            The efficiency is unmatched for modern creators.
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
-              {/* 最佳实践 */}
+              {/* 最佳实践 - 右图左文 */}
               <Card>
                 <CardHeader>
                   <CardTitle>Best Practices for Crafting Effective Text to Image Prompts</CardTitle>
                 </CardHeader>
-                <CardContent className="prose prose-slate dark:prose-invert max-w-none">
-                  <p>
-                    Achieving phenomenal results with any <strong>text to image</strong> generator relies heavily on the quality of your input. 
-                    To unlock the full potential of imagetovideo-ai, follow these expert prompting guidelines:
-                  </p>
-                  <div className="space-y-4 mt-6">
-                    <div className="border-l-4 border-primary pl-4">
-                      <h4 className="font-semibold">Be Specific and Detailed</h4>
-                      <p className="text-sm text-muted-foreground">
-                        Instead of 'a dog,' try 'A photorealistic Shiba Inu wearing a small red bow tie, sitting on a vintage leather armchair 
-                        in a library, cinematic lighting.' The more specific your <strong>text to image</strong> prompt, the better the AI can execute your vision.
+                <CardContent>
+                  <div className="grid lg:grid-cols-2 gap-8 xl:gap-12 items-center">
+                    {/* 左侧文字 */}
+                    <div className="prose prose-slate dark:prose-invert max-w-none">
+                      <p>
+                        Achieving phenomenal results with any <strong>text to image</strong> generator relies heavily on the quality of your input. 
+                        To unlock the full potential of imagetovideo-ai, follow these expert prompting guidelines:
                       </p>
+                      <div className="space-y-4 mt-6">
+                        <div className="border-l-4 border-primary pl-4">
+                          <h4 className="font-semibold">Be Specific and Detailed</h4>
+                          <p className="text-sm text-muted-foreground">
+                            Instead of 'a dog,' try 'A photorealistic Shiba Inu wearing a small red bow tie, sitting on a vintage leather armchair 
+                            in a library, cinematic lighting.' The more specific your <strong>text to image</strong> prompt, the better the AI can execute your vision.
+                          </p>
+                        </div>
+                        <div className="border-l-4 border-primary pl-4">
+                          <h4 className="font-semibold">Include Artistic Style</h4>
+                          <p className="text-sm text-muted-foreground">
+                            Specify the medium or artist you want to emulate. Keywords like 'Impressionist painting,' 'digital art,' 
+                            'isometric 3D render,' or 'Vaporwave aesthetic' guide the AI's stylistic choices.
+                          </p>
+                        </div>
+                        <div className="border-l-4 border-primary pl-4">
+                          <h4 className="font-semibold">Define Composition and Framing</h4>
+                          <p className="text-sm text-muted-foreground">
+                            Use photography terms such as 'wide-angle shot,' 'macro close-up,' 'low-angle perspective,' or 
+                            'Rule of Thirds composition' to control the final <strong>AI image</strong> layout.
+                          </p>
+                        </div>
+                        <div className="border-l-4 border-primary pl-4">
+                          <h4 className="font-semibold">Control Lighting and Mood</h4>
+                          <p className="text-sm text-muted-foreground">
+                            Descriptions like 'golden hour,' 'neon light reflections,' 'dark and moody,' or 'bright and cheerful' 
+                            are critical for setting the atmosphere of your <strong>text to image</strong> output.
+                          </p>
+                        </div>
+                        <div className="border-l-4 border-primary pl-4">
+                          <h4 className="font-semibold">Use Negative Prompts</h4>
+                          <p className="text-sm text-muted-foreground">
+                            While not always necessary, specifying elements you wish to exclude (e.g., 'no watermark, low quality, blurred') 
+                            can help refine the final <strong>text to image</strong> generation.
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                    <div className="border-l-4 border-primary pl-4">
-                      <h4 className="font-semibold">Include Artistic Style</h4>
-                      <p className="text-sm text-muted-foreground">
-                        Specify the medium or artist you want to emulate. Keywords like 'Impressionist painting,' 'digital art,' 
-                        'isometric 3D render,' or 'Vaporwave aesthetic' guide the AI's stylistic choices.
-                      </p>
-                    </div>
-                    <div className="border-l-4 border-primary pl-4">
-                      <h4 className="font-semibold">Define Composition and Framing</h4>
-                      <p className="text-sm text-muted-foreground">
-                        Use photography terms such as 'wide-angle shot,' 'macro close-up,' 'low-angle perspective,' or 
-                        'Rule of Thirds composition' to control the final <strong>AI image</strong> layout.
-                      </p>
-                    </div>
-                    <div className="border-l-4 border-primary pl-4">
-                      <h4 className="font-semibold">Control Lighting and Mood</h4>
-                      <p className="text-sm text-muted-foreground">
-                        Descriptions like 'golden hour,' 'neon light reflections,' 'dark and moody,' or 'bright and cheerful' 
-                        are critical for setting the atmosphere of your <strong>text to image</strong> output.
-                      </p>
-                    </div>
-                    <div className="border-l-4 border-primary pl-4">
-                      <h4 className="font-semibold">Use Negative Prompts</h4>
-                      <p className="text-sm text-muted-foreground">
-                        While not always necessary, specifying elements you wish to exclude (e.g., 'no watermark, low quality, blurred') 
-                        can help refine the final <strong>text to image</strong> generation.
-                      </p>
+                    
+                    {/* 右侧图片 */}
+                    <div>
+                      <div className="relative overflow-hidden rounded-xl shadow-lg w-4/5 mx-auto">
+                        <img
+                          src="/imgs/showcases/effective-prompt-writing-techniques-guide.webp"
+                          alt="Best practices and techniques for writing effective text to image prompts"
+                          className="w-full h-auto object-cover"
+                          loading="lazy"
+                        />
+                      </div>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
-              {/* 与AI视频的连接 */}
+              {/* 与AI视频的连接 - 左图右文 */}
               <Card>
                 <CardHeader>
                   <CardTitle>The Seamless Connection Between Text to Image and AI Video on imagetovideo-ai</CardTitle>
                 </CardHeader>
-                <CardContent className="prose prose-slate dark:prose-invert max-w-none">
-                  <p>
-                    What truly sets imagetovideo-ai apart is the integrated ecosystem. We recognize that static <strong>AI images</strong> 
-                    often need to evolve into dynamic media. After successfully generating a stunning <strong>text to image</strong> asset, 
-                    our platform offers a one-click solution to transform that image into a high-definition, animated <strong>AI video</strong>.
-                  </p>
-                  <p>
-                    This unique functionality leverages advanced temporal coherence models to intelligently generate movement, camera transitions, 
-                    and visual effects that honor the original aesthetic and subject matter of the <strong>AI-generated image</strong>. 
-                    Whether you need a simple zoom and pan, or complex character animation derived from your initial <strong>text to image</strong> concept, 
-                    imagetovideo-ai provides the tools.
-                  </p>
-                  <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800 mt-4">
-                    <p className="text-sm text-blue-700 dark:text-blue-300 mb-2 font-medium">
-                      Complete Creative Pipeline
-                    </p>
-                    <p className="text-xs text-blue-600 dark:text-blue-400">
-                      Your entire creative pipeline—from <strong>text to image</strong> inception to final <strong>AI video</strong> render—exists 
-                      within the powerful and intuitive interface of imagetovideo-ai. No more switching between multiple software applications.
-                    </p>
+                <CardContent>
+                  <div className="grid lg:grid-cols-2 gap-8 xl:gap-12 items-center">
+                    {/* 左侧图片 */}
+                    <div className="order-2 lg:order-1">
+                      <div className="relative overflow-hidden rounded-xl shadow-lg w-4/5 mx-auto">
+                        <img
+                          src="/imgs/showcases/ai-image-to-video-conversion-pipeline.webp"
+                          alt="Seamless AI image to video conversion pipeline and integration features"
+                          className="w-full h-auto object-cover"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                    
+                    {/* 右侧文字 */}
+                    <div className="order-1 lg:order-2 prose prose-slate dark:prose-invert max-w-none">
+                      <p>
+                        What truly sets imagetovideo-ai apart is the integrated ecosystem. We recognize that static <strong>AI images</strong> 
+                        often need to evolve into dynamic media. After successfully generating a stunning <strong>text to image</strong> asset, 
+                        our platform offers a one-click solution to transform that image into a high-definition, animated <strong>AI video</strong>.
+                      </p>
+                      <p>
+                        This unique functionality leverages advanced temporal coherence models to intelligently generate movement, camera transitions, 
+                        and visual effects that honor the original aesthetic and subject matter of the <strong>AI-generated image</strong>. 
+                        Whether you need a simple zoom and pan, or complex character animation derived from your initial <strong>text to image</strong> concept, 
+                        imagetovideo-ai provides the tools.
+                      </p>
+                      <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800 mt-4">
+                        <p className="text-sm text-blue-700 dark:text-blue-300 mb-2 font-medium">
+                          Complete Creative Pipeline
+                        </p>
+                        <p className="text-xs text-blue-600 dark:text-blue-400">
+                          Your entire creative pipeline—from <strong>text to image</strong> inception to final <strong>AI video</strong> render—exists 
+                          within the powerful and intuitive interface of imagetovideo-ai. No more switching between multiple software applications.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
 
-              {/* 道德考虑 */}
+              {/* 道德考虑 - 右图左文 */}
               <Card>
                 <CardHeader>
                   <CardTitle>Ethical Considerations and Responsible Text to Image Generation</CardTitle>
                 </CardHeader>
-                <CardContent className="prose prose-slate dark:prose-invert max-w-none">
-                  <p>
-                    As a leader in <strong>AI image generation</strong> technology, imagetovideo-ai is deeply committed to ethical and responsible deployment. 
-                    The power of <strong>text to image</strong> is immense, and we have implemented robust safeguards to prevent misuse.
-                  </p>
-                  <p>
-                    Our models are trained with a focus on respecting copyright and avoiding the generation of harmful, hateful, or inappropriate content. 
-                    We believe that <strong>AI-generated content</strong> should enhance human creativity, not detract from it. Transparency is key; 
-                    every image created through our <strong>text to image</strong> system is a unique synthetic creation, and we provide clear usage rights to our users.
-                  </p>
-                  <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border border-green-200 dark:border-green-800 mt-4">
-                    <p className="text-sm text-green-700 dark:text-green-300 font-medium">
-                      By choosing imagetovideo-ai, you are opting for a platform that not only offers unparalleled <strong>AI image</strong> and 
-                      <strong>AI video</strong> capabilities but also champions a thoughtful and principled approach to artificial intelligence.
-                    </p>
+                <CardContent>
+                  <div className="grid lg:grid-cols-2 gap-8 xl:gap-12 items-center">
+                    {/* 左侧文字 */}
+                    <div className="prose prose-slate dark:prose-invert max-w-none">
+                      <p>
+                        As a leader in <strong>AI image generation</strong> technology, imagetovideo-ai is deeply committed to ethical and responsible deployment. 
+                        The power of <strong>text to image</strong> is immense, and we have implemented robust safeguards to prevent misuse.
+                      </p>
+                      <p>
+                        Our models are trained with a focus on respecting copyright and avoiding the generation of harmful, hateful, or inappropriate content. 
+                        We believe that <strong>AI-generated content</strong> should enhance human creativity, not detract from it. Transparency is key; 
+                        every image created through our <strong>text to image</strong> system is a unique synthetic creation, and we provide clear usage rights to our users.
+                      </p>
+                      <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border border-green-200 dark:border-green-800 mt-4">
+                        <p className="text-sm text-green-700 dark:text-green-300 font-medium">
+                          By choosing imagetovideo-ai, you are opting for a platform that not only offers unparalleled <strong>AI image</strong> and 
+                          <strong>AI video</strong> capabilities but also champions a thoughtful and principled approach to artificial intelligence.
+                        </p>
+                      </div>
+                    </div>
+                    
+                    {/* 右侧图片 */}
+                    <div>
+                      <div className="relative overflow-hidden rounded-xl shadow-lg w-4/5 mx-auto">
+                        <img
+                          src="/imgs/showcases/text-to-image-ai-generator-showcase.webp"
+                          alt="Advanced text to image AI generator creating stunning visuals from prompts"
+                          className="w-full h-auto object-cover"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
 
-              {/* 未来创新 */}
+              {/* 未来创新 - 左图右文 */}
               <Card>
                 <CardHeader>
                   <CardTitle>Future Innovations and the Evolution of Text to Image Technology</CardTitle>
                 </CardHeader>
-                <CardContent className="prose prose-slate dark:prose-invert max-w-none">
-                  <p>
-                    The world of AI evolves at an exponential pace, and imagetovideo-ai is committed to staying at the forefront of this revolution. 
-                    Our research and development team is constantly exploring next-generation models to improve the fidelity, coherence, and speed 
-                    of our <strong>text to image</strong> outputs.
-                  </p>
-                  <div className="grid md:grid-cols-2 gap-6 mt-6">
-                    <div className="space-y-3">
-                      <h4 className="font-semibold text-primary">Enhanced Control Mechanisms</h4>
-                      <p className="text-sm text-muted-foreground">
-                        Future updates will focus on allowing users to manipulate specific elements within the generated <strong>AI image</strong> 
-                        without altering the entire composition.
-                      </p>
+                <CardContent>
+                  <div className="grid lg:grid-cols-2 gap-8 xl:gap-12 items-center">
+                    {/* 左侧图片 */}
+                    <div className="order-2 lg:order-1">
+                      <div className="relative overflow-hidden rounded-xl shadow-lg w-4/5 mx-auto">
+                        <img
+                          src="/imgs/showcases/next-generation-ai-art-creation-features.webp"
+                          alt="Next-generation AI art creation features and future innovation roadmap"
+                          className="w-full h-auto object-cover"
+                          loading="lazy"
+                        />
+                      </div>
                     </div>
-                    <div className="space-y-3">
-                      <h4 className="font-semibold text-primary">Deeper Integration</h4>
-                      <p className="text-sm text-muted-foreground">
-                        We are working on deeper integration between our <strong>text to image</strong> and <strong>AI video</strong> features, 
-                        promising even more sophisticated, high-quality animations and cinematic sequences.
+                    
+                    {/* 右侧文字 */}
+                    <div className="order-1 lg:order-2 prose prose-slate dark:prose-invert max-w-none">
+                      <p>
+                        The world of AI evolves at an exponential pace, and imagetovideo-ai is committed to staying at the forefront of this revolution. 
+                        Our research and development team is constantly exploring next-generation models to improve the fidelity, coherence, and speed 
+                        of our <strong>text to image</strong> outputs.
                       </p>
-                    </div>
-                    <div className="space-y-3">
-                      <h4 className="font-semibold text-primary">Specialized Models</h4>
-                      <p className="text-sm text-muted-foreground">
-                        Expect new style packs, model variations optimized for specific use cases (e.g., product photography, architectural rendering), 
-                        and even more intuitive prompting interfaces.
-                      </p>
-                    </div>
-                    <div className="space-y-3">
-                      <h4 className="font-semibold text-primary">Effortless Creation</h4>
-                      <p className="text-sm text-muted-foreground">
-                        Our goal is to make <strong>text to image</strong> generation feel less like a technical process and more like an effortless 
-                        extension of the human mind.
-                      </p>
+                      <div className="grid md:grid-cols-2 gap-6 mt-6">
+                        <div className="space-y-3">
+                          <h4 className="font-semibold text-primary">Enhanced Control Mechanisms</h4>
+                          <p className="text-sm text-muted-foreground">
+                            Future updates will focus on allowing users to manipulate specific elements within the generated <strong>AI image</strong> 
+                            without altering the entire composition.
+                          </p>
+                        </div>
+                        <div className="space-y-3">
+                          <h4 className="font-semibold text-primary">Deeper Integration</h4>
+                          <p className="text-sm text-muted-foreground">
+                            We are working on deeper integration between our <strong>text to image</strong> and <strong>AI video</strong> features, 
+                            promising even more sophisticated, high-quality animations and cinematic sequences.
+                          </p>
+                        </div>
+                        <div className="space-y-3">
+                          <h4 className="font-semibold text-primary">Specialized Models</h4>
+                          <p className="text-sm text-muted-foreground">
+                            Expect new style packs, model variations optimized for specific use cases (e.g., product photography, architectural rendering), 
+                            and even more intuitive prompting interfaces.
+                          </p>
+                        </div>
+                        <div className="space-y-3">
+                          <h4 className="font-semibold text-primary">Effortless Creation</h4>
+                          <p className="text-sm text-muted-foreground">
+                            Our goal is to make <strong>text to image</strong> generation feel less like a technical process and more like an effortless 
+                            extension of the human mind.
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </CardContent>

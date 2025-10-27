@@ -109,6 +109,20 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
           <p className="text-muted-foreground lg:text-lg">
             {pricing.description}
           </p>
+
+          {/* 展示案例图片 */}
+          {pricing.image && (
+            <div className="mt-8">
+              <div className="mx-auto max-w-4xl">
+                <img
+                  src={pricing.image.src}
+                  alt={pricing.image.alt || pricing.title}
+                  className="w-full h-auto rounded-xl shadow-lg"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          )}
         </div>
         <div className="w-full flex flex-col items-center gap-2">
           {pricing.groups && pricing.groups.length > 0 && (

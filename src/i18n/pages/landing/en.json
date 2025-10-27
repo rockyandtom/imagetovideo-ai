@@ -109,6 +109,10 @@
     "title": "Create Stunning Videos from Static Images with Advanced AI",
     "highlight_text": "Advanced AI",
     "description": "Transform your photos into captivating videos in seconds. Our cutting-edge AI technology brings your images to life with smooth animations and professional quality.",
+    "image": {
+      "src": "/imgs/showcases/ai-video-creation-hero-showcase.webp",
+      "alt": "AI-powered video creation from static images showcase"
+    },
     "buttons": [
       {
         "title": "Start Creating",
@@ -130,7 +134,8 @@
     "label": "How It Works",
     "description": "Our advanced AI technology analyzes your images and creates stunning video animations automatically. Experience the future of content creation with just a few clicks.",
     "image": {
-      "src": "/imgs/features/1.mp4"
+      "src": "/imgs/showcases/smart-scene-analysis-demo.webp",
+      "alt": "Smart AI scene analysis and motion generation demonstration"
     },
     "items": [
       {
@@ -161,7 +166,8 @@
         "description": "Create professional videos in under 60 seconds. Our optimized AI engine delivers results 10x faster than traditional video editing software.",
         "icon": "RiThunderboltLine",
         "image": {
-          "src": "/imgs/features/2.mp4"
+          "src": "/imgs/showcases/lightning-fast-video-processing.webp",
+          "alt": "Lightning-fast AI video processing in under 60 seconds"
         }
       },
       {
@@ -190,6 +196,10 @@
     "name": "feature",
     "title": "Everything You Need for Exceptional Video Content",
     "description": "Our platform is packed with powerful features designed to give you full creative control and produce outstanding results every time.",
+    "image": {
+      "src": "/imgs/showcases/comprehensive-video-features-overview.webp",
+      "alt": "Comprehensive AI video generation features and capabilities"
+    },
     "items": [
       {
         "title": "Rapid Video Synthesis",
@@ -229,6 +239,10 @@
     "title": "Trusted by Creators Worldwide",
     "description": "Join thousands of satisfied users creating amazing videos",
     "icon": "FaRegHeart",
+    "image": {
+      "src": "/imgs/showcases/trusted-worldwide-user-statistics.webp",
+      "alt": "Worldwide user statistics showing 10K+ videos created"
+    },
     "items": [
       {
         "title": "Videos Created",
@@ -253,6 +267,10 @@
     "title": "What Users Say About Image To Video AI",
     "description": "Hear from creators who are transforming their content with our AI technology.",
     "icon": "GoThumbsup",
+    "image": {
+      "src": "/imgs/showcases/user-success-stories-testimonials.webp",
+      "alt": "Real user success stories and testimonials for AI video creation"
+    },
     "items": [
       {
         "title": "Sarah Johnson",

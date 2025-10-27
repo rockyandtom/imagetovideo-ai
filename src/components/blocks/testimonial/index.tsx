@@ -43,6 +43,20 @@ export default function Testimonial({ section }: { section: SectionType }) {
         <p className="text-center text-muted-foreground lg:text-lg">
           {section.description}
         </p>
+
+        {/* 展示案例图片 */}
+        {section.image && (
+          <div className="mt-8">
+            <div className="mx-auto max-w-4xl">
+              <img
+                src={section.image.src}
+                alt={section.image.alt || section.title}
+                className="w-full h-auto rounded-xl shadow-lg"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        )}
       </div>
       <div className="lg:container">
         <div className="mt-16 space-y-4">

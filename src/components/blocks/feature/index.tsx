@@ -16,6 +16,20 @@ export default function Feature({ section }: { section: SectionType }) {
           <p className="mb-8 max-w-xl text-muted-foreground lg:max-w-none lg:text-lg">
             {section.description}
           </p>
+
+          {/* 展示案例图片 */}
+          {section.image && (
+            <div className="mb-12">
+              <div className="mx-auto max-w-4xl">
+                <img
+                  src={section.image.src}
+                  alt={section.image.alt || section.title}
+                  className="w-full h-auto rounded-xl shadow-lg"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          )}
         </div>
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
           {section.items?.map((item, i) => (

@@ -245,7 +245,8 @@ export default function TextToVideoClient() {
   };
 
   return (
-    <div className="container py-8">
+    <div className="min-h-screen bg-background">
+      <div className="px-16 sm:px-20 lg:px-24 xl:px-32 py-8">
       {/* Page Title */}
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -443,146 +444,224 @@ export default function TextToVideoClient() {
       </div>
 
       {/* 内容区域 - 基于JSON文件的内容 */}
-      <div className="mt-16 space-y-16">
+      <div className="px-16 sm:px-20 lg:px-24 xl:px-32 mt-16 space-y-16">
         {/* Main Title Section */}
-        <section className="text-center max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-6">
-            Unlock Creative Potential with AI Text to Video Technology
-          </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            Welcome to imagetovideo-ai, the pioneering platform dedicated to revolutionizing content creation through advanced <strong>AI text to video</strong> capabilities. In the modern digital landscape, video is king, and speed is paramount. Our tool is engineered to bridge the gap between imagination and execution, allowing creators, marketers, and businesses to convert mere words—scripts, blog posts, articles, or simple ideas—into high-quality, engaging video content within minutes.
-          </p>
-        </section>
+        <Card>
+          <CardHeader>
+            <CardTitle>Unlock Creative Potential with AI Text to Video Technology</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="grid lg:grid-cols-2 gap-8 xl:gap-12 items-center">
+              {/* 左侧文字 */}
+              <div className="order-2 lg:order-1 prose prose-slate dark:prose-invert max-w-none">
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Welcome to imagetovideo-ai, the pioneering platform dedicated to revolutionizing content creation through advanced <strong>AI text to video</strong> capabilities. In the modern digital landscape, video is king, and speed is paramount. Our tool is engineered to bridge the gap between imagination and execution, allowing creators, marketers, and businesses to convert mere words—scripts, blog posts, articles, or simple ideas—into high-quality, engaging video content within minutes.
+                </p>
+              </div>
+              {/* 右侧图片 */}
+              <div className="order-1 lg:order-2">
+                <div className="relative overflow-hidden rounded-xl shadow-lg w-4/5 mx-auto">
+                  <img
+                    src="/imgs/showcases/ai-text-to-video-creative-potential-showcase.webp"
+                    alt="AI text to video technology unlocking creative potential for content creators"
+                    className="w-full h-auto object-cover"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
 
         {/* Why Choose AI Text to Video */}
-        <section className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold mb-8 text-center">The Evolution of Content: Why Choose AI Text to Video?</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                The shift towards video consumption is undeniable, yet traditional video production remains a significant barrier for many. The <strong>AI text to video</strong> paradigm addresses this bottleneck head-on. Our technology analyzes your input text for context, sentiment, and key themes, then automatically sources, generates, and stitches together relevant visuals, animations, voiceovers, and background music.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                This process drastically reduces time-to-market for video content, making it possible to produce daily videos for social media, explainer content for products, or internal communication updates effortlessly. The precision of imagetovideo-ai's AI ensures that the resulting video is not only visually appealing but also contextually faithful to the original text.
-              </p>
+        <Card>
+          <CardHeader>
+            <CardTitle>The Evolution of Content: Why Choose AI Text to Video?</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="grid lg:grid-cols-2 gap-8 xl:gap-12 items-center">
+              {/* 左侧图片 */}
+              <div className="order-2 lg:order-1">
+                <div className="relative overflow-hidden rounded-xl shadow-lg w-4/5 mx-auto">
+                  <img
+                    src="/imgs/showcases/content-evolution-text-to-video-advantages.webp"
+                    alt="Content evolution showing advantages of AI text to video technology"
+                    className="w-full h-auto object-cover"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              {/* 右侧文字和卡片 */}
+              <div className="order-1 lg:order-2 space-y-6">
+                <div className="prose prose-slate dark:prose-invert max-w-none">
+                  <p className="text-muted-foreground leading-relaxed mb-6">
+                    The shift towards video consumption is undeniable, yet traditional video production remains a significant barrier for many. The <strong>AI text to video</strong> paradigm addresses this bottleneck head-on. Our technology analyzes your input text for context, sentiment, and key themes, then automatically sources, generates, and stitches together relevant visuals, animations, voiceovers, and background music.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    This process drastically reduces time-to-market for video content, making it possible to produce daily videos for social media, explainer content for products, or internal communication updates effortlessly. The precision of imagetovideo-ai's AI ensures that the resulting video is not only visually appealing but also contextually faithful to the original text.
+                  </p>
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <Card>
+                    <CardContent className="pt-6 text-center">
+                      <Icon name="RiTimeLine" className="h-8 w-8 mx-auto mb-2 text-blue-500" />
+                      <h3 className="font-semibold mb-1">Fast Production</h3>
+                      <p className="text-sm text-muted-foreground">Videos in minutes</p>
+                    </CardContent>
+                  </Card>
+                  <Card>
+                    <CardContent className="pt-6 text-center">
+                      <Icon name="RiAiGenerate" className="h-8 w-8 mx-auto mb-2 text-purple-500" />
+                      <h3 className="font-semibold mb-1">AI Powered</h3>
+                      <p className="text-sm text-muted-foreground">Smart content understanding</p>
+                    </CardContent>
+                  </Card>
+                  <Card>
+                    <CardContent className="pt-6 text-center">
+                      <Icon name="RiHdLine" className="h-8 w-8 mx-auto mb-2 text-green-500" />
+                      <h3 className="font-semibold mb-1">Professional Quality</h3>
+                      <p className="text-sm text-muted-foreground">HD video output</p>
+                    </CardContent>
+                  </Card>
+                  <Card>
+                    <CardContent className="pt-6 text-center">
+                      <Icon name="RiGlobalLine" className="h-8 w-8 mx-auto mb-2 text-orange-500" />
+                      <h3 className="font-semibold mb-1">Multilingual</h3>
+                      <p className="text-sm text-muted-foreground">Global support</p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              <Card>
-                <CardContent className="pt-6 text-center">
-                  <Icon name="RiTimeLine" className="h-8 w-8 mx-auto mb-2 text-blue-500" />
-                  <h3 className="font-semibold mb-1">Fast Production</h3>
-                  <p className="text-sm text-muted-foreground">Videos in minutes</p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="pt-6 text-center">
-                  <Icon name="RiAiGenerate" className="h-8 w-8 mx-auto mb-2 text-purple-500" />
-                  <h3 className="font-semibold mb-1">AI Powered</h3>
-                  <p className="text-sm text-muted-foreground">Smart content understanding</p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="pt-6 text-center">
-                  <Icon name="RiHdLine" className="h-8 w-8 mx-auto mb-2 text-green-500" />
-                  <h3 className="font-semibold mb-1">Professional Quality</h3>
-                  <p className="text-sm text-muted-foreground">HD video output</p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="pt-6 text-center">
-                  <Icon name="RiGlobalLine" className="h-8 w-8 mx-auto mb-2 text-orange-500" />
-                  <h3 className="font-semibold mb-1">Multilingual</h3>
-                  <p className="text-sm text-muted-foreground">Global support</p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
+          </CardContent>
+        </Card>
 
         {/* Key Features */}
-        <section className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold mb-8 text-center">Key Features of the imagetovideo-ai Text to Video Platform</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Icon name="RiBrainLine" className="h-6 w-6 text-blue-500" />
-                  Smart NLP Engine
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Advanced Natural Language Processing engine that deeply understands the semantics, emotions, and key themes of text content, ensuring video content highly matches text descriptions.
-                </p>
-              </CardContent>
-            </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>Key Features of the imagetovideo-ai Text to Video Platform</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="grid lg:grid-cols-2 gap-8 xl:gap-12 items-center">
+              {/* 左侧功能卡片 */}
+              <div className="order-2 lg:order-1 grid grid-cols-1 gap-6">
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2">
+                      <Icon name="RiBrainLine" className="h-6 w-6 text-blue-500" />
+                      Smart NLP Engine
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground">
+                      Advanced Natural Language Processing engine that deeply understands the semantics, emotions, and key themes of text content, ensuring video content highly matches text descriptions.
+                    </p>
+                  </CardContent>
+                </Card>
 
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Icon name="RiImageLine" className="h-6 w-6 text-purple-500" />
-                  Rich Media Library
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Vast library of high-resolution assets and AI-generated resources, including diverse visual elements, animation effects, and background music.
-                </p>
-              </CardContent>
-            </Card>
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2">
+                      <Icon name="RiImageLine" className="h-6 w-6 text-purple-500" />
+                      Rich Media Library
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground">
+                      Vast library of high-resolution assets and AI-generated resources, including diverse visual elements, animation effects, and background music.
+                    </p>
+                  </CardContent>
+                </Card>
 
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Icon name="RiVoiceprintLine" className="h-6 w-6 text-green-500" />
-                  Smart Voice Synthesis
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  State-of-the-art text-to-speech engine offering diverse, natural-sounding voiceover options, supporting multiple languages and tones.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2">
+                      <Icon name="RiVoiceprintLine" className="h-6 w-6 text-green-500" />
+                      Smart Voice Synthesis
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground">
+                      State-of-the-art text-to-speech engine offering diverse, natural-sounding voiceover options, supporting multiple languages and tones.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+              {/* 右侧图片 */}
+              <div className="order-1 lg:order-2">
+                <div className="relative overflow-hidden rounded-xl shadow-lg w-4/5 mx-auto">
+                  <img
+                    src="/imgs/showcases/text-to-video-platform-key-features-overview.webp"
+                    alt="Key features overview of imagetovideo-ai text to video platform"
+                    className="w-full h-auto object-cover"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
 
         {/* Workflow */}
-        <section className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold mb-8 text-center">How imagetovideo-ai Simplifies the Text to Video Workflow</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-blue-600">1</span>
+        <Card>
+          <CardHeader>
+            <CardTitle>How imagetovideo-ai Simplifies the Text to Video Workflow</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="grid lg:grid-cols-2 gap-8 xl:gap-12 items-center">
+              {/* 左侧图片 */}
+              <div className="order-2 lg:order-1">
+                <div className="relative overflow-hidden rounded-xl shadow-lg w-4/5 mx-auto">
+                  <img
+                    src="/imgs/showcases/simplified-text-to-video-workflow-process.webp"
+                    alt="Simplified text to video workflow process from input to output"
+                    className="w-full h-auto object-cover"
+                    loading="lazy"
+                  />
+                </div>
               </div>
-              <h3 className="text-xl font-semibold mb-3">Input Your Text</h3>
-              <p className="text-muted-foreground">
-                Paste your script, article, or bullet points into our editor. Our AI immediately analyzes the content's semantics and emotions.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-purple-600">2</span>
+              {/* 右侧工作流程步骤 */}
+              <div className="order-1 lg:order-2 space-y-8">
+                <div className="flex items-start gap-4">
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-2xl font-bold text-blue-600">1</span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-3">Input Your Text</h3>
+                    <p className="text-muted-foreground">
+                      Paste your script, article, or bullet points into our editor. Our AI immediately analyzes the content's semantics and emotions.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-2xl font-bold text-purple-600">2</span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-3">Customize and Preview</h3>
+                    <p className="text-muted-foreground">
+                      The system automatically generates a draft video, segmenting your text into scenes. You can easily adjust visuals, choose voiceover, and select background music.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-2xl font-bold text-green-600">3</span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-3">Generate and Download</h3>
+                    <p className="text-muted-foreground">
+                      With one click, the final high-definition video is rendered and ready for download or direct sharing to major platforms.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold mb-3">Customize and Preview</h3>
-              <p className="text-muted-foreground">
-                The system automatically generates a draft video, segmenting your text into scenes. You can easily adjust visuals, choose voiceover, and select background music.
-              </p>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-green-600">3</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Generate and Download</h3>
-              <p className="text-muted-foreground">
-                With one click, the final high-definition video is rendered and ready for download or direct sharing to major platforms.
-              </p>
-            </div>
-          </div>
-        </section>
+          </CardContent>
+        </Card>
 
         {/* FAQ Section */}
-        <section className="max-w-4xl mx-auto">
+        <section>
           <h2 className="text-2xl font-bold text-center mb-12">Frequently Asked Questions on AI Text to Video Generation</h2>
           <div className="space-y-6">
             <Card>
@@ -674,6 +753,7 @@ export default function TextToVideoClient() {
             </Card>
           </div>
         </section>
+      </div>
       </div>
     </div>
   );

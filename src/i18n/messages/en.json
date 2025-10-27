@@ -85,6 +85,15 @@
     "description": "News, resources, and updates about ImageToVideoAI",
     "read_more_text": "Read More"
   },
+  "showcase_images": {
+    "hero_alt": "AI-powered video creation from static images showcase",
+    "introduce_alt": "Smart AI scene analysis and motion generation demonstration",
+    "benefit_alt": "Lightning-fast AI video processing in under 60 seconds",
+    "feature_alt": "Comprehensive AI video generation features and capabilities",
+    "stats_alt": "Worldwide user statistics showing 10K+ videos created",
+    "testimonial_alt": "Real user success stories and testimonials for AI video creation",
+    "pricing_alt": "Flexible AI video generation pricing plans and features comparison"
+  },
   "my_invites": {
     "title": "My Invites",
     "description": "View your invite records",
