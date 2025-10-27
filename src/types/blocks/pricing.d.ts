@@ -1,4 +1,4 @@
-import { Button } from "@/types/blocks/base/button";
+import { Button, Image } from "@/types/blocks/base";
 
 export interface PricingGroup {
   name?: string;
@@ -38,4 +38,5 @@ export interface Pricing {
   description?: string;
   items?: PricingItem[];
   groups?: PricingGroup[];
+  image?: Image;
 }
