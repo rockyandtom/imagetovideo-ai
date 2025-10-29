@@ -23,9 +23,10 @@ export async function POST(request: NextRequest) {
         // 创建新的FormData发送给RunningHub
         const runningHubFormData = new FormData()
         runningHubFormData.append('file', file)
+        runningHubFormData.append('apiKey', RUNNINGHUB_CONFIG.apiKey) // API Key 需要通过 FormData 传递
 
         // 上传到RunningHub
-        const uploadUrl = `${RUNNINGHUB_CONFIG.baseUrl}/task/openapi/upload?apiKey=${RUNNINGHUB_CONFIG.apiKey}`
+        const uploadUrl = `${RUNNINGHUB_CONFIG.baseUrl}/task/openapi/upload`
 
         const response = await fetch(uploadUrl, {
             method: 'POST',

@@ -20,7 +20,7 @@
       "skipDelayDuration": 300,
       "items": [
         {
-          "title": "Text to Image",
+          "title": "文字生图",
           "url": "/text-to-image",
           "icon": "RiImageAddLine",
           "trigger": "hover",
@@ -29,7 +29,7 @@
           "sideOffset": 4
         },
         {
-          "title": "Text to Video",
+          "title": "文字生视频",
           "url": "/text-to-video",
           "icon": "RiVideoLine",
           "trigger": "hover",
@@ -38,7 +38,7 @@
           "sideOffset": 4
         },
         {
-          "title": "Image to Video",
+          "title": "图片转视频",
           "url": "/Image-to-Video",
           "icon": "RiVideoAddLine",
           "trigger": "hover",
@@ -47,7 +47,7 @@
           "sideOffset": 4
         },
         {
-          "title": "Image Editor",
+          "title": "图片编辑器",
           "url": "/image-editor",
           "icon": "RiEditLine",
           "trigger": "hover",
@@ -56,24 +56,24 @@
           "sideOffset": 4,
           "children": [
             {
-              "title": "Qwen Image Edit",
+              "title": "Qwen图片编辑",
               "url": "/image-editor/qwen-image-edit",
-              "description": "Transform your imagination with AI-powered image editing"
+              "description": "使用AI驱动的图片编辑技术释放您的想象力"
             },
             {
-              "title": "AI Image Enhancer",
+              "title": "AI图片增强",
               "url": "/image-editor/AI-Image-Enhancer",
-              "description": "Elevate your images to stunning quality with cutting-edge AI technology"
+              "description": "使用尖端AI技术将您的图片提升到惊人的质量"
             },
             {
-              "title": "AI Image Upscaler",
+              "title": "AI图片放大",
               "url": "/image-editor/image-upscaler",
-              "description": "Enhance your images with powerful AI upscaling technology"
+              "description": "使用强大的AI放大技术增强您的图片"
             }
           ]
         },
         {
-          "title": "Photo Effects",
+          "title": "照片特效",
           "url": "/photo-effects",
           "icon": "RiMagicLine",
           "trigger": "hover",
@@ -82,8 +82,8 @@
           "sideOffset": 4,
           "children": [
             {
-              "title": "Ghibli AI Generator",
-              "description": "Transform images into Studio Ghibli style art",
+              "title": "吉卜力AI生成器",
+              "description": "将图片转换为吉卜力工作室风格的艺术作品",
               "url": "/photo-effects/ghibli-ai-generator",
               "icon": "RiMagicLine",
               "target": "_self"
@@ -91,7 +91,16 @@
           ]
         },
         {
-          "title": "Support",
+          "title": "支持",
+          "url": "/#faq",
+          "icon": "RiQuestionLine",
+          "trigger": "hover",
+          "highlightOnHover": true,
+          "align": "center",
+          "sideOffset": 4
+        },
+        {
+          "title": "支持",
           "url": "/#faq",
           "icon": "RiQuestionLine",
           "trigger": "hover",
@@ -391,67 +400,67 @@
     "nav": {
       "items": [
         {
-          "title": "Text to Image",
+          "title": "文字生图",
           "url": "/text-to-image",
           "children": []
         },
         {
-          "title": "Text to Video", 
+          "title": "文字生视频", 
           "url": "/text-to-video",
           "children": []
         },
         {
-          "title": "Image to Video",
+          "title": "图片转视频",
           "url": "/Image-to-Video", 
           "children": []
         },
         {
-          "title": "Image Editor",
+          "title": "图片编辑器",
           "url": "/image-editor",
           "children": [
             {
-              "title": "Qwen Image Edit",
+              "title": "Qwen图片编辑",
               "url": "/image-editor/qwen-image-edit",
               "target": "_self"
             },
             {
-              "title": "AI Image Enhancer",
+              "title": "AI图片增强",
               "url": "/image-editor/AI-Image-Enhancer",
               "target": "_self"
             },
             {
-              "title": "AI Image Upscaler",
+              "title": "AI图片放大",
               "url": "/image-editor/image-upscaler",
               "target": "_self"
             }
           ]
         },
         {
-          "title": "Photo Effects",
+          "title": "照片特效",
           "url": "/photo-effects",
           "children": [
             {
-              "title": "Ghibli AI Generator",
+              "title": "吉卜力AI生成器",
               "url": "/photo-effects/ghibli-ai-generator",
               "target": "_self"
             }
           ]
         },
         {
-          "title": "Support",
+          "title": "支持",
           "children": [
             {
-              "title": "Privacy Policy",
+              "title": "隐私政策",
               "url": "/privacy-policy",
               "target": "_self"
             },
             {
-              "title": "Terms of Service",
+              "title": "服务条款",
               "url": "/terms-of-service",
               "target": "_self"
             },
             {
-              "title": "Refund Policy",
+              "title": "退款政策",
               "url": "/refund-policy",
               "target": "_self"
             }
