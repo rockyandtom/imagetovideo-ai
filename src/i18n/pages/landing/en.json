@@ -91,6 +91,22 @@
           ]
         },
         {
+          "title": "Video Effects",
+          "url": "/video-effects",
+          "icon": "RiSparklingLine",
+          "trigger": "hover",
+          "highlightOnHover": true,
+          "align": "center",
+          "sideOffset": 4,
+          "children": [
+            {
+              "title": "Hold Up Dance",
+              "url": "/video-effects/hold-up-dance",
+              "description": "Transform images into dynamic Hold Up Dance videos with AI"
+            }
+          ]
+        },
+        {
           "title": "Support",
           "url": "/#faq",
           "icon": "RiQuestionLine",
@@ -433,6 +449,17 @@
             {
               "title": "Ghibli AI Generator",
               "url": "/photo-effects/ghibli-ai-generator",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "Video Effects",
+          "url": "/video-effects",
+          "children": [
+            {
+              "title": "Hold Up Dance",
+              "url": "/video-effects/hold-up-dance",
               "target": "_self"
             }
           ]

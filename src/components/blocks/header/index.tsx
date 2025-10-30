@@ -51,8 +51,8 @@ export default function Header({ header = {} }: { header?: HeaderType }) {
   return (
     <section className="py-3 bg-white/90 backdrop-blur-sm border-b border-slate-100/60">
       <div className="container">
-        <nav className="hidden justify-between lg:flex items-center">
-          <div className="flex items-center gap-6">
+        <nav className="hidden lg:flex items-center w-full">
+          <div className="flex items-center gap-2 mr-8">
             <Link
               href={(header.brand?.url as any) || "/"}
               className="flex items-center gap-2"
@@ -65,11 +65,13 @@ export default function Header({ header = {} }: { header?: HeaderType }) {
                 />
               )}
               {header.brand?.title && (
-                <span className="text-2xl gradient-text font-bold">
+                <span className="text-2xl gradient-text font-bold whitespace-nowrap">
                   {header.brand?.title || ""}
                 </span>
               )}
             </Link>
+          </div>
+          <div className="flex items-center flex-1 justify-start">
             <div className="flex items-center">
               <NavigationMenu>
                 <NavigationMenuList>
@@ -150,7 +152,7 @@ export default function Header({ header = {} }: { header?: HeaderType }) {
                           {item.icon && (
                             <Icon
                               name={item.icon}
-                              className="size-4 shrink-0 mr-0"
+                              className="size-4 shrink-0 mr-2"
                             />
                           )}
                           {item.title}
@@ -162,7 +164,7 @@ export default function Header({ header = {} }: { header?: HeaderType }) {
               </NavigationMenu>
             </div>
           </div>
-          <div className="shrink-0 flex gap-2 items-center">
+          <div className="flex gap-2 items-center ml-auto">
             {header.show_locale && <LocaleToggle />}
             {header.buttons?.map((item, i) => {
               return (
@@ -198,7 +200,7 @@ export default function Header({ header = {} }: { header?: HeaderType }) {
                 />
               )}
               {header.brand?.title && (
-                <span className="text-xl gradient-text font-bold">
+                <span className="text-xl gradient-text font-bold whitespace-nowrap">
                   {header.brand?.title || ""}
                 </span>
               )}
@@ -224,7 +226,7 @@ export default function Header({ header = {} }: { header?: HeaderType }) {
                         />
                       )}
                       {header.brand?.title && (
-                        <span className="text-xl gradient-text font-bold">
+                        <span className="text-xl gradient-text font-bold whitespace-nowrap">
                           {header.brand?.title || ""}
                         </span>
                       )}
@@ -284,7 +286,7 @@ export default function Header({ header = {} }: { header?: HeaderType }) {
                           {item.icon && (
                             <Icon
                               name={item.icon}
-                              className="size-4 shrink-0"
+                              className="size-4 shrink-0 mr-2"
                             />
                           )}
                           {item.title}

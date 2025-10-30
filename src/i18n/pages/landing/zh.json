@@ -91,9 +91,9 @@
           ]
         },
         {
-          "title": "支持",
-          "url": "/#faq",
-          "icon": "RiQuestionLine",
+          "title": "视频特效",
+          "url": "/video-effects",
+          "icon": "RiSparklingLine",
           "trigger": "hover",
           "highlightOnHover": true,
           "align": "center",
@@ -109,19 +109,19 @@
           "sideOffset": 4,
           "children": [
             {
-              "title": "Privacy Policy",
+              "title": "隐私政策",
               "url": "/privacy-policy",
-              "description": "How we protect your data and privacy"
+              "description": "我们如何保护您的数据和隐私"
             },
             {
-              "title": "Terms of Service",
+              "title": "服务条款",
               "url": "/terms-of-service",
-              "description": "Terms and conditions of service"
+              "description": "服务条款和条件"
             },
             {
-              "title": "Refund Policy",
+              "title": "退款政策",
               "url": "/refund-policy",
-              "description": "Our refund and cancellation policy"
+              "description": "我们的退款和取消政策"
             }
           ]
         }
@@ -442,6 +442,17 @@
             {
               "title": "吉卜力AI生成器",
               "url": "/photo-effects/ghibli-ai-generator",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "视频特效",
+          "url": "/video-effects",
+          "children": [
+            {
+              "title": "Hold Up Dance",
+              "url": "/video-effects/hold-up-dance",
               "target": "_self"
             }
           ]
