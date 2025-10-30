@@ -10,21 +10,33 @@ export default function Footer({ footer }: { footer: FooterType }) {
     <section id={footer.name} className="py-16">
       <div className="container pl-2 lg:pl-4">
         <footer>
-          {/* 所有主标题强制在同一排横向排列，不换行 */}
-          <div className="flex justify-start gap-4 lg:gap-6 xl:gap-8">
-            {/* 品牌标题作为第一个主标题 */}
-            {footer.brand && footer.brand.title && (
-              <div className="text-left flex-shrink-0 min-w-fit max-w-xs">
-                <p className="font-bold text-lg mb-3 text-gray-900 whitespace-nowrap">
+          {/* Logo 和品牌信息放在顶部 */}
+          {footer.brand && (
+            <div className="mb-8 text-left">
+              {footer.brand.logo && (
+                <div className="mb-3">
+                  <img 
+                    src={footer.brand.logo.src} 
+                    alt={footer.brand.logo.alt || footer.brand.title} 
+                    className="h-8 w-auto"
+                  />
+                </div>
+              )}
+              {footer.brand.title && (
+                <p className="font-bold text-lg mb-2 text-gray-900">
                   {footer.brand.title}
                 </p>
-                {footer.brand.description && (
-                  <p className="text-sm text-gray-600 max-w-xs">
-                    {footer.brand.description}
-                  </p>
-                )}
-              </div>
-            )}
+              )}
+              {footer.brand.description && (
+                <p className="text-sm text-gray-600 max-w-md">
+                  {footer.brand.description}
+                </p>
+              )}
+            </div>
+          )}
+          
+          {/* 导航链接在下方横向排列 */}
+          <div className="flex justify-start gap-6 lg:gap-8 xl:gap-12">
 
             {/* 所有导航链接主标题 */}
             {footer.nav?.items?.map((item, i) => (
