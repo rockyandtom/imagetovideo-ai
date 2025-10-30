@@ -8,13 +8,13 @@ export default function Footer({ footer }: { footer: FooterType }) {
 
   return (
     <section id={footer.name} className="py-16">
-      <div className="max-w-7xl mx-auto px-8">
+      <div className="container">
         <footer>
-          {/* 所有主标题强制在同一排横向排列，不换行 */}
-          <div className="flex justify-start gap-4 lg:gap-8">
+          {/* 所有主标题横向排列，小屏幕时可换行 */}
+          <div className="flex flex-wrap justify-start gap-4 lg:gap-8 xl:gap-12">
             {/* 品牌标题作为第一个主标题 */}
             {footer.brand && footer.brand.title && (
-              <div className="text-left flex-shrink-0 min-w-0">
+              <div className="text-left flex-shrink-0 min-w-fit max-w-xs">
                 <p className="font-bold text-lg mb-3 text-gray-900 whitespace-nowrap">
                   {footer.brand.title}
                 </p>
@@ -28,7 +28,7 @@ export default function Footer({ footer }: { footer: FooterType }) {
 
             {/* 所有导航链接主标题 */}
             {footer.nav?.items?.map((item, i) => (
-              <div key={i} className="text-left flex-shrink-0 min-w-0">
+              <div key={i} className="text-left flex-shrink-0 min-w-fit">
                 {/* 主标题 */}
                 {item.title === "Support" || !item.url ? (
                   <p className="font-bold text-lg mb-3 text-gray-900 whitespace-nowrap">{item.title}</p>
