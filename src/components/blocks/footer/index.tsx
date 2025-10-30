@@ -8,10 +8,10 @@ export default function Footer({ footer }: { footer: FooterType }) {
 
   return (
     <section id={footer.name} className="py-16">
-      <div className="container">
+      <div className="container pl-2 lg:pl-4">
         <footer>
-          {/* 所有主标题横向排列，小屏幕时可换行 */}
-          <div className="flex flex-wrap justify-start gap-4 lg:gap-8 xl:gap-12">
+          {/* 所有主标题强制在同一排横向排列，不换行 */}
+          <div className="flex justify-start gap-4 lg:gap-6 xl:gap-8">
             {/* 品牌标题作为第一个主标题 */}
             {footer.brand && footer.brand.title && (
               <div className="text-left flex-shrink-0 min-w-fit max-w-xs">

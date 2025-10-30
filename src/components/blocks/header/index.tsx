@@ -50,7 +50,7 @@ export default function Header({ header = {} }: { header?: HeaderType }) {
 
   return (
     <section className="py-3 bg-white/90 backdrop-blur-sm border-b border-slate-100/60">
-      <div className="container">
+      <div className="container pl-2 lg:pl-4">
         <nav className="hidden lg:flex items-center w-full">
           <div className="flex items-center gap-2 mr-8">
             <Link
