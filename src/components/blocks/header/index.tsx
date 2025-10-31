@@ -113,21 +113,19 @@ export default function Header({ header = {} }: { header?: HeaderType }) {
                               <DropdownMenuItem key={ii} asChild>
                                 <Link
                                   className={cn(
-                                    "flex select-none gap-4 rounded-md p-3 leading-none no-underline outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                                    "flex flex-col select-none gap-1 rounded-md p-3 leading-none no-underline outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                                   )}
                                   href={iitem.url as any}
                                   target={iitem.target}
                                 >
-                                  <div>
-                                    <div className="text-sm font-semibold text-slate-700">
-                                      {iitem.title}
-                                    </div>
-                                    {iitem.description && (
-                                      <p className="text-sm leading-snug text-slate-500">
-                                        {iitem.description}
-                                      </p>
-                                    )}
-                                  </div>
+                                  <span className="text-sm font-semibold text-slate-700">
+                                    {iitem.title}
+                                  </span>
+                                  {iitem.description && (
+                                    <span className="text-sm leading-snug text-slate-500">
+                                      {iitem.description}
+                                    </span>
+                                  )}
                                 </Link>
                               </DropdownMenuItem>
                             ))}
