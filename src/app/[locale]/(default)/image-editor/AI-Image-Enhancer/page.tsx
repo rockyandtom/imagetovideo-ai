@@ -10,22 +10,22 @@ export async function generateMetadata({
   const { locale } = await params;
 
   return {
-    title: "Ultimate AI Image Enhancer & Video Creation | imagetovideo-ai",
-    description: "Imagetovideo-ai offers a cutting-edge AI Image Enhancer. Elevate your images to stunning quality and seamlessly transform them into dynamic videos. Your creative journey starts here!",
-    keywords: "AI Image Enhancer, image enhancement, photo enhancement, AI upscaling, image quality improvement, super resolution, denoising, color correction",
+    title: "Free AI Image Enhancer - Professional Photo Enhancement Tool | imagetovideo-ai",
+    description: "Transform your photos with our advanced free AI image enhancer! Professional photo enhancement, AI upscaling, super resolution, noise reduction, and color correction. No registration required, instant results in minutes.",
+    keywords: "free AI image enhancer, photo enhancement, AI upscaling, super resolution, image quality improvement, noise reduction, color correction, photo enhancer, AI photo editor, image enhancement tool, imagetovideo-ai",
     alternates: {
       canonical: `/${locale}/image-editor/AI-Image-Enhancer`,
     },
     openGraph: {
-      title: "Ultimate AI Image Enhancer & Video Creation",
-      description: "Imagetovideo-ai offers a cutting-edge AI Image Enhancer. Elevate your images to stunning quality and seamlessly transform them into dynamic videos.",
+      title: "Free AI Image Enhancer - Professional Photo Enhancement Tool | imagetovideo-ai",
+      description: "Transform your photos with our advanced free AI image enhancer! Professional photo enhancement, AI upscaling, super resolution, and noise reduction. No registration required.",
       type: "website",
       locale: locale,
     },
     twitter: {
       card: "summary_large_image",
-      title: "Ultimate AI Image Enhancer & Video Creation",
-      description: "Elevate your images to stunning quality with our cutting-edge AI Image Enhancer technology.",
+      title: "Free AI Image Enhancer - imagetovideo-ai",
+      description: "Advanced AI photo enhancement with super resolution, noise reduction, and color correction. Professional results in minutes, completely free.",
     },
     robots: {
       index: true,

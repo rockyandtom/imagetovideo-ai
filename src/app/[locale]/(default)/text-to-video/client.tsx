@@ -245,15 +245,50 @@ export default function TextToVideoClient() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      <div className="px-16 sm:px-20 lg:px-24 xl:px-32 py-8">
+    <>
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "AI Text to Video Generator",
+            "description": "Advanced AI-powered text to video generator that transforms descriptive text prompts into stunning AI-generated videos",
+            "url": "https://www.imagetovideo-ai.net/text-to-video",
+            "applicationCategory": "MultimediaApplication",
+            "operatingSystem": "Web Browser",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "featureList": [
+              "AI-powered text to video conversion",
+              "Multiple aspect ratio options (1:1, 3:4, 4:3, 9:16, 16:9)",
+              "High-quality video generation",
+              "Professional AI video creation",
+              "Free to use",
+              "No registration required"
+            ],
+            "creator": {
+              "@type": "Organization",
+              "name": "ImageToVideoAI"
+            }
+          })
+        }}
+      />
+      
+      <div className="min-h-screen bg-background">
+        <div className="px-16 sm:px-20 lg:px-24 xl:px-32 py-8">
       {/* Page Title */}
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-          AI Text to Video Generator
+          Free AI Text to Video Generator - Best AI Video Creator
         </h1>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-          Enter your text description and AI will generate stunning video content for you
+          Transform your <strong>text descriptions</strong> into stunning <strong>AI-generated videos</strong> instantly! 
+          No registration required, supports multiple aspect ratios, and creates professional videos in minutes.
         </p>
       </div>
 
@@ -753,8 +788,260 @@ export default function TextToVideoClient() {
             </Card>
           </div>
         </section>
+
+        {/* SEO Content Area */}
+        <div className="space-y-8 mt-16">
+          {/* What is AI Text to Video Technology */}
+          <section>
+            <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
+              What is AI Text to Video Technology? Understanding imagetovideo-ai's Innovation
+            </h2>
+            
+            <Card>
+              <CardHeader>
+                <CardTitle>Revolutionary AI Video Generation Technology</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid lg:grid-cols-2 gap-8 xl:gap-12 items-center">
+                  <div className="prose prose-slate dark:prose-invert max-w-none">
+                    <p>
+                      <strong>AI text to video</strong> represents the cutting edge of artificial intelligence, where sophisticated 
+                      machine learning models transform written descriptions into dynamic, high-quality video content. 
+                      imagetovideo-ai leverages advanced diffusion models and temporal coherence algorithms to create 
+                      videos that perfectly match your textual input.
+                    </p>
+                    <p>
+                      Our <strong>text to video generator</strong> doesn't simply animate static images—it understands 
+                      context, motion, lighting, and narrative flow to produce cinematic-quality videos that bring 
+                      your words to life with unprecedented accuracy and visual appeal.
+                    </p>
+                  </div>
+                  <div>
+                    <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 p-6 rounded-lg">
+                      <h3 className="font-semibold text-lg mb-4">Key Features:</h3>
+                      <ul className="space-y-2 text-sm">
+                        <li>✅ <strong>5 Aspect Ratios</strong> (1:1, 3:4, 4:3, 9:16, 16:9)</li>
+                        <li>✅ <strong>Professional Quality</strong> HD video output</li>
+                        <li>✅ <strong>Fast Generation</strong> in 3-8 minutes</li>
+                        <li>✅ <strong>No Watermarks</strong> on generated videos</li>
+                        <li>✅ <strong>Commercial License</strong> included</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </section>
+
+          {/* AI Video Generator Comparison */}
+          <section>
+            <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
+              imagetovideo-ai vs Other AI Video Generators: Why We Lead the Market
+            </h2>
+            
+            <Card>
+              <CardHeader>
+                <CardTitle>Comprehensive AI Video Generator Comparison</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="space-y-4">
+                    <div className="text-center">
+                      <h3 className="font-semibold text-lg text-primary mb-2">imagetovideo-ai</h3>
+                      <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border border-green-200 dark:border-green-800">
+                        <ul className="text-sm space-y-2 text-left">
+                          <li>✅ <strong>Completely Free</strong> text to video</li>
+                          <li>✅ <strong>No Registration</strong> required</li>
+                          <li>✅ <strong>5 Aspect Ratios</strong> supported</li>
+                          <li>✅ <strong>HD Quality</strong> video output</li>
+                          <li>✅ <strong>Commercial License</strong> included</li>
+                          <li>✅ <strong>No Watermarks</strong></li>
+                          <li>✅ <strong>3-8 Minutes</strong> generation time</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    <div className="text-center">
+                      <h3 className="font-semibold text-lg text-muted-foreground mb-2">Runway ML</h3>
+                      <div className="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg border border-red-200 dark:border-red-800">
+                        <ul className="text-sm space-y-2 text-left">
+                          <li>❌ <strong>$12-76/month</strong> subscription</li>
+                          <li>❌ Registration required</li>
+                          <li>⚠️ Limited aspect ratios</li>
+                          <li>⚠️ Watermarked videos (free)</li>
+                          <li>⚠️ Limited commercial rights</li>
+                          <li>❌ Usage credits system</li>
+                          <li>⚠️ Queue waiting times</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    <div className="text-center">
+                      <h3 className="font-semibold text-lg text-muted-foreground mb-2">Pika Labs</h3>
+                      <div className="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg border border-red-200 dark:border-red-800">
+                        <ul className="text-sm space-y-2 text-left">
+                          <li>❌ <strong>$10-70/month</strong> subscription</li>
+                          <li>❌ Discord-based interface</li>
+                          <li>⚠️ Fixed 16:9 aspect ratio</li>
+                          <li>⚠️ 3-second video limit (free)</li>
+                          <li>⚠️ Community-based generation</li>
+                          <li>❌ No direct download</li>
+                          <li>⚠️ Inconsistent quality</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="mt-8 bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
+                  <h3 className="font-semibold text-blue-700 dark:text-blue-300 mb-3">
+                    Why imagetovideo-ai is the Best Free AI Video Generator?
+                  </h3>
+                  <p className="text-sm text-blue-600 dark:text-blue-400">
+                    As the only platform offering <strong>completely free text to video generation</strong> with 
+                    <strong>professional HD quality</strong> and <strong>no watermarks</strong>, imagetovideo-ai 
+                    democratizes AI video creation. Our advanced algorithms ensure consistent, high-quality results 
+                    that rival expensive commercial platforms, making professional video creation accessible to everyone.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </section>
+
+          {/* AI Video Generation Use Cases */}
+          <section>
+            <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
+              AI Text to Video Use Cases: Transform Your Content Strategy
+            </h2>
+            
+            <Card>
+              <CardHeader>
+                <CardTitle>Professional Applications for AI Video Generation</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div className="space-y-6">
+                    <div className="border-l-4 border-primary pl-4">
+                      <h4 className="font-semibold text-primary mb-2">Social Media Marketing</h4>
+                      <p className="text-sm text-muted-foreground">
+                        Create engaging <strong>AI-generated videos</strong> for Instagram, TikTok, and YouTube. 
+                        Transform product descriptions into compelling video ads that drive engagement and conversions.
+                      </p>
+                    </div>
+                    
+                    <div className="border-l-4 border-primary pl-4">
+                      <h4 className="font-semibold text-primary mb-2">Educational Content</h4>
+                      <p className="text-sm text-muted-foreground">
+                        Convert lesson plans and educational materials into dynamic video content. 
+                        Make complex concepts visual and engaging for better student comprehension.
+                      </p>
+                    </div>
+                    
+                    <div className="border-l-4 border-primary pl-4">
+                      <h4 className="font-semibold text-primary mb-2">Content Creation</h4>
+                      <p className="text-sm text-muted-foreground">
+                        Transform blog posts, articles, and stories into captivating video content. 
+                        Expand your content reach across multiple platforms and formats.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-6">
+                    <div className="border-l-4 border-primary pl-4">
+                      <h4 className="font-semibold text-primary mb-2">Business Presentations</h4>
+                      <p className="text-sm text-muted-foreground">
+                        Create professional presentation videos from meeting notes and business concepts. 
+                        Enhance corporate communication with visually appealing video content.
+                      </p>
+                    </div>
+                    
+                    <div className="border-l-4 border-primary pl-4">
+                      <h4 className="font-semibold text-primary mb-2">Creative Projects</h4>
+                      <p className="text-sm text-muted-foreground">
+                        Bring creative writing, poetry, and artistic concepts to life through 
+                        <strong>AI video generation</strong>. Perfect for artists, writers, and creative professionals.
+                      </p>
+                    </div>
+                    
+                    <div className="border-l-4 border-primary pl-4">
+                      <h4 className="font-semibold text-primary mb-2">Product Demonstrations</h4>
+                      <p className="text-sm text-muted-foreground">
+                        Generate product demo videos from feature descriptions. 
+                        Create compelling visual narratives that showcase your products effectively.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </section>
+
+          {/* FAQ Section */}
+          <section>
+            <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
+              Frequently Asked Questions: Everything About AI Text to Video Generation
+            </h2>
+            
+            <Card>
+              <CardHeader>
+                <CardTitle>Common Questions About AI Video Generation</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div className="space-y-6">
+                  <div className="border-b border-border pb-4">
+                    <h4 className="font-semibold mb-2">How does AI text to video generation work?</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Our <strong>AI text to video generator</strong> uses advanced machine learning models to analyze your text description, 
+                      understand the context, visual elements, and motion requirements, then generates a corresponding video 
+                      that matches your description with high accuracy and visual quality.
+                    </p>
+                  </div>
+                  
+                  <div className="border-b border-border pb-4">
+                    <h4 className="font-semibold mb-2">Is imagetovideo-ai really free to use?</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Yes! imagetovideo-ai offers completely <strong>free AI video generation</strong> with no hidden costs, 
+                      no watermarks, and no registration requirements. You can create professional-quality videos 
+                      instantly without any payment or subscription.
+                    </p>
+                  </div>
+                  
+                  <div className="border-b border-border pb-4">
+                    <h4 className="font-semibold mb-2">What video formats and quality does the AI generator support?</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Our <strong>text to video generator</strong> produces high-definition MP4 videos in multiple aspect ratios 
+                      (1:1, 3:4, 4:3, 9:16, 16:9) suitable for all social media platforms, presentations, and professional use.
+                    </p>
+                  </div>
+                  
+                  <div className="border-b border-border pb-4">
+                    <h4 className="font-semibold mb-2">How long does it take to generate a video from text?</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Video generation typically takes 3-8 minutes depending on complexity and current server load. 
+                      Our optimized infrastructure ensures fast processing while maintaining high video quality.
+                    </p>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-semibold mb-2">Can I use the generated videos for commercial purposes?</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Absolutely! All videos generated through imagetovideo-ai come with full commercial usage rights. 
+                      You can use them for marketing, advertising, social media, presentations, and any business purposes 
+                      without additional licensing fees.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </section>
+        </div>
       </div>
       </div>
     </div>
+    </>
   );
 }

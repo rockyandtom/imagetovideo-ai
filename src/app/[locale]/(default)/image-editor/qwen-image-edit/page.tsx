@@ -10,22 +10,22 @@ export async function generateMetadata({
   const { locale } = await params;
 
   return {
-    title: "Qwen Image Edit: Transform Photos to Videos with AI | ImageToVideo-AI",
-    description: "Elevate your visuals with Qwen Image Edit from ImageToVideo-AI. Our powerful AI tools let you edit images and convert them into stunning videos, all for free.",
-    keywords: "Qwen Image Edit, AI image editing, photo editor, image enhancement, ai生图, ComfyUI, GGUF, free image editor",
+    title: "Free AI Image Editor - Qwen Image Edit Tool | imagetovideo-ai",
+    description: "Transform your images with advanced AI editing powered by Qwen technology! Free AI image editor with intelligent editing capabilities, background removal, object manipulation, and style transfer. No registration required, professional results in minutes.",
+    keywords: "free AI image editor, Qwen image edit, AI photo editor, intelligent image editing, AI image enhancement, background removal AI, object manipulation, style transfer, free photo editor, AI image tools, imagetovideo-ai",
     alternates: {
       canonical: `/${locale}/image-editor/qwen-image-edit`,
     },
     openGraph: {
-      title: "Qwen Image Edit: Transform Photos to Videos with AI",
-      description: "Elevate your visuals with Qwen Image Edit from ImageToVideo-AI. Our powerful AI tools let you edit images and convert them into stunning videos, all for free.",
+      title: "Free AI Image Editor - Qwen Image Edit Tool | imagetovideo-ai",
+      description: "Transform your images with advanced AI editing powered by Qwen technology! Free AI image editor with intelligent editing capabilities, no registration required.",
       type: "website",
       locale: locale,
     },
     twitter: {
       card: "summary_large_image",
-      title: "Qwen Image Edit: Transform Photos to Videos with AI",
-      description: "Transform your imagination with Qwen Image Edit - powerful AI tools for image editing and video creation.",
+      title: "Free AI Image Editor - Qwen Image Edit",
+      description: "Advanced AI image editing powered by Qwen technology. Professional results in minutes, completely free to use.",
     },
     robots: {
       index: true,

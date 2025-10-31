@@ -209,7 +209,7 @@ export default function TextToImageClient() {
             "@type": "WebApplication",
             "name": "Text to Image AI Generator",
             "description": "Advanced AI-powered text to image generator that transforms descriptive text prompts into stunning AI-generated images",
-            "url": "https://imagetovideoai.com/text-to-image",
+            "url": "https://www.imagetovideo-ai.net/text-to-image",
             "applicationCategory": "MultimediaApplication",
             "operatingSystem": "Web Browser",
             "offers": {
@@ -239,11 +239,13 @@ export default function TextToImageClient() {
             {/* 页面标题 */}
             <div className="text-center space-y-4">
               <h1 className="text-3xl font-bold text-foreground">
-                Mastering the Art of Text to Image Generation with imagetovideo-ai
+                Free AI Text to Image Generator - Best AI Image Creator | imagetovideo-ai
               </h1>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Welcome to imagetovideo-ai, the cutting-edge platform where your imagination takes tangible, visual form. 
-                Transform descriptive text prompts into stunning AI-generated images with our advanced machine learning technology.
+                Experience the most advanced <strong>free AI image generator</strong>! imagetovideo-ai provides powerful 
+                <strong>text to image</strong> capabilities, transforming your text descriptions into stunning 
+                <strong>AI-generated images</strong>. No registration required, supports multiple languages, 
+                and can convert to AI video with one click. Start your creative journey today!
               </p>
             </div>
 
@@ -481,11 +483,17 @@ export default function TextToImageClient() {
 
             {/* 内容区域 - 基于texttovideo.json完整内容 */}
             <div className="space-y-8">
-              {/* 技术介绍 - 左图右文 */}
-              <Card>
-                <CardHeader>
-                  <CardTitle>The Core Technology Behind Our Advanced Text to Image System</CardTitle>
-                </CardHeader>
+              {/* AI文生图技术介绍 - 添加H2标签优化SEO */}
+              <section>
+                <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
+                  What is AI Text to Image Technology? Deep Dive into imagetovideo-ai's Core Advantages
+                </h2>
+                
+                {/* 技术介绍 - 左图右文 */}
+                <Card>
+                  <CardHeader>
+                    <CardTitle>The Core Technology Behind Our Advanced Text to Image System</CardTitle>
+                  </CardHeader>
                 <CardContent>
                   <div className="grid lg:grid-cols-2 gap-8 xl:gap-12 items-center">
                     {/* 左侧图片 */}
@@ -521,10 +529,17 @@ export default function TextToImageClient() {
                     </div>
                   </div>
                 </CardContent>
-              </Card>
+                </Card>
+              </section>
 
-              {/* 工作流程 - 右图左文 */}
-              <Card>
+              {/* AI图像生成工作流程 - 添加H2标签 */}
+              <section>
+                <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
+                  Complete AI Image Generation Workflow: Perfect Text to Visual Transformation
+                </h2>
+                
+                {/* 工作流程 - 右图左文 */}
+                <Card>
                 <CardHeader>
                   <CardTitle>From Simple Concept to Stunning Visuals: The Text to Image Workflow</CardTitle>
                 </CardHeader>
@@ -585,10 +600,17 @@ export default function TextToImageClient() {
                     </div>
                   </div>
                 </CardContent>
-              </Card>
+                </Card>
+              </section>
 
-              {/* 内容策略提升 - 左图右文 */}
-              <Card>
+              {/* AI文生图应用场景 - 添加H2标签 */}
+              <section>
+                <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
+                  AI Text to Image Use Cases: Creative Solutions Across Industries
+                </h2>
+                
+                {/* 内容策略提升 - 左图右文 */}
+                <Card>
                 <CardHeader>
                   <CardTitle>Elevating Your Content Strategy with Powerful Text to Image Capabilities</CardTitle>
                 </CardHeader>
@@ -645,10 +667,17 @@ export default function TextToImageClient() {
                     </div>
                   </div>
                 </CardContent>
-              </Card>
+                </Card>
+              </section>
 
-              {/* 最佳实践 - 右图左文 */}
-              <Card>
+              {/* AI文生图最佳实践指南 - 添加H2标签 */}
+              <section>
+                <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
+                  AI Text to Image Best Practices Guide: How to Write Perfect Prompts
+                </h2>
+                
+                {/* 最佳实践 - 右图左文 */}
+                <Card>
                 <CardHeader>
                   <CardTitle>Best Practices for Crafting Effective Text to Image Prompts</CardTitle>
                 </CardHeader>
@@ -712,10 +741,95 @@ export default function TextToImageClient() {
                     </div>
                   </div>
                 </CardContent>
-              </Card>
+                </Card>
+              </section>
+
+              {/* AI文生图工具对比 - 新增重要SEO内容 */}
+              <section>
+                <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
+                  imagetovideo-ai vs Other AI Image Generators: Why Choose Us?
+                </h2>
+                
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Comprehensive Comparison: Why imagetovideo-ai Leads the AI Image Generation Market</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="grid md:grid-cols-3 gap-6">
+                      <div className="space-y-4">
+                        <div className="text-center">
+                          <h3 className="font-semibold text-lg text-primary mb-2">imagetovideo-ai</h3>
+                          <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border border-green-200 dark:border-green-800">
+                            <ul className="text-sm space-y-2 text-left">
+                              <li>✅ <strong>Completely Free</strong> text to image generation</li>
+                              <li>✅ <strong>No Registration</strong> required</li>
+                              <li>✅ Supports <strong>Multiple Languages</strong></li>
+                              <li>✅ <strong>One-Click Video</strong> conversion</li>
+                              <li>✅ <strong>Commercial License</strong> included</li>
+                              <li>✅ <strong>23 Aspect Ratios</strong> available</li>
+                              <li>✅ <strong>2-5 Minutes</strong> fast generation</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="space-y-4">
+                        <div className="text-center">
+                          <h3 className="font-semibold text-lg text-muted-foreground mb-2">Midjourney</h3>
+                          <div className="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg border border-red-200 dark:border-red-800">
+                            <ul className="text-sm space-y-2 text-left">
+                              <li>❌ <strong>$10-60/month</strong> subscription</li>
+                              <li>❌ Requires Discord account</li>
+                              <li>⚠️ Primarily English only</li>
+                              <li>❌ No video generation</li>
+                              <li>⚠️ Limited commercial rights</li>
+                              <li>⚠️ Fixed aspect ratios</li>
+                              <li>⚠️ Queue waiting required</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="space-y-4">
+                        <div className="text-center">
+                          <h3 className="font-semibold text-lg text-muted-foreground mb-2">DALL-E 3</h3>
+                          <div className="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg border border-red-200 dark:border-red-800">
+                            <ul className="text-sm space-y-2 text-left">
+                              <li>❌ <strong>$20/month</strong> subscription</li>
+                              <li>❌ Requires OpenAI account</li>
+                              <li>⚠️ Primarily English only</li>
+                              <li>❌ No video generation</li>
+                              <li>⚠️ Strict content restrictions</li>
+                              <li>❌ Square format only</li>
+                              <li>⚠️ Monthly usage limits</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="mt-8 bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
+                      <h3 className="font-semibold text-blue-700 dark:text-blue-300 mb-3">
+                        Why imagetovideo-ai is the Best Free AI Image Generator?
+                      </h3>
+                      <p className="text-sm text-blue-600 dark:text-blue-400">
+                        As the only platform in the market offering <strong>completely free text to image generation</strong> with 
+                        <strong>one-click video conversion</strong>, imagetovideo-ai not only lowers the barrier to AI creation 
+                        but also provides users with a complete creative workflow from static images to dynamic videos. 
+                        Whether you're a marketing professional, content creator, or art enthusiast, our platform meets your professional needs.
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </section>
 
               {/* 与AI视频的连接 - 左图右文 */}
-              <Card>
+              <section>
+                <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
+                  From AI Images to AI Videos: imagetovideo-ai's Complete Creative Ecosystem
+                </h2>
+                
+                <Card>
                 <CardHeader>
                   <CardTitle>The Seamless Connection Between Text to Image and AI Video on imagetovideo-ai</CardTitle>
                 </CardHeader>
@@ -758,10 +872,16 @@ export default function TextToImageClient() {
                     </div>
                   </div>
                 </CardContent>
-              </Card>
+                </Card>
+              </section>
 
               {/* 道德考虑 - 右图左文 */}
-              <Card>
+              <section>
+                <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
+                  Responsible AI Image Generation: imagetovideo-ai's Ethical Commitment
+                </h2>
+                
+                <Card>
                 <CardHeader>
                   <CardTitle>Ethical Considerations and Responsible Text to Image Generation</CardTitle>
                 </CardHeader>
@@ -799,10 +919,16 @@ export default function TextToImageClient() {
                     </div>
                   </div>
                 </CardContent>
-              </Card>
+                </Card>
+              </section>
 
               {/* 未来创新 - 左图右文 */}
-              <Card>
+              <section>
+                <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
+                  The Future of AI Image Generation: imagetovideo-ai's Technology Roadmap
+                </h2>
+                
+                <Card>
                 <CardHeader>
                   <CardTitle>Future Innovations and the Evolution of Text to Image Technology</CardTitle>
                 </CardHeader>
@@ -860,10 +986,16 @@ export default function TextToImageClient() {
                     </div>
                   </div>
                 </CardContent>
-              </Card>
+                </Card>
+              </section>
 
               {/* FAQ部分 - 完整版本 */}
-              <Card>
+              <section>
+                <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
+                  Frequently Asked Questions: Everything You Need to Know About AI Text to Image
+                </h2>
+                
+                <Card>
                 <CardHeader>
                   <CardTitle>FAQ: Common Questions About Text to Image and imagetovideo-ai</CardTitle>
                 </CardHeader>
@@ -943,7 +1075,8 @@ export default function TextToImageClient() {
                     </div>
                   </div>
                 </CardContent>
-              </Card>
+                </Card>
+              </section>
             </div>
           </div>
         </div>

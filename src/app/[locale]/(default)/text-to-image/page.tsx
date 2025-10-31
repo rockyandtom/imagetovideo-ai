@@ -10,22 +10,22 @@ export async function generateMetadata({
   const { locale } = await params;
 
   return {
-    title: "Unlock Creativity: The Ultimate Text to Image AI Generator | imagetovideo-ai",
-    description: "Revolutionize your visuals with the powerful text to image capabilities of imagetovideo-ai. Effortlessly convert text prompts into stunning AI-generated images and video content. Start your free trial today!",
-    keywords: "text to image, AI image generation, AI-generated images, text to image generator, AI art, image creation, artificial intelligence, digital art",
+    title: "Free AI Text to Image Generator - Best AI Image Creator | imagetovideo-ai",
+    description: "Experience the most advanced free AI image generator! imagetovideo-ai provides powerful text to image capabilities, transforming text descriptions into stunning AI-generated images. No registration required, supports multiple languages, and converts to AI video with one click. Start your creative journey today!",
+    keywords: "free AI image generator, text to image, AI image generation, free AI art generator, AI image creator, text to image generator, artificial intelligence images, free image generation, AI art tools, imagetovideo-ai, online AI generator",
     alternates: {
       canonical: `/${locale}/text-to-image`,
     },
     openGraph: {
-      title: "Unlock Creativity: The Ultimate Text to Image AI Generator",
-      description: "Revolutionize your visuals with the powerful text to image capabilities of imagetovideo-ai. Effortlessly convert text prompts into stunning AI-generated images.",
+      title: "Free AI Text to Image Generator - Best AI Image Creator | imagetovideo-ai",
+      description: "Experience the most advanced free AI image generator! Transform text descriptions into stunning AI-generated images. No registration required, supports multiple languages, and converts to AI video with one click.",
       type: "website",
       locale: locale,
     },
     twitter: {
       card: "summary_large_image",
-      title: "Ultimate Text to Image AI Generator",
-      description: "Transform text prompts into stunning AI-generated images with imagetovideo-ai's advanced technology.",
+      title: "Free AI Text to Image Generator - imagetovideo-ai",
+      description: "The most advanced free AI image generator. Supports multiple languages, no registration required, and converts to AI video with one click.",
     },
     robots: {
       index: true,
