@@ -692,13 +692,52 @@ export default function QwenImageEditClient() {
                   <p className="text-muted-foreground">Powerful image editing capabilities driven by core technology</p>
                 </div>
                 <Card className="p-8">
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed mb-8">
                     At the heart of <strong>ImageToVideo-AI</strong> lies a robust <strong>Qwen Image Edit</strong> model, meticulously trained for a wide array of creative applications. 
                     This model is built on the latest advancements in AI and machine learning, allowing it to understand context and intent with remarkable precision. 
                     Unlike generic tools, our <strong>Qwen Image Edit</strong> system has been fine-tuned to handle everything from subtle color corrections to dramatic stylistic changes, 
                     all while maintaining the integrity of the image for video conversion. This means whether you are trying to give your photo a cinematic feel or a vibrant comic book look, 
                     the <strong>Qwen Image Edit</strong> engine can deliver.
                   </p>
+                  
+                  {/* 展示案例 1 */}
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8 items-start">
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                        <h4 className="text-lg font-semibold text-foreground">Original Photo</h4>
+                      </div>
+                      <div className="relative overflow-hidden rounded-xl shadow-lg group max-h-96">
+                        <img
+                          src="/imgs/showcases/qwen-image-edit-core-technology-original-photo-example-1.webp"
+                          alt="Original photo before Qwen Image Edit core technology processing - demonstrating AI editing capabilities"
+                          className="w-full h-auto max-h-96 object-contain transition-all duration-500 group-hover:scale-110"
+                          loading="lazy"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      </div>
+                    </div>
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                        <h4 className="text-lg font-semibold text-foreground">Qwen Edit Result</h4>
+                        <div className="ml-auto">
+                          <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
+                            🔧 AI Edited
+                          </span>
+                        </div>
+                      </div>
+                      <div className="relative overflow-hidden rounded-xl shadow-lg group max-h-96">
+                        <img
+                          src="/imgs/showcases/qwen-image-edit-core-technology-result-image-example-1.webp"
+                          alt="Qwen Image Edit core technology result showcasing advanced AI editing and enhancement capabilities"
+                          className="w-full h-auto max-h-96 object-contain transition-all duration-500 group-hover:scale-110"
+                          loading="lazy"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      </div>
+                    </div>
+                  </div>
                 </Card>
               </div>
 
@@ -709,7 +748,7 @@ export default function QwenImageEditClient() {
                   <p className="text-muted-foreground">Deep ComfyUI integration for advanced users</p>
                 </div>
                 <Card className="p-8">
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed mb-8">
                     For advanced users and developers, we offer deep integration with <strong>ComfyUI</strong>, a powerful and modular Stable Diffusion graphical interface. 
                     This synergy allows you to harness the full potential of our <strong>Qwen Image Edit</strong> capabilities within a highly customizable workflow. 
                     By connecting our <strong>Qwen Image Edit</strong> model to <strong>ComfyUI</strong>, 
@@ -717,6 +756,45 @@ export default function QwenImageEditClient() {
                     This opens up a new realm of possibilities, allowing you to automate repetitive tasks, build custom pipelines, 
                     and achieve levels of detail and control that are simply not possible with traditional editing software.
                   </p>
+                  
+                  {/* 展示案例 2 */}
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8 items-start">
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                        <h4 className="text-lg font-semibold text-foreground">Original Photo</h4>
+                      </div>
+                      <div className="relative overflow-hidden rounded-xl shadow-lg group max-h-96">
+                        <img
+                          src="/imgs/showcases/qwen-image-edit-comfyui-integration-original-photo-example-2.webp"
+                          alt="Original photo before ComfyUI integration processing - demonstrating advanced Qwen Image Edit workflow"
+                          className="w-full h-auto max-h-96 object-contain transition-all duration-500 group-hover:scale-110"
+                          loading="lazy"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      </div>
+                    </div>
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                        <h4 className="text-lg font-semibold text-foreground">Qwen Edit Result</h4>
+                        <div className="ml-auto">
+                          <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
+                            ⚙️ ComfyUI
+                          </span>
+                        </div>
+                      </div>
+                      <div className="relative overflow-hidden rounded-xl shadow-lg group max-h-96">
+                        <img
+                          src="/imgs/showcases/qwen-image-edit-comfyui-integration-result-image-example-2.webp"
+                          alt="Qwen Image Edit ComfyUI integration result showcasing advanced workflow and node-based editing capabilities"
+                          className="w-full h-auto max-h-96 object-contain transition-all duration-500 group-hover:scale-110"
+                          loading="lazy"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      </div>
+                    </div>
+                  </div>
                 </Card>
               </div>
 
@@ -727,7 +805,7 @@ export default function QwenImageEditClient() {
                   <p className="text-muted-foreground">Perfect fusion of Qwen Image Edit and AI image generation</p>
                 </div>
                 <Card className="p-8">
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed mb-8">
                     Our platform's commitment to providing free access to powerful AI tools is central to our mission. With <strong>ImageToVideo-AI</strong>, 
                     you can tap into the immense power of <strong>AI image generation</strong> to create and modify images for your video projects without any cost. 
                     The <strong>Qwen Image Edit</strong> functionality is not just about making minor tweaks; it's about empowering you to generate entirely new visual content. 
@@ -735,6 +813,45 @@ export default function QwenImageEditClient() {
                     This is the power of <strong>Qwen Image Edit</strong>. The <strong>AI image generation</strong> process is incredibly fast and intuitive, 
                     allowing you to see the results of your edits in real-time.
                   </p>
+                  
+                  {/* 展示案例 3 */}
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8 items-start">
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                        <h4 className="text-lg font-semibold text-foreground">Original Photo</h4>
+                      </div>
+                      <div className="relative overflow-hidden rounded-xl shadow-lg group max-h-96">
+                        <img
+                          src="/imgs/showcases/qwen-image-edit-ai-generation-fusion-original-photo-example-3.webp"
+                          alt="Original photo before AI image generation fusion processing - demonstrating Qwen Image Edit creative capabilities"
+                          className="w-full h-auto max-h-96 object-contain transition-all duration-500 group-hover:scale-110"
+                          loading="lazy"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      </div>
+                    </div>
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                        <h4 className="text-lg font-semibold text-foreground">Qwen Edit Result</h4>
+                        <div className="ml-auto">
+                          <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
+                            🎨 AI Fusion
+                          </span>
+                        </div>
+                      </div>
+                      <div className="relative overflow-hidden rounded-xl shadow-lg group max-h-96">
+                        <img
+                          src="/imgs/showcases/qwen-image-edit-ai-generation-fusion-result-image-example-3.webp"
+                          alt="Qwen Image Edit AI generation fusion result showcasing creative image generation and enhancement capabilities"
+                          className="w-full h-auto max-h-96 object-contain transition-all duration-500 group-hover:scale-110"
+                          loading="lazy"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      </div>
+                    </div>
+                  </div>
                 </Card>
               </div>
 
@@ -745,13 +862,52 @@ export default function QwenImageEditClient() {
                   <p className="text-muted-foreground">Future prospects of Qwen Image Edit GGUF models</p>
                 </div>
                 <Card className="p-8">
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed mb-8">
                     The future of AI image generation is at the forefront of our development, and we are excited to be exploring the potential of <strong>Qwen Image Edit GGUF</strong> models. 
                     <strong>GGUF</strong> (GPT-Generated Unified Format) is a new format for storing and loading large language models, 
                     and its application to image generation models like <strong>Qwen Image Edit</strong> promises to revolutionize local AI processing. 
                     By optimizing our <strong>Qwen Image Edit GGUF</strong> models, we can enable users to run powerful editing and generation tasks directly on their own hardware, 
                     even on devices with limited VRAM. This not only enhances privacy and security but also provides unparalleled speed and control.
                   </p>
+                  
+                  {/* 展示案例 4 */}
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8 items-start">
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                        <h4 className="text-lg font-semibold text-foreground">Original Photo</h4>
+                      </div>
+                      <div className="relative overflow-hidden rounded-xl shadow-lg group max-h-96">
+                        <img
+                          src="/imgs/showcases/qwen-image-edit-future-gguf-original-photo-example-4.webp"
+                          alt="Original photo before Qwen Image Edit GGUF processing - demonstrating future AI image creation capabilities"
+                          className="w-full h-auto max-h-96 object-contain transition-all duration-500 group-hover:scale-110"
+                          loading="lazy"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      </div>
+                    </div>
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                        <h4 className="text-lg font-semibold text-foreground">Qwen Edit Result</h4>
+                        <div className="ml-auto">
+                          <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
+                            🚀 GGUF Future
+                          </span>
+                        </div>
+                      </div>
+                      <div className="relative overflow-hidden rounded-xl shadow-lg group max-h-96">
+                        <img
+                          src="/imgs/showcases/qwen-image-edit-future-gguf-result-image-example-4.webp"
+                          alt="Qwen Image Edit GGUF future result showcasing next-generation AI image creation and local processing capabilities"
+                          className="w-full h-auto max-h-96 object-contain transition-all duration-500 group-hover:scale-110"
+                          loading="lazy"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      </div>
+                    </div>
+                  </div>
                 </Card>
               </div>
             </div>

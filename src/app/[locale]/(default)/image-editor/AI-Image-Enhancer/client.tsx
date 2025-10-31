@@ -686,7 +686,7 @@ export default function AIImageEnhancerClient() {
                 <h2 className="text-3xl font-bold text-foreground">
                   Unlocking Potential with a Powerful AI Image Enhancer
                 </h2>
-                <div className="prose prose-lg max-w-none text-muted-foreground">
+                <div className="prose prose-lg max-w-none text-muted-foreground mb-8">
                   <p>
                     In a digital world driven by visuals, the quality of your content is paramount. Whether you're a professional content creator, 
                     a digital artist, or a small business owner, high-resolution, captivating images are no longer a luxury—they are a necessity. 
@@ -700,6 +700,45 @@ export default function AIImageEnhancerClient() {
                     We believe that stunning visual content should be accessible to everyone, regardless of their editing experience.
                   </p>
                 </div>
+                
+                {/* 展示案例 1 */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8 items-start">
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                      <h4 className="text-lg font-semibold text-foreground">Original Photo</h4>
+                    </div>
+                    <div className="relative overflow-hidden rounded-xl shadow-lg group max-h-96">
+                      <img
+                        src="/imgs/showcases/ai-image-enhancer-unlocking-potential-original-photo-example-1.webp"
+                        alt="Original photo before AI Image Enhancer processing - demonstrating unlocking potential with professional enhancement"
+                        className="w-full h-auto max-h-96 object-contain transition-all duration-500 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                      <h4 className="text-lg font-semibold text-foreground">Enhanced Result</h4>
+                      <div className="ml-auto">
+                        <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                          ✨ AI Enhanced
+                        </span>
+                      </div>
+                    </div>
+                    <div className="relative overflow-hidden rounded-xl shadow-lg group max-h-96">
+                      <img
+                        src="/imgs/showcases/ai-image-enhancer-unlocking-potential-enhanced-result-example-1.png"
+                        alt="AI Image Enhancer result showcasing professional photo enhancement, super resolution, and quality improvement"
+                        className="w-full h-auto max-h-96 object-contain transition-all duration-500 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                  </div>
+                </div>
               </section>
 
               {/* How It Works Section */}
@@ -707,7 +746,7 @@ export default function AIImageEnhancerClient() {
                 <h2 className="text-3xl font-bold text-foreground">
                   How Our AI Image Enhancer Works: The Science Behind the Magic
                 </h2>
-                <div className="prose prose-lg max-w-none text-muted-foreground">
+                <div className="prose prose-lg max-w-none text-muted-foreground mb-8">
                   <p>
                     At the core of our platform's capabilities is our advanced <strong>ai生图</strong> technology. When you upload an image to our 
                     <strong>AI Image Enhancer</strong>, the system immediately performs a deep analysis. It scans for common visual defects, 
@@ -719,6 +758,45 @@ export default function AIImageEnhancerClient() {
                     a feat that is nearly impossible with traditional methods. Our denoising feature distinguishes between genuine detail 
                     and unwanted noise, removing the latter while preserving the integrity of the image.
                   </p>
+                </div>
+                
+                {/* 展示案例 2 */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8 items-start">
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                      <h4 className="text-lg font-semibold text-foreground">Original Photo</h4>
+                    </div>
+                    <div className="relative overflow-hidden rounded-xl shadow-lg group max-h-96">
+                      <img
+                        src="/imgs/showcases/ai-image-enhancer-how-it-works-original-photo-example-2.webp"
+                        alt="Original photo before AI Image Enhancer processing - demonstrating how the science behind AI enhancement works"
+                        className="w-full h-auto max-h-96 object-contain transition-all duration-500 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                      <h4 className="text-lg font-semibold text-foreground">Enhanced Result</h4>
+                      <div className="ml-auto">
+                        <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                          🔬 Science
+                        </span>
+                      </div>
+                    </div>
+                    <div className="relative overflow-hidden rounded-xl shadow-lg group max-h-96">
+                      <img
+                        src="/imgs/showcases/ai-image-enhancer-how-it-works-enhanced-result-example-2.png"
+                        alt="AI Image Enhancer result showcasing deep learning analysis, super-resolution, and intelligent denoising capabilities"
+                        className="w-full h-auto max-h-96 object-contain transition-all duration-500 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                  </div>
                 </div>
               </section>
 
@@ -815,6 +893,45 @@ export default function AIImageEnhancerClient() {
                     </CardContent>
                   </Card>
                 </div>
+                
+                {/* 展示案例 3 */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8 items-start">
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                      <h4 className="text-lg font-semibold text-foreground">Original Photo</h4>
+                    </div>
+                    <div className="relative overflow-hidden rounded-xl shadow-lg group max-h-96">
+                      <img
+                        src="/imgs/showcases/ai-image-enhancer-key-features-original-photo-example-3.webp"
+                        alt="Original photo before AI Image Enhancer processing - demonstrating key features and capabilities"
+                        className="w-full h-auto max-h-96 object-contain transition-all duration-500 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                      <h4 className="text-lg font-semibold text-foreground">Enhanced Result</h4>
+                      <div className="ml-auto">
+                        <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                          ⭐ Key Features
+                        </span>
+                      </div>
+                    </div>
+                    <div className="relative overflow-hidden rounded-xl shadow-lg group max-h-96">
+                      <img
+                        src="/imgs/showcases/ai-image-enhancer-key-features-enhanced-result-example-3.png"
+                        alt="AI Image Enhancer result showcasing super-resolution, denoising, color correction, and portrait enhancement features"
+                        className="w-full h-auto max-h-96 object-contain transition-all duration-500 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                  </div>
+                </div>
               </section>
 
               {/* Applications Section */}
@@ -822,7 +939,7 @@ export default function AIImageEnhancerClient() {
                 <h2 className="text-3xl font-bold text-foreground">
                   Applications and Use Cases for Our AI Image Enhancer
                 </h2>
-                <div className="prose prose-lg max-w-none text-muted-foreground">
+                <div className="prose prose-lg max-w-none text-muted-foreground mb-8">
                   <p>
                     The versatility of our <strong>AI Image Enhancer</strong> makes it suitable for a wide range of professional and personal applications. 
                     For <strong>e-commerce businesses</strong>, high-quality product photos are crucial for attracting customers. Our tool can enhance 
@@ -833,6 +950,45 @@ export default function AIImageEnhancerClient() {
                     to clients faster than ever before. For <strong>social media influencers</strong> and <strong>marketers</strong>, our 
                     <strong>AI Image Enhancer</strong> ensures that every post is visually striking and engaging, helping to grow their audience.
                   </p>
+                </div>
+                
+                {/* 展示案例 4 */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8 items-start">
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                      <h4 className="text-lg font-semibold text-foreground">Original Photo</h4>
+                    </div>
+                    <div className="relative overflow-hidden rounded-xl shadow-lg group max-h-96">
+                      <img
+                        src="/imgs/showcases/ai-image-enhancer-applications-original-photo-example-4.webp"
+                        alt="Original photo before AI Image Enhancer processing - demonstrating professional applications and use cases"
+                        className="w-full h-auto max-h-96 object-contain transition-all duration-500 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                      <h4 className="text-lg font-semibold text-foreground">Enhanced Result</h4>
+                      <div className="ml-auto">
+                        <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                          💼 Applications
+                        </span>
+                      </div>
+                    </div>
+                    <div className="relative overflow-hidden rounded-xl shadow-lg group max-h-96">
+                      <img
+                        src="/imgs/showcases/ai-image-enhancer-applications-enhanced-result-example-4.png"
+                        alt="AI Image Enhancer result showcasing e-commerce, photography, real estate, and social media applications"
+                        className="w-full h-auto max-h-96 object-contain transition-all duration-500 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                  </div>
                 </div>
               </section>
 
