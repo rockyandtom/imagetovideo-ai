@@ -638,13 +638,52 @@ export default function GhibliAIGeneratorClient() {
                 <h2 className="text-3xl font-bold text-foreground mb-6">
                   How Our Ghibli AI Generator Works Its Magic
                 </h2>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed mb-8">
                   The process behind our <strong>Ghibli AI Generator</strong> is built on a foundation of cutting-edge artificial intelligence. 
                   At its heart lies a sophisticated deep learning model that has been trained on a massive dataset, including thousands of images, 
                   frames, and concept art from the Studio Ghibli universe. This intensive training allows the AI to understand and replicate 
                   the distinct artistic elements that define the Ghibli style: the lush, painterly backgrounds, the soft, evocative color palettes, 
                   the expressive character designs, and the serene, sometimes melancholy, atmosphere.
                 </p>
+                
+                {/* 展示案例 1 */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8 items-start">
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                      <h4 className="text-lg font-semibold text-foreground">Original Photo</h4>
+                    </div>
+                    <div className="relative overflow-hidden rounded-xl shadow-lg group max-h-96">
+                      <img
+                        src="/imgs/showcases/ghibli-ai-generator-original-photo-example-1.webp"
+                        alt="Original photo before Ghibli AI transformation - demonstrating input quality for best results"
+                        className="w-full h-auto max-h-96 object-contain transition-all duration-500 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                      <h4 className="text-lg font-semibold text-foreground">Ghibli AI Result</h4>
+                      <div className="ml-auto">
+                        <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                          ✨ AI Generated
+                        </span>
+                      </div>
+                    </div>
+                    <div className="relative overflow-hidden rounded-xl shadow-lg group max-h-96">
+                      <img
+                        src="/imgs/showcases/ghibli-ai-generator-transformed-art-example-1.webp"
+                        alt="Ghibli AI generated art showing magical transformation with Studio Ghibli style elements"
+                        className="w-full h-auto max-h-96 object-contain transition-all duration-500 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                  </div>
+                </div>
               </section>
 
               {/* Creative Potential */}
@@ -652,13 +691,52 @@ export default function GhibliAIGeneratorClient() {
                 <h2 className="text-3xl font-bold text-foreground mb-6">
                   Unleash Your Creative Potential with the Ghibli AI Generator
                 </h2>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed mb-8">
                   The applications for the <strong>Ghibli AI Generator</strong> are as boundless as your imagination. This tool isn't just for 
                   creating static images; it's a launchpad for countless creative projects. You can design original characters for your own 
                   Ghibli-inspired narrative, generate breathtaking wallpapers for your devices, or create unique concept art for a personal project. 
                   Content creators can use the generated images for social media posts, blog headers, video thumbnails, or as visual stories to 
                   captivate their audience.
                 </p>
+                
+                {/* 展示案例 2 */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8 items-start">
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                      <h4 className="text-lg font-semibold text-foreground">Original Photo</h4>
+                    </div>
+                    <div className="relative overflow-hidden rounded-xl shadow-lg group max-h-96">
+                      <img
+                        src="/imgs/showcases/ghibli-ai-generator-original-photo-example-2.webp"
+                        alt="Creative potential example - original landscape photo ready for Ghibli AI transformation"
+                        className="w-full h-auto max-h-96 object-contain transition-all duration-500 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                      <h4 className="text-lg font-semibold text-foreground">Ghibli AI Result</h4>
+                      <div className="ml-auto">
+                        <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                          ✨ AI Generated
+                        </span>
+                      </div>
+                    </div>
+                    <div className="relative overflow-hidden rounded-xl shadow-lg group max-h-96">
+                      <img
+                        src="/imgs/showcases/ghibli-ai-generator-transformed-art-example-2.webp"
+                        alt="Ghibli AI creative transformation showcasing artistic potential and Studio Ghibli aesthetic"
+                        className="w-full h-auto max-h-96 object-contain transition-all duration-500 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                  </div>
+                </div>
               </section>
 
               {/* Advanced Technology */}
@@ -666,12 +744,51 @@ export default function GhibliAIGeneratorClient() {
                 <h2 className="text-3xl font-bold text-foreground mb-6">
                   The Advanced Technology Behind Our Ghibli AI Generator
                 </h2>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed mb-8">
                   What makes the <strong>Ghibli AI Generator</strong> from <strong>imagetovideo-ai</strong> so exceptional is its foundation 
                   in state-of-the-art AI technology. We leverage a type of model known as a diffusion model. This advanced architecture functions 
                   by learning to 'de-noise' an image. It begins with a completely random pattern and progressively refines it, adding layers of 
                   detail and structure until it forms a coherent, high-quality image that matches the input requirements.
                 </p>
+                
+                {/* 展示案例 3 */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8 items-start">
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                      <h4 className="text-lg font-semibold text-foreground">Original Photo</h4>
+                    </div>
+                    <div className="relative overflow-hidden rounded-xl shadow-lg group max-h-96">
+                      <img
+                        src="/imgs/showcases/ghibli-ai-generator-original-photo-example-3.webp"
+                        alt="Advanced technology demonstration - high-quality original photo for AI processing"
+                        className="w-full h-auto max-h-96 object-contain transition-all duration-500 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                      <h4 className="text-lg font-semibold text-foreground">Ghibli AI Result</h4>
+                      <div className="ml-auto">
+                        <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                          ✨ AI Generated
+                        </span>
+                      </div>
+                    </div>
+                    <div className="relative overflow-hidden rounded-xl shadow-lg group max-h-96">
+                      <img
+                        src="/imgs/showcases/ghibli-ai-generator-transformed-art-example-3.webp"
+                        alt="Advanced AI technology result showcasing diffusion model capabilities in Ghibli style transformation"
+                        className="w-full h-auto max-h-96 object-contain transition-all duration-500 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                  </div>
+                </div>
               </section>
 
               {/* Pro Tips */}
@@ -679,7 +796,7 @@ export default function GhibliAIGeneratorClient() {
                 <h2 className="text-3xl font-bold text-foreground mb-6">
                   Pro Tips for Using the Ghibli AI Generator
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                   <div className="space-y-4">
                     <div className="flex items-start gap-3">
                       <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
@@ -726,6 +843,45 @@ export default function GhibliAIGeneratorClient() {
                           Download your generated art in high quality for use in your projects.
                         </p>
                       </div>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* 展示案例 4 */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8 items-start">
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                      <h4 className="text-lg font-semibold text-foreground">Original Photo</h4>
+                    </div>
+                    <div className="relative overflow-hidden rounded-xl shadow-lg group max-h-96">
+                      <img
+                        src="/imgs/showcases/ghibli-ai-generator-original-photo-example-4.webp"
+                        alt="Pro tips example - optimal photo composition for Ghibli AI generator best practices"
+                        className="w-full h-auto max-h-96 object-contain transition-all duration-500 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                      <h4 className="text-lg font-semibold text-foreground">Ghibli AI Result</h4>
+                      <div className="ml-auto">
+                        <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                          ✨ AI Generated
+                        </span>
+                      </div>
+                    </div>
+                    <div className="relative overflow-hidden rounded-xl shadow-lg group max-h-96">
+                      <img
+                        src="/imgs/showcases/ghibli-ai-generator-transformed-art-example-4.webp"
+                        alt="Pro tips result - perfect Ghibli AI transformation following best practices and techniques"
+                        className="w-full h-auto max-h-96 object-contain transition-all duration-500 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
                   </div>
                 </div>

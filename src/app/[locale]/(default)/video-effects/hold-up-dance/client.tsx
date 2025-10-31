@@ -610,7 +610,7 @@ export default function HoldUpDanceClient() {
               {/* Why Use AI Section */}
               <section className="space-y-6">
                 <h2 className="text-3xl font-bold text-center">Why Use AI to Generate the Hold Up Dance?</h2>
-                <div className="prose prose-lg max-w-none text-muted-foreground">
+                <div className="prose prose-lg max-w-none text-muted-foreground mb-8">
                   <p>
                     The <strong>Hold Up Dance</strong> is more than just a simple gesture; it's a powerful statement of emotion and style. 
                     The pose, characterized by hands raised in a recognizable gesture of surrender or celebration, is a staple in music, 
@@ -622,12 +622,54 @@ export default function HoldUpDanceClient() {
                     <strong> Hold Up Dance</strong> and generate a new, unique image from scratch.
                   </p>
                 </div>
+                
+                {/* 展示案例 1 */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8 items-start">
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
+                      <h4 className="text-lg font-semibold text-foreground">Original Photo</h4>
+                    </div>
+                    <div className="relative overflow-hidden rounded-xl shadow-lg group max-h-96">
+                      <img
+                        src="/imgs/showcases/hold-up-dance-ai-generation-original-photo-example-1.webp"
+                        alt="Original photo before Hold Up Dance AI transformation - demonstrating AI generation capabilities"
+                        className="w-full h-auto max-h-96 object-contain transition-all duration-500 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-rose-500 rounded-full"></div>
+                      <h4 className="text-lg font-semibold text-foreground">Hold Up Dance Video</h4>
+                      <div className="ml-auto">
+                        <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-rose-100 text-rose-800">
+                          🎬 AI Generated
+                        </span>
+                      </div>
+                    </div>
+                    <div className="relative overflow-hidden rounded-xl shadow-lg group max-h-96">
+                      <video
+                        src="/imgs/showcases/hold-up-dance-ai-generation-result-video-example-1.mp4"
+                        className="w-full h-auto max-h-96 object-contain transition-all duration-500 group-hover:scale-110"
+                        controls
+                        loop
+                        muted
+                        playsInline
+                        preload="metadata"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                    </div>
+                  </div>
+                </div>
               </section>
 
               {/* Technology Section */}
               <section className="space-y-6">
                 <h2 className="text-3xl font-bold text-center">The Technology Behind the Perfect Hold Up Dance Image</h2>
-                <div className="prose prose-lg max-w-none text-muted-foreground">
+                <div className="prose prose-lg max-w-none text-muted-foreground mb-8">
                   <p>
                     At imagetovideo-ai, we leverage state-of-the-art AI models, including diffusion and transformer networks, 
                     to power our image generation engine. When you input a prompt, such as 'futuristic <strong>Hold Up Dance</strong> with glowing tattoos,' 
@@ -639,12 +681,54 @@ export default function HoldUpDanceClient() {
                     <strong> Hold Up Dance</strong> a core capability.
                   </p>
                 </div>
+                
+                {/* 展示案例 2 */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8 items-start">
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
+                      <h4 className="text-lg font-semibold text-foreground">Original Photo</h4>
+                    </div>
+                    <div className="relative overflow-hidden rounded-xl shadow-lg group max-h-96">
+                      <img
+                        src="/imgs/showcases/hold-up-dance-technology-original-photo-example-2.webp"
+                        alt="Technology demonstration - original photo showcasing AI processing capabilities for Hold Up Dance"
+                        className="w-full h-auto max-h-96 object-contain transition-all duration-500 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-rose-500 rounded-full"></div>
+                      <h4 className="text-lg font-semibold text-foreground">Hold Up Dance Video</h4>
+                      <div className="ml-auto">
+                        <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-rose-100 text-rose-800">
+                          🎥 AI Technology
+                        </span>
+                      </div>
+                    </div>
+                    <div className="relative overflow-hidden rounded-xl shadow-lg group max-h-96">
+                      <video
+                        src="/imgs/showcases/hold-up-dance-technology-result-video-example-2.mp4"
+                        className="w-full h-auto max-h-96 object-contain transition-all duration-500 group-hover:scale-110"
+                        controls
+                        loop
+                        muted
+                        playsInline
+                        preload="metadata"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                    </div>
+                  </div>
+                </div>
               </section>
 
               {/* Customization Section */}
               <section className="space-y-6">
                 <h2 className="text-3xl font-bold text-center">Customizing Your Hold Up Dance Creations</h2>
-                <div className="prose prose-lg max-w-none text-muted-foreground">
+                <div className="prose prose-lg max-w-none text-muted-foreground mb-8">
                   <p>
                     One of the most exciting aspects of using imagetovideo-ai is the incredible level of customization available for your 
                     <strong> Hold Up Dance</strong> images. You are the director of your own visual narrative. You can specify the subject's 
@@ -655,6 +739,48 @@ export default function HoldUpDanceClient() {
                     or a 'joyful <strong>Hold Up Dance</strong> at a vibrant music festival.' You can also choose from a wide range of 
                     artistic styles, including 'oil painting,' 'digital art,' 'anime,' and 'photorealistic.'
                   </p>
+                </div>
+                
+                {/* 展示案例 3 */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8 items-start">
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
+                      <h4 className="text-lg font-semibold text-foreground">Original Photo</h4>
+                    </div>
+                    <div className="relative overflow-hidden rounded-xl shadow-lg group max-h-96">
+                      <img
+                        src="/imgs/showcases/hold-up-dance-customization-original-photo-example-3.webp"
+                        alt="Customization example - original photo demonstrating Hold Up Dance personalization options"
+                        className="w-full h-auto max-h-96 object-contain transition-all duration-500 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-rose-500 rounded-full"></div>
+                      <h4 className="text-lg font-semibold text-foreground">Hold Up Dance Video</h4>
+                      <div className="ml-auto">
+                        <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-rose-100 text-rose-800">
+                          🎨 Customized
+                        </span>
+                      </div>
+                    </div>
+                    <div className="relative overflow-hidden rounded-xl shadow-lg group max-h-96">
+                      <video
+                        src="/imgs/showcases/hold-up-dance-customization-result-video-example-3.mp4"
+                        className="w-full h-auto max-h-96 object-contain transition-all duration-500 group-hover:scale-110"
+                        controls
+                        loop
+                        muted
+                        playsInline
+                        preload="metadata"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                    </div>
+                  </div>
                 </div>
               </section>
 
@@ -713,6 +839,48 @@ export default function HoldUpDanceClient() {
                       </p>
                     </CardContent>
                   </Card>
+                </div>
+                
+                {/* 展示案例 4 */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8 items-start">
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
+                      <h4 className="text-lg font-semibold text-foreground">Original Photo</h4>
+                    </div>
+                    <div className="relative overflow-hidden rounded-xl shadow-lg group max-h-96">
+                      <img
+                        src="/imgs/showcases/hold-up-dance-faq-original-photo-example-4.webp"
+                        alt="FAQ example - original photo demonstrating common Hold Up Dance questions and solutions"
+                        className="w-full h-auto max-h-96 object-contain transition-all duration-500 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-rose-500 rounded-full"></div>
+                      <h4 className="text-lg font-semibold text-foreground">Hold Up Dance Video</h4>
+                      <div className="ml-auto">
+                        <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-rose-100 text-rose-800">
+                          ❓ FAQ Demo
+                        </span>
+                      </div>
+                    </div>
+                    <div className="relative overflow-hidden rounded-xl shadow-lg group max-h-96">
+                      <video
+                        src="/imgs/showcases/hold-up-dance-faq-result-video-example-4.mp4"
+                        className="w-full h-auto max-h-96 object-contain transition-all duration-500 group-hover:scale-110"
+                        controls
+                        loop
+                        muted
+                        playsInline
+                        preload="metadata"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                    </div>
+                  </div>
                 </div>
               </section>
             </div>
