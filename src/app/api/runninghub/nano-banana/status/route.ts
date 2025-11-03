@@ -16,12 +16,14 @@ export async function POST(request: NextRequest) {
 
     console.log('Checking Nano Banana task status:', taskId);
 
-    // 查询任务状态
-    const statusResponse = await fetch(`${API_BASE_URL}/task/openapi/ai-app/status?apiKey=${API_KEY}&taskId=${taskId}`, {
-      method: 'GET',
+    // 查询任务状态 - 使用标准的 status API
+    const statusResponse = await fetch(`${API_BASE_URL}/task/openapi/status`, {
+      method: 'POST',
       headers: {
+        'Content-Type': 'application/json',
         'Host': 'www.runninghub.cn'
-      }
+      },
+      body: JSON.stringify({ apiKey: API_KEY, taskId })
     });
 
     console.log('Nano Banana status response status:', statusResponse.status);
@@ -49,45 +51,70 @@ export async function POST(request: NextRequest) {
       }, { status: 400 });
     }
 
-    // 解析任务状态
-    const status = result.data?.status || 'unknown';
+    // 解析任务状态 - result.data 直接是状态字符串
+    const status = result.data || 'unknown';
     let imageUrl = null;
-    let message = result.data?.message || 'Processing...';
+    let message = 'Processing...';
 
-    // 如果任务完成，尝试获取图片 URL
-    if (status === 'completed' && result.data?.output) {
-      // RunningHub 返回的输出可能有多种格式，需要根据实际返回结构解析
-      // 通常输出可能在 result.data.output 或 result.data.result 中
-      if (result.data.output) {
-        // 如果是数组，取第一个元素
-        if (Array.isArray(result.data.output) && result.data.output.length > 0) {
-          imageUrl = result.data.output[0];
-        } else if (typeof result.data.output === 'string') {
-          imageUrl = result.data.output;
-        }
-      }
+    // 如果任务完成，获取结果文件
+    if (status === 'SUCCESS' || status === 'COMPLETED') {
+      console.log('Task completed, getting results...');
       
-      // 如果还没有找到 URL，尝试其他可能的字段
-      if (!imageUrl && result.data.result) {
-        if (Array.isArray(result.data.result) && result.data.result.length > 0) {
-          imageUrl = result.data.result[0];
-        } else if (typeof result.data.result === 'string') {
-          imageUrl = result.data.result;
-        }
-      }
+      // 调用 outputs API 获取实际文件
+      const outputResponse = await fetch(`${API_BASE_URL}/task/openapi/outputs`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Host': 'www.runninghub.cn'
+        },
+        body: JSON.stringify({ apiKey: API_KEY, taskId })
+      });
 
-      // 如果找到了 URL，确保它是完整的 URL
-      if (imageUrl && !imageUrl.startsWith('http')) {
-        imageUrl = `https://www.runninghub.cn${imageUrl}`;
+      if (outputResponse.ok) {
+        const outputData = await outputResponse.json();
+        console.log('Nano Banana output response:', JSON.stringify(outputData, null, 2));
+
+        if (outputData.code === 0 && outputData.data && Array.isArray(outputData.data)) {
+          // 查找图片文件
+          const imageItem = outputData.data.find((item: any) =>
+            item.fileUrl && (
+              !item.fileType ||
+              item.fileType.toLowerCase().includes('png') ||
+              item.fileType.toLowerCase().includes('jpg') ||
+              item.fileType.toLowerCase().includes('jpeg') ||
+              item.fileType.toLowerCase().includes('gif') ||
+              item.fileType.toLowerCase().includes('webp') ||
+              item.fileType.toLowerCase().includes('image')
+            )
+          );
+
+          if (imageItem && imageItem.fileUrl) {
+            imageUrl = imageItem.fileUrl;
+            message = 'Completed!';
+          } else if (outputData.data.length > 0 && outputData.data[0].fileUrl) {
+            // 如果没有找到图片，使用第一个文件
+            imageUrl = outputData.data[0].fileUrl;
+            message = 'Completed!';
+          }
+        }
+      } else {
+        console.error('Failed to fetch outputs:', outputResponse.status);
       }
+    } else if (status === 'RUNNING' || status === 'PENDING' || status === 'QUEUED') {
+      message = `Task processing, status: ${status}`;
+    } else if (status === 'FAILED' || status === 'ERROR') {
+      return NextResponse.json({
+        success: false,
+        error: 'Image generation task failed'
+      }, { status: 500 });
     }
 
     return NextResponse.json({
       success: true,
-      status: status,
+      status: status === 'SUCCESS' || status === 'COMPLETED' ? 'completed' : 
+              (status === 'FAILED' || status === 'ERROR' ? 'failed' : 'running'),
       imageUrl: imageUrl,
-      message: message,
-      data: result.data
+      message: message
     });
 
   } catch (error) {
