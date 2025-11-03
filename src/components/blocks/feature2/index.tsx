@@ -122,7 +122,10 @@ export default function Feature2({ section }: { section: SectionType }) {
                           loop
                           muted
                           playsInline
-                        />
+                        >
+                          {/* 空的字幕轨道，提升可访问性 */}
+                          <track kind="captions" />
+                        </video>
                       ) : (
                         <img
                           src={item.image?.src}

@@ -25,6 +25,14 @@ export default async function RootLayout({
           <meta name="google-adsense-account" content={googleAdsenseCode} />
         )}
 
+        {/* 预连接到第三方资源，提升加载性能 */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://js.stripe.com" />
+        <link rel="preconnect" href="https://m.stripe.network" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://js.stripe.com" />
+        <link rel="dns-prefetch" href="https://m.stripe.network" />
+
         <link rel="icon" href="/favicon.ico" />
 
         {locales &&

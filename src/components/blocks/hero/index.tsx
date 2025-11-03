@@ -5,6 +5,7 @@ import HeroBg from "./bg";
 import { Hero as HeroType } from "@/types/blocks/hero";
 import Icon from "@/components/icon";
 import { Link } from "@/i18n/navigation";
+import Image from "next/image";
 
 export default function Hero({ hero }: { hero: HeroType }) {
   if (hero.disabled) {
@@ -25,9 +26,11 @@ export default function Hero({ hero }: { hero: HeroType }) {
           {hero.show_badge && (
             <div className="flex items-center justify-center mb-12 fade-in-up">
               <div className="glass-effect rounded-full p-4">
-                <img
+                <Image
                   src="/imgs/badges/phdaily.svg"
                   alt="phdaily"
+                  width={48}
+                  height={48}
                   className="h-12 object-cover"
                 />
               </div>
@@ -110,11 +113,14 @@ export default function Hero({ hero }: { hero: HeroType }) {
             {hero.image && (
               <div className="fade-in-up stagger-5 mt-12">
                 <div className="mx-auto max-w-4xl">
-                  <img
+                  <Image
                     src={hero.image.src}
                     alt={hero.image.alt || hero.title}
+                    width={1200}
+                    height={675}
                     className="w-full h-auto rounded-2xl shadow-2xl border border-white/20"
-                    loading="eager"
+                    priority
+                    quality={85}
                   />
                 </div>
               </div>

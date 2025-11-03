@@ -11,7 +11,7 @@ export default function FAQ({ section }: { section: SectionType }) {
       <div className="container">
         <div className="text-center">
           {section.label && (
-            <Badge className="text-xs font-medium">{section.label}</Badge>
+            <Badge variant="default" className="bg-blue-600 text-white text-xs font-medium">{section.label}</Badge>
           )}
           <h2 className="mt-4 text-4xl font-semibold">{section.title}</h2>
           <p className="mt-6 font-medium text-muted-foreground">

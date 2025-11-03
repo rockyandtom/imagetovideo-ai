@@ -1,6 +1,7 @@
 import SignForm from "@/components/sign/form";
 import { auth } from "@/auth";
 import { redirect } from "next/navigation";
+import Image from "next/image";
 
 export default async function SignInPage({
   searchParams,
@@ -18,7 +19,7 @@ export default async function SignInPage({
       <div className="flex w-full max-w-sm flex-col gap-6">
         <a href="/" className="flex items-center gap-2 self-center font-medium">
           <div className="flex h-6 w-6 items-center justify-center rounded-md border text-primary-foreground">
-            <img src="/logo.png" alt="logo" className="size-4" />
+            <Image src="/logo.png" alt="logo" width={16} height={16} className="size-4" priority />
           </div>
           {process.env.NEXT_PUBLIC_PROJECT_NAME}
         </a>

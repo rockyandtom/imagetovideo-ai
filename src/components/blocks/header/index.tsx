@@ -39,6 +39,7 @@ import SignToggle from "@/components/sign/toggle";
 import ThemeToggle from "@/components/theme/toggle";
 import { cn } from "@/lib/utils";
 import React, { useState } from "react";
+import Image from "next/image";
 
 export default function Header({ header = {} }: { header?: HeaderType }) {
   if (header.disabled) {
@@ -58,10 +59,13 @@ export default function Header({ header = {} }: { header?: HeaderType }) {
               className="flex items-center gap-2"
             >
               {header.brand?.logo?.src && (
-                <img
-                  src={header.brand.logo.src}
-                  alt={header.brand.logo.alt || header.brand.title}
-                  className="w-8"
+                <Image
+                  src={header.brand.logo.src as string}
+                  alt=""
+                  width={32}
+                  height={32}
+                  className="w-8 h-8"
+                  priority
                 />
               )}
               {header.brand?.title && (
@@ -78,59 +82,54 @@ export default function Header({ header = {} }: { header?: HeaderType }) {
                   {header.nav?.items?.map((item, i) => {
                     if (item.children && item.children.length > 0) {
                       return (
-                        <DropdownMenu
-                          key={i}
-                          open={openDropdownIndex === i}
-                          onOpenChange={(open) => setOpenDropdownIndex(open ? i : null)}
-                        >
-                          <DropdownMenuTrigger asChild>
-                            <div className="relative group">
-                              {/* Main title link */}
-                              <Link
-                                href={item.url as any}
-                                target={item.target}
-                                className="text-slate-700 hover:text-blue-600 inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-slate-100 focus:bg-slate-100 focus:outline-hidden"
+                        <NavigationMenuItem key={i}>
+                          <DropdownMenu
+                            open={openDropdownIndex === i}
+                            onOpenChange={(open) => setOpenDropdownIndex(open ? i : null)}
+                          >
+                            <DropdownMenuTrigger asChild>
+                              <button
+                                type="button"
+                                className="relative group text-slate-700 hover:text-blue-600 inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-slate-100 focus:bg-slate-100 focus:outline-hidden"
                                 onMouseEnter={() => setOpenDropdownIndex(i)}
                                 onMouseLeave={() => setOpenDropdownIndex(null)}
-                                onFocus={() => setOpenDropdownIndex(i)}
-                                onBlur={() => setOpenDropdownIndex(null)}
                               >
                                 {item.icon && (
                                   <Icon name={item.icon} className="size-4 shrink-0 mr-2" />
                                 )}
                                 <span>{item.title}</span>
-                              </Link>
-                            </div>
-                          </DropdownMenuTrigger>
-                          <DropdownMenuContent
-                            sideOffset={8}
-                            align="start"
-                            className="min-w-[200px]"
-                            onMouseEnter={() => setOpenDropdownIndex(i)}
-                            onMouseLeave={() => setOpenDropdownIndex(null)}
-                          >
-                            {item.children.map((iitem, ii) => (
-                              <DropdownMenuItem key={ii} asChild>
-                                <Link
-                                  className={cn(
-                                    "flex flex-col select-none gap-1 rounded-md p-3 leading-none no-underline outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                                  )}
-                                  href={iitem.url as any}
-                                  target={iitem.target}
-                                >
-                                  <span className="text-sm font-semibold text-slate-700">
-                                    {iitem.title}
-                                  </span>
-                                  {iitem.description && (
-                                    <span className="text-sm leading-snug text-slate-500">
-                                      {iitem.description}
+                              </button>
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent
+                              sideOffset={8}
+                              align="start"
+                              className="min-w-[200px]"
+                              onMouseEnter={() => setOpenDropdownIndex(i)}
+                              onMouseLeave={() => setOpenDropdownIndex(null)}
+                            >
+                              {item.children.map((iitem, ii) => (
+                                <DropdownMenuItem key={ii} asChild>
+                                  <Link
+                                    className={cn(
+                                      "flex flex-col select-none gap-1 rounded-md p-3 leading-none no-underline outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                                    )}
+                                    href={iitem.url as any}
+                                    target={iitem.target}
+                                  >
+                                    <span className="text-sm font-semibold text-slate-700">
+                                      {iitem.title}
                                     </span>
-                                  )}
-                                </Link>
-                              </DropdownMenuItem>
-                            ))}
-                          </DropdownMenuContent>
-                        </DropdownMenu>
+                                    {iitem.description && (
+                                      <span className="text-sm leading-snug text-slate-500">
+                                        {iitem.description}
+                                      </span>
+                                    )}
+                                  </Link>
+                                </DropdownMenuItem>
+                              ))}
+                            </DropdownMenuContent>
+                          </DropdownMenu>
+                        </NavigationMenuItem>
                       );
                     }
 
@@ -191,10 +190,13 @@ export default function Header({ header = {} }: { header?: HeaderType }) {
               className="flex items-center gap-2"
             >
               {header.brand?.logo?.src && (
-                <img
-                  src={header.brand.logo.src}
-                  alt={header.brand.logo.alt || header.brand.title}
-                  className="w-8"
+                <Image
+                  src={header.brand.logo.src as string}
+                  alt=""
+                  width={32}
+                  height={32}
+                  className="w-8 h-8"
+                  priority
                 />
               )}
               {header.brand?.title && (
@@ -217,10 +219,13 @@ export default function Header({ header = {} }: { header?: HeaderType }) {
                       className="flex items-center gap-2"
                     >
                       {header.brand?.logo?.src && (
-                        <img
-                          src={header.brand.logo.src}
-                          alt={header.brand.logo.alt || header.brand.title}
-                          className="w-8"
+                        <Image
+                          src={header.brand.logo.src as string}
+                          alt=""
+                          width={32}
+                          height={32}
+                          className="w-8 h-8"
+                          priority
                         />
                       )}
                       {header.brand?.title && (

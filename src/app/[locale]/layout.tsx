@@ -53,11 +53,12 @@ export default async function LocaleLayout({
     <NextIntlClientProvider messages={messages}>
       <NextAuthSessionProvider>
         <AppContextProvider>
+          {/* Google Tag Manager 延迟加载，不阻塞页面渲染 */}
           <Script
-            async
+            strategy="afterInteractive"
             src="https://www.googletagmanager.com/gtag/js?id=G-9YPHKGTMZG"
           ></Script>
-          <Script id="google-analytics">
+          <Script id="google-analytics" strategy="afterInteractive">
             {`
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}

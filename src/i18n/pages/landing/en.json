@@ -311,7 +311,7 @@
         "label": "Content Creator",
         "description": "Image To Video AI has revolutionized my content creation process. I can now turn my photography into engaging videos in minutes, not hours!",
         "image": {
-          "src": "/imgs/users/1.mp4"
+          "src": "/imgs/users/1.png"
         }
       },
       {
@@ -319,7 +319,7 @@
         "label": "Marketing Director",
         "description": "The quality of videos generated is incredible. Our social media engagement has increased by 300% since we started using Image To Video AI.",
         "image": {
-          "src": "/imgs/users/2.mp4"
+          "src": "/imgs/users/2.png"
         }
       },
       {
@@ -327,7 +327,7 @@
         "label": "Digital Artist",
         "description": "As a digital artist, I love how this tool brings my static artwork to life. The AI understands the nuances of my art style perfectly.",
         "image": {
-          "src": "/imgs/users/3.mp4"
+          "src": "/imgs/users/3.png"
         }
       },
       {
@@ -335,7 +335,7 @@
         "label": "Small Business Owner",
         "description": "Cost-effective and incredibly easy to use. I've created dozens of promotional videos for my business without any technical expertise.",
         "image": {
-          "src": "/imgs/users/4.mp4"
+          "src": "/imgs/users/4.png"
         }
       },
       {
@@ -343,7 +343,7 @@
         "label": "Social Media Manager",
         "description": "The speed is unmatched. I can create multiple video variations for A/B testing in the time it used to take for one video.",
         "image": {
-          "src": "/imgs/users/5.mp4"
+          "src": "/imgs/users/5.png"
         }
       },
       {
@@ -351,7 +351,7 @@
         "label": "Freelance Designer",
         "description": "Image To Video AI has become an essential tool in my creative workflow. My clients are amazed by the dynamic videos I can produce.",
         "image": {
-          "src": "/imgs/users/6.mp4"
+          "src": "/imgs/users/6.png"
         }
       }
     ]

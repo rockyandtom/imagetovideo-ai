@@ -60,7 +60,10 @@ export default function Feature3({ section }: { section: SectionType }) {
                               loop
                               muted
                               playsInline
-                            />
+                            >
+                              {/* 空的字幕轨道，提升可访问性 */}
+                              <track kind="captions" />
+                            </video>
                           ) : (
                             <img
                               src={item.image?.src}
@@ -95,7 +98,10 @@ export default function Feature3({ section }: { section: SectionType }) {
                             loop
                             muted
                             playsInline
-                          />
+                          >
+                            {/* 空的字幕轨道，提升可访问性 */}
+                            <track kind="captions" />
+                          </video>
                         ) : (
                           <img
                             src={item.image.src}
