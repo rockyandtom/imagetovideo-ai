@@ -110,12 +110,12 @@ export default function Hero({ hero }: { hero: HeroType }) {
             )}
 
             {/* 展示案例图片 */}
-            {hero.image && (
+            {hero.image && hero.image.src && (
               <div className="fade-in-up stagger-5 mt-12">
                 <div className="mx-auto max-w-4xl">
                   <Image
-                    src={hero.image.src}
-                    alt={hero.image.alt || hero.title}
+                    src={hero.image.src as string}
+                    alt={(hero.image.alt || hero.title) as string}
                     width={1200}
                     height={675}
                     className="w-full h-auto rounded-2xl shadow-2xl border border-white/20"
