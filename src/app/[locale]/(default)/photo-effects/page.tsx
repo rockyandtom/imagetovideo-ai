@@ -93,6 +93,32 @@ export default async function PhotoEffectsPage({
             </div>
           </Link>
 
+          {/* Nano Banana Anime Figure Generator 功能卡片 */}
+          <Link href="/photo-effects/nano-banana-anime-figure-generator" className="block">
+            <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+              <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+              </div>
+              <div className="flex items-center gap-2 mb-2">
+                <h3 className="text-xl font-semibold text-gray-900">Nano Banana</h3>
+                <span className="bg-gradient-to-r from-yellow-500 to-orange-600 text-white text-xs px-2 py-1 rounded-full font-medium">
+                  LIVE
+                </span>
+              </div>
+              <p className="text-gray-600">
+                Create stunning anime figures with our AI-powered Nano Banana generator. Transform your images into unique, high-quality anime figures instantly.
+              </p>
+              <div className="mt-4 flex items-center justify-between">
+                <span className="bg-green-100 text-green-600 px-2 py-1 rounded-full text-xs font-medium">Available Now</span>
+                <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </div>
+          </Link>
+
           {/* AI Photo Filters 功能卡片 */}
           <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
             <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">

@@ -87,6 +87,13 @@
               "url": "/photo-effects/ghibli-ai-generator",
               "icon": "RiMagicLine",
               "target": "_self"
+            },
+            {
+              "title": "Nano Banana",
+              "description": "Create stunning anime figures with AI-powered generator",
+              "url": "/photo-effects/nano-banana-anime-figure-generator",
+              "icon": "RiSparklingLine",
+              "target": "_self"
             }
           ]
         },
@@ -449,6 +456,11 @@
             {
               "title": "Ghibli AI Generator",
               "url": "/photo-effects/ghibli-ai-generator",
+              "target": "_self"
+            },
+            {
+              "title": "Nano Banana",
+              "url": "/photo-effects/nano-banana-anime-figure-generator",
               "target": "_self"
             }
           ]
