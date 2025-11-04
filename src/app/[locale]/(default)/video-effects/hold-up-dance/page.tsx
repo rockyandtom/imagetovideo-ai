@@ -14,7 +14,7 @@ export async function generateMetadata({
     description: "Generate stunning images of the Hold Up Dance with imagetovideo-ai. Our AI image generator makes it easy to create captivating visuals for any project.",
     keywords: "Hold Up Dance, AI image generator, dance images, AI art, image to video, dance poses, AI creativity",
     alternates: {
-      canonical: `/${locale}/video-effects/hold-up-dance`,
+      canonical: `https://imagetovideo-ai.net/${locale}/video-effects/hold-up-dance`,
     },
     openGraph: {
       title: "Create Hold Up Dance Images with AI - ImageToVideoAI",

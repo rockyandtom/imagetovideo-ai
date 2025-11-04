@@ -14,7 +14,7 @@ export async function generateMetadata({
     description: "Transform your photos with our advanced free AI image enhancer! Professional photo enhancement, AI upscaling, super resolution, noise reduction, and color correction. No registration required, instant results in minutes.",
     keywords: "free AI image enhancer, photo enhancement, AI upscaling, super resolution, image quality improvement, noise reduction, color correction, photo enhancer, AI photo editor, image enhancement tool, imagetovideo-ai",
     alternates: {
-      canonical: `/${locale}/image-editor/AI-Image-Enhancer`,
+      canonical: `https://imagetovideo-ai.net/${locale}/image-editor/AI-Image-Enhancer`,
     },
     openGraph: {
       title: "Free AI Image Enhancer - Professional Photo Enhancement Tool | imagetovideo-ai",

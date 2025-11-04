@@ -11,10 +11,11 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations();
 
-  let canonicalUrl = `${process.env.NEXT_PUBLIC_WEB_URL}/posts`;
+  // 设置 canonical URL 为完整的绝对 URL
+  let canonicalUrl = `https://imagetovideo-ai.net/posts`;
 
   if (locale !== "en") {
-    canonicalUrl = `${process.env.NEXT_PUBLIC_WEB_URL}/${locale}/posts`;
+    canonicalUrl = `https://imagetovideo-ai.net/${locale}/posts`;
   }
 
   return {

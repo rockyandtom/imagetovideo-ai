@@ -13,7 +13,7 @@ export async function generateMetadata({
     description: "Professional image editing tools powered by AI. Edit, enhance, and transform your images with advanced artificial intelligence technology.",
     keywords: "image editor, AI image editing, photo editor, image enhancement, background removal, AI filters",
     alternates: {
-      canonical: `/${locale}/image-editor`,
+      canonical: `https://imagetovideo-ai.net/${locale}/image-editor`,
     },
     openGraph: {
       title: "Image Editor - AI-Powered Image Editing Tools",

@@ -14,7 +14,7 @@ export async function generateMetadata({
     description: "Experience the best face swap online free with imagetovideo-ai's cutting-edge AI technology. Seamlessly blend faces onto any image with photorealistic results. Our easy-to-use tool is 100% free and fast. Start your AI image creation today!",
     keywords: "face swap online free, face swap, AI face swap, free face swap, face swap tool, AI face replacement, face swap generator, imagetovideo-ai",
     alternates: {
-      canonical: `/${locale}/photo-effects/face-swap-online-free`,
+      canonical: `https://imagetovideo-ai.net/${locale}/photo-effects/face-swap-online-free`,
     },
     openGraph: {
       title: "Ultimate Face Swap Online Free Tool by imagetovideo-ai",

@@ -14,7 +14,7 @@ export async function generateMetadata({
     description: "Unleash your creativity with our Ghibli AI Generator. ImageToVideo-AI brings your imagination to life, turning text into stunning Ghibli-style art with cutting-edge AI.",
     keywords: "Ghibli AI generator, Studio Ghibli art, anime AI generator, Ghibli style art, AI art generator, Miyazaki style, anime art creation, Ghibli AI art",
     alternates: {
-      canonical: `/${locale}/photo-effects/ghibli-ai-generator`,
+      canonical: `https://imagetovideo-ai.net/${locale}/photo-effects/ghibli-ai-generator`,
     },
     openGraph: {
       title: "Ghibli AI Generator: Create Anime Art with ImageToVideo AI",

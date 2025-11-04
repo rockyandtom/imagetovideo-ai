@@ -14,7 +14,7 @@ export async function generateMetadata({
     description: "ImageToVideoAI transforms static images into dynamic videos instantly. Create professional video content with our free AI-powered image to video generator. No signup required.",
     keywords: "ImageToVideoAI, image to video AI, free video generator, AI video creation, photo to video converter, image animation, video maker online",
     alternates: {
-      canonical: `/${locale}/Image-to-Video`,
+      canonical: `https://imagetovideo-ai.net/${locale}/Image-to-Video`,
     },
     openGraph: {
       title: "ImageToVideoAI - Free AI Image to Video Generator",

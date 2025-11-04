@@ -8,7 +8,7 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Transform your text descriptions into stunning AI-generated videos instantly! imagetovideo-ai offers the most advanced free text to video generation. No registration required, supports multiple aspect ratios, and creates professional videos in minutes. Start your video creation journey today!",
     keywords: "free AI video generator, text to video, AI video generation, free AI video creator, text to video generator, AI video maker, artificial intelligence videos, free video generation, AI video tools, imagetovideo-ai, online video generator",
     alternates: {
-      canonical: "/text-to-video",
+      canonical: "https://imagetovideo-ai.net/text-to-video",
     },
     openGraph: {
       title: "Free AI Text to Video Generator - Best AI Video Creator | imagetovideo-ai",

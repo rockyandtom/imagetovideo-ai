@@ -13,10 +13,11 @@ export async function generateMetadata({
 
   const post = await findPostBySlug(slug, locale);
 
-  let canonicalUrl = `${process.env.NEXT_PUBLIC_WEB_URL}/posts/${slug}`;
+  // 设置 canonical URL 为完整的绝对 URL
+  let canonicalUrl = `https://imagetovideo-ai.net/posts/${slug}`;
 
   if (locale !== "en") {
-    canonicalUrl = `${process.env.NEXT_PUBLIC_WEB_URL}/${locale}/posts/${slug}`;
+    canonicalUrl = `https://imagetovideo-ai.net/${locale}/posts/${slug}`;
   }
 
   return {

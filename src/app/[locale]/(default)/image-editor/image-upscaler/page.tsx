@@ -14,7 +14,7 @@ export async function generateMetadata({
     description: "Enhance your images with our powerful AI Image Upscaler. Free and fast, imagetovideo-ai helps you upscale images without losing quality, perfect for creators and professionals.",
     keywords: "AI image upscaler, image enhancement, upscale images, image quality, photo enhancer, resolution enhancement, image enlarger",
     alternates: {
-      canonical: `/${locale}/image-editor/image-upscaler`,
+      canonical: `https://imagetovideo-ai.net/${locale}/image-editor/image-upscaler`,
     },
     openGraph: {
       title: "Best Image Upscaler Free Online - imagetovideo-ai",

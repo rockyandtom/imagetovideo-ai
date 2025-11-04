@@ -21,7 +21,7 @@ export async function generateMetadata({
     title: title,
     description: description,
     alternates: {
-      canonical: `/${locale}/make/image-to-video-ai-free`,
+      canonical: `https://imagetovideo-ai.net/${locale}/make/image-to-video-ai-free`,
     },
   };
 }

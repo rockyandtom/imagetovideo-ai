@@ -35,7 +35,7 @@ export async function generateMetadata({
       description: "Transform your videos with our comprehensive collection of AI-powered effects and enhancement tools.",
     },
     alternates: {
-      canonical: `/video-effects`,
+      canonical: `https://imagetovideo-ai.net/video-effects`,
     },
     robots: {
       index: true,

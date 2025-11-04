@@ -17,11 +17,8 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  let canonicalUrl = `${process.env.NEXT_PUBLIC_WEB_URL}`;
-
-  if (locale !== "en") {
-    canonicalUrl = `${process.env.NEXT_PUBLIC_WEB_URL}/${locale}`;
-  }
+  // 设置 canonical URL 为 https://imagetovideo-ai.net/
+  const canonicalUrl = "https://imagetovideo-ai.net/";
 
   return {
     alternates: {

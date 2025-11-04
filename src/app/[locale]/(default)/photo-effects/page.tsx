@@ -14,7 +14,7 @@ export async function generateMetadata({
     description: "Transform your photos with stunning AI-powered effects. Apply filters, background effects, and artistic style transfers with advanced artificial intelligence technology.",
     keywords: "photo effects, AI photo filters, background effects, style transfer, photo enhancement, AI filters, artistic effects",
     alternates: {
-      canonical: `/${locale}/photo-effects`,
+      canonical: `https://imagetovideo-ai.net/${locale}/photo-effects`,
     },
     openGraph: {
       title: "Photo Effects - AI-Powered Photo Enhancement Tools",

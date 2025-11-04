@@ -23,6 +23,9 @@ export async function generateMetadata({
 
   const t = await getTranslations();
 
+  // 设置 canonical URL 为 https://imagetovideo-ai.net/
+  const canonicalUrl = "https://imagetovideo-ai.net/";
+
   return {
     title: {
       template: `%s`,
@@ -30,6 +33,9 @@ export async function generateMetadata({
     },
     description: t("metadata.description") || "",
     keywords: t("metadata.keywords") || "",
+    alternates: {
+      canonical: canonicalUrl,
+    },
   };
 }
 

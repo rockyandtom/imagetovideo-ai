@@ -82,6 +82,7 @@ const nextConfig = {
     ];
   },
   async redirects() {
+    // 注意：www 重定向已在 Vercel 平台配置为 308 重定向，此处无需重复配置
     return [];
   },
 };

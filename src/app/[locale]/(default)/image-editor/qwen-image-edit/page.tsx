@@ -14,7 +14,7 @@ export async function generateMetadata({
     description: "Transform your images with advanced AI editing powered by Qwen technology! Free AI image editor with intelligent editing capabilities, background removal, object manipulation, and style transfer. No registration required, professional results in minutes.",
     keywords: "free AI image editor, Qwen image edit, AI photo editor, intelligent image editing, AI image enhancement, background removal AI, object manipulation, style transfer, free photo editor, AI image tools, imagetovideo-ai",
     alternates: {
-      canonical: `/${locale}/image-editor/qwen-image-edit`,
+      canonical: `https://imagetovideo-ai.net/${locale}/image-editor/qwen-image-edit`,
     },
     openGraph: {
       title: "Free AI Image Editor - Qwen Image Edit Tool | imagetovideo-ai",
