@@ -94,6 +94,13 @@
               "url": "/photo-effects/nano-banana-anime-figure-generator",
               "icon": "RiSparklingLine",
               "target": "_self"
+            },
+            {
+              "title": "Face Swap Online Free",
+              "description": "Seamlessly blend faces onto any image with photorealistic results",
+              "url": "/photo-effects/face-swap-online-free",
+              "icon": "RiSwapLine",
+              "target": "_self"
             }
           ]
         },
@@ -461,6 +468,11 @@
             {
               "title": "Nano Banana",
               "url": "/photo-effects/nano-banana-anime-figure-generator",
+              "target": "_self"
+            },
+            {
+              "title": "Face Swap Online Free",
+              "url": "/photo-effects/face-swap-online-free",
               "target": "_self"
             }
           ]

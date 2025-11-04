@@ -119,6 +119,32 @@ export default async function PhotoEffectsPage({
             </div>
           </Link>
 
+          {/* Face Swap Online Free 功能卡片 */}
+          <Link href="/photo-effects/face-swap-online-free" className="block">
+            <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                </svg>
+              </div>
+              <div className="flex items-center gap-2 mb-2">
+                <h3 className="text-xl font-semibold text-gray-900">Face Swap Online Free</h3>
+                <span className="bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs px-2 py-1 rounded-full font-medium">
+                  LIVE
+                </span>
+              </div>
+              <p className="text-gray-600">
+                Experience the best face swap online free with imagetovideo-ai's cutting-edge AI technology. Seamlessly blend faces onto any image with photorealistic results.
+              </p>
+              <div className="mt-4 flex items-center justify-between">
+                <span className="bg-green-100 text-green-600 px-2 py-1 rounded-full text-xs font-medium">Available Now</span>
+                <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </div>
+          </Link>
+
           {/* AI Photo Filters 功能卡片 */}
           <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
             <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
