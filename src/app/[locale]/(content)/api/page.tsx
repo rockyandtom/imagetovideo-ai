@@ -11,8 +11,8 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const title = "API Interface - Developer-Friendly Video Generation API";
-  const description = "Provides RESTful API interface supporting image-to-video, batch processing and more, with complete SDK and documentation.";
+  const title = "API Interface - Video Generation API";
+  const description = "RESTful API for image-to-video, batch processing, and more. Includes complete SDK and documentation for developers.";
 
   return {
     title: title,

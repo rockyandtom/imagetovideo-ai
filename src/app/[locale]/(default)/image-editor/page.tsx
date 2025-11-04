@@ -9,8 +9,8 @@ export async function generateMetadata({
   const { locale } = await params;
 
   return {
-    title: "Image Editor - AI-Powered Image Editing Tools | imagetovideo-ai",
-    description: "Professional image editing tools powered by AI. Edit, enhance, and transform your images with advanced artificial intelligence technology.",
+    title: "AI Image Editor - Professional Editing Tools",
+    description: "Professional AI-powered image editing tools. Edit, enhance, and transform images with advanced artificial intelligence technology.",
     keywords: "image editor, AI image editing, photo editor, image enhancement, background removal, AI filters",
     alternates: {
       canonical: `https://imagetovideo-ai.net/${locale}/image-editor`,

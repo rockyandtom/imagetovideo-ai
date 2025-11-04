@@ -4,8 +4,8 @@ import TextToVideoClient from "./client";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Free AI Text to Video Generator - Best AI Video Creator | imagetovideo-ai",
-    description: "Transform your text descriptions into stunning AI-generated videos instantly! imagetovideo-ai offers the most advanced free text to video generation. No registration required, supports multiple aspect ratios, and creates professional videos in minutes. Start your video creation journey today!",
+    title: "Free AI Text to Video Generator | imagetovideo-ai",
+    description: "Transform text into stunning AI videos instantly! Free text to video generator with no registration. Supports multiple aspect ratios. Create professional videos in minutes.",
     keywords: "free AI video generator, text to video, AI video generation, free AI video creator, text to video generator, AI video maker, artificial intelligence videos, free video generation, AI video tools, imagetovideo-ai, online video generator",
     alternates: {
       canonical: "https://imagetovideo-ai.net/text-to-video",

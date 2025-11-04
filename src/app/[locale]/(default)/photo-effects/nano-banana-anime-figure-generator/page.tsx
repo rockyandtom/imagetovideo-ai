@@ -11,7 +11,7 @@ export async function generateMetadata({
 
   return {
     title: "Nano Banana: AI Anime Figure Generator",
-    description: "Create stunning anime figures with our AI-powered Nano Banana generator. imagetovideo-ai brings your anime dreams to life, transforming text into unique, high-quality figures.",
+    description: "Create stunning anime figures with AI-powered Nano Banana generator. Transform text into unique, high-quality anime characters instantly.",
     keywords: "Nano Banana, AI anime figure generator, anime figure creator, AI character generator, anime art generator, figure generator, anime character creation",
     alternates: {
       canonical: `https://imagetovideo-ai.net/${locale}/photo-effects/nano-banana-anime-figure-generator`,

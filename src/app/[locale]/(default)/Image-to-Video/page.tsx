@@ -10,8 +10,8 @@ export async function generateMetadata({
   const { locale } = await params;
 
   return {
-    title: "ImageToVideoAI - Free AI Image to Video Generator Online",
-    description: "ImageToVideoAI transforms static images into dynamic videos instantly. Create professional video content with our free AI-powered image to video generator. No signup required.",
+    title: "ImageToVideoAI - Free AI Image to Video Generator",
+    description: "Transform static images into dynamic videos instantly. Free AI-powered image to video generator. Create professional videos with no signup required.",
     keywords: "ImageToVideoAI, image to video AI, free video generator, AI video creation, photo to video converter, image animation, video maker online",
     alternates: {
       canonical: `https://imagetovideo-ai.net/${locale}/Image-to-Video`,

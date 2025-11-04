@@ -10,8 +10,8 @@ export async function generateMetadata({
   const { locale } = await params;
 
   return {
-    title: "Free AI Text to Image Generator - Best AI Image Creator | imagetovideo-ai",
-    description: "Experience the most advanced free AI image generator! imagetovideo-ai provides powerful text to image capabilities, transforming text descriptions into stunning AI-generated images. No registration required, supports multiple languages, and converts to AI video with one click. Start your creative journey today!",
+    title: "Free AI Text to Image Generator | imagetovideo-ai",
+    description: "Transform text into stunning AI images instantly! Free AI image generator with no registration. Supports multiple languages. Convert to video with one click.",
     keywords: "free AI image generator, text to image, AI image generation, free AI art generator, AI image creator, text to image generator, artificial intelligence images, free image generation, AI art tools, imagetovideo-ai, online AI generator",
     alternates: {
       canonical: `https://imagetovideo-ai.net/${locale}/text-to-image`,

@@ -10,8 +10,8 @@ export async function generateMetadata({
   const { locale } = await params;
 
   return {
-    title: "Free AI Image Editor - Qwen Image Edit Tool | imagetovideo-ai",
-    description: "Transform your images with advanced AI editing powered by Qwen technology! Free AI image editor with intelligent editing capabilities, background removal, object manipulation, and style transfer. No registration required, professional results in minutes.",
+    title: "Free AI Image Editor - Qwen Image Edit",
+    description: "Transform images with Qwen AI technology. Free AI editor with background removal, object manipulation, and style transfer. No registration required.",
     keywords: "free AI image editor, Qwen image edit, AI photo editor, intelligent image editing, AI image enhancement, background removal AI, object manipulation, style transfer, free photo editor, AI image tools, imagetovideo-ai",
     alternates: {
       canonical: `https://imagetovideo-ai.net/${locale}/image-editor/qwen-image-edit`,

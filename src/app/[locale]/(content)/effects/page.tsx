@@ -11,8 +11,8 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const title = "Effects Library - Rich Animation Effects and Visual Effects";
-  const description = "Explore our rich animation effects library with 100+ professional effects to make your videos more vivid and engaging.";
+  const title = "Effects Library - Animation & Visual Effects";
+  const description = "Explore 100+ professional animation and visual effects. Make your videos more vivid and engaging with our effects library.";
 
   return {
     title: title,

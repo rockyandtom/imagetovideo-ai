@@ -11,8 +11,8 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const title = "AI Video Tools - Professional Video Generation Tools";
-  const description = "Explore our powerful AI video generation toolkit, including image-to-video, video editing, and special effects creation.";
+  const title = "AI Video Tools - Video Generation Toolkit";
+  const description = "Explore powerful AI video generation toolkit. Includes image-to-video, video editing, and special effects creation tools.",
 
   return {
     title: title,

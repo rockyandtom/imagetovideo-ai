@@ -14,8 +14,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   // Multi-language support can be added here if needed
-  const title = "Image to Video AI Free: Create Videos from Photos Instantly";
-  const description = "Discover the best way to turn any image into a dynamic video with our free AI generator. Create stunning, high-quality videos from your photos effortlessly. No credit card required to start.";
+  const title = "Image to Video AI Free - Create Videos Instantly";
+  const description = "Turn any image into dynamic videos with free AI generator. Create stunning, high-quality videos from photos. No credit card required.",
 
   return {
     title: title,

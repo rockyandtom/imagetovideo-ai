@@ -10,8 +10,8 @@ export async function generateMetadata({
   const { locale } = await params;
 
   return {
-    title: "Free AI Image Enhancer - Professional Photo Enhancement Tool | imagetovideo-ai",
-    description: "Transform your photos with our advanced free AI image enhancer! Professional photo enhancement, AI upscaling, super resolution, noise reduction, and color correction. No registration required, instant results in minutes.",
+    title: "Free AI Image Enhancer - Photo Enhancement",
+    description: "Transform photos with free AI image enhancer. Professional enhancement, upscaling, super resolution, noise reduction, and color correction. No registration.",
     keywords: "free AI image enhancer, photo enhancement, AI upscaling, super resolution, image quality improvement, noise reduction, color correction, photo enhancer, AI photo editor, image enhancement tool, imagetovideo-ai",
     alternates: {
       canonical: `https://imagetovideo-ai.net/${locale}/image-editor/AI-Image-Enhancer`,

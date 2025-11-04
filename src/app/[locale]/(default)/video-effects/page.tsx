@@ -10,8 +10,8 @@ export async function generateMetadata({
   const { locale } = await params;
 
   return {
-    title: "Video Effects - AI-Powered Video Enhancement Tools | Image To Video AI",
-    description: "Discover our comprehensive collection of AI-powered video effects and enhancement tools. Transform your videos with professional-grade effects, filters, and animations.",
+    title: "AI Video Effects - Video Enhancement Tools",
+    description: "Discover AI-powered video effects and enhancement tools. Transform videos with professional-grade effects, filters, and animations.",
     keywords: [
       "video effects",
       "AI video enhancement",

@@ -10,8 +10,8 @@ export async function generateMetadata({
   const { locale } = await params;
 
   return {
-    title: "Photo Effects - AI-Powered Photo Enhancement Tools | imagetovideo-ai",
-    description: "Transform your photos with stunning AI-powered effects. Apply filters, background effects, and artistic style transfers with advanced artificial intelligence technology.",
+    title: "AI Photo Effects - Photo Enhancement Tools",
+    description: "Transform photos with AI-powered effects. Apply filters, background effects, and artistic style transfers using advanced AI technology.",
     keywords: "photo effects, AI photo filters, background effects, style transfer, photo enhancement, AI filters, artistic effects",
     alternates: {
       canonical: `https://imagetovideo-ai.net/${locale}/photo-effects`,
