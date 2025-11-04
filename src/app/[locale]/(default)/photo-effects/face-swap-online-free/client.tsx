@@ -21,6 +21,7 @@ export default function FaceSwapOnlineFreeClient() {
   const [progress, setProgress] = useState<number>(0);
   const [estimatedTime, setEstimatedTime] = useState<string>("");
   const [taskId, setTaskId] = useState<string | null>(null);
+  const [isDownloading, setIsDownloading] = useState(false);
 
   const targetImageRef = useRef<HTMLInputElement>(null);
   const replaceImageRef = useRef<HTMLInputElement>(null);
@@ -254,6 +255,66 @@ export default function FaceSwapOnlineFreeClient() {
     checkStatus();
   };
 
+  // 下载生成的图片
+  const downloadImage = async (imageUrl: string) => {
+    if (isDownloading) return;
+    
+    setIsDownloading(true);
+    try {
+      console.log('开始下载图片:', imageUrl);
+      
+      // 使用 fetch 获取图片数据并转换为 blob，强制下载
+      const response = await fetch(imageUrl, {
+        mode: 'cors',
+        credentials: 'omit'
+      });
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
+      const blob = await response.blob();
+      console.log('图片blob创建成功, 大小:', blob.size, '类型:', blob.type);
+      
+      // 确定文件扩展名
+      let fileExtension = 'png';
+      if (blob.type.includes('jpeg') || blob.type.includes('jpg')) {
+        fileExtension = 'jpg';
+      } else if (blob.type.includes('webp')) {
+        fileExtension = 'webp';
+      } else if (blob.type.includes('gif')) {
+        fileExtension = 'gif';
+      }
+      
+      // 创建对象URL
+      const url = window.URL.createObjectURL(blob);
+      
+      // 创建下载链接
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `face-swap-${Date.now()}.${fileExtension}`;
+      link.style.display = 'none';
+      
+      // 触发下载
+      document.body.appendChild(link);
+      link.click();
+      
+      // 清理
+      setTimeout(() => {
+        document.body.removeChild(link);
+        window.URL.revokeObjectURL(url);
+      }, 100);
+      
+      console.log('下载完成');
+      toast.success('图片下载成功！');
+    } catch (error) {
+      console.error('下载错误:', error);
+      toast.error('下载失败，请重试');
+    } finally {
+      setIsDownloading(false);
+    }
+  };
+
   const UploadArea = ({ 
     image, 
     setImage, 
@@ -436,21 +497,22 @@ export default function FaceSwapOnlineFreeClient() {
                             <p className="text-sm text-muted-foreground mb-3">Your face swap is ready!</p>
                             <div className="flex flex-col sm:flex-row gap-2 justify-center">
                               <Button
-                                onClick={() => {
-                                  const link = document.createElement('a');
-                                  link.href = generatedImage;
-                                  link.download = `face-swap-${Date.now()}.jpg`;
-                                  document.body.appendChild(link);
-                                  link.click();
-                                  document.body.removeChild(link);
-                                  toast.success('Image downloaded successfully!');
-                                }}
-                                disabled={isGenerating}
+                                onClick={() => downloadImage(generatedImage)}
+                                disabled={isGenerating || isDownloading}
                                 size="sm"
                                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
                               >
-                                <Icon name="RiDownloadLine" className="w-4 h-4 mr-2" />
-                                Download
+                                {isDownloading ? (
+                                  <>
+                                    <Icon name="RiLoader4Line" className="w-4 h-4 mr-2 animate-spin" />
+                                    Downloading...
+                                  </>
+                                ) : (
+                                  <>
+                                    <Icon name="RiDownloadLine" className="w-4 h-4 mr-2" />
+                                    Download
+                                  </>
+                                )}
                               </Button>
                               <Button
                                 onClick={() => {
