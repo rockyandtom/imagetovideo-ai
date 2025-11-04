@@ -12,7 +12,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const title = "AI Video Tools - Video Generation Toolkit";
-  const description = "Explore powerful AI video generation toolkit. Includes image-to-video, video editing, and special effects creation tools.",
+  const description = "Explore powerful AI video generation toolkit. Includes image-to-video, video editing, and special effects creation tools.";
 
   return {
     title: title,
