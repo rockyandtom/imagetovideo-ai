@@ -731,7 +731,7 @@ export default function Sora2VideoGeneratorClient() {
                       <div className="space-y-4">
                         <h2 className="text-2xl font-bold text-foreground">Introduction: The Future of AI Video Generation</h2>
                         <div className="prose prose-slate dark:prose-invert max-w-none">
-                          <Markdown content={section.content} />
+                          <Markdown content={section.content || ""} />
                         </div>
                       </div>
                     )}
@@ -744,7 +744,7 @@ export default function Sora2VideoGeneratorClient() {
                               ? "order-2 lg:order-1 prose prose-slate dark:prose-invert max-w-none"
                               : "order-2 lg:order-2 prose prose-slate dark:prose-invert max-w-none"
                             }>
-                              <Markdown content={section.content} />
+                              <Markdown content={section.content || ""} />
                             </div>
                             <div className={h2Index % 2 === 0 
                               ? "order-1 lg:order-2"
@@ -765,7 +765,7 @@ export default function Sora2VideoGeneratorClient() {
                           </div>
                         ) : (
                           <div className="prose prose-slate dark:prose-invert max-w-none">
-                            <Markdown content={section.content} />
+                            <Markdown content={section.content || ""} />
                           </div>
                         )}
                       </div>
@@ -776,10 +776,10 @@ export default function Sora2VideoGeneratorClient() {
                         <div className="space-y-4">
                           {section.items.map((item, itemIndex) => (
                             <div key={itemIndex} className="space-y-2">
-                              <h3 className="text-lg font-semibold text-foreground">{item.question}</h3>
-                              <div className="prose prose-slate dark:prose-invert max-w-none">
-                                <Markdown content={item.answer} />
-                              </div>
+                            <h3 className="text-lg font-semibold text-foreground">{item.question}</h3>
+                            <div className="prose prose-slate dark:prose-invert max-w-none">
+                              <Markdown content={item.answer || ""} />
+                            </div>
                             </div>
                           ))}
                         </div>
