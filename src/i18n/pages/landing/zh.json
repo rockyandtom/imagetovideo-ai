@@ -35,7 +35,15 @@
           "trigger": "hover",
           "highlightOnHover": true,
           "align": "center",
-          "sideOffset": 4
+          "sideOffset": 4,
+          "children": [
+            {
+              "title": "Sora 2 AI Video Generator",
+              "url": "/text-to-video/sora-2-ai-video-generator",
+              "description": "使用 Sora 2 AI Video Generator 将文本提示转换为电影级视频",
+              "target": "_self"
+            }
+          ]
         },
         {
           "title": "图片转视频",
@@ -407,7 +415,13 @@
         {
           "title": "文字生视频", 
           "url": "/text-to-video",
-          "children": []
+          "children": [
+            {
+              "title": "Sora 2 AI Video Generator",
+              "url": "/text-to-video/sora-2-ai-video-generator",
+              "target": "_self"
+            }
+          ]
         },
         {
           "title": "图片转视频",

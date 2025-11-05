@@ -83,52 +83,62 @@ export default function Header({ header = {} }: { header?: HeaderType }) {
                     if (item.children && item.children.length > 0) {
                       return (
                         <NavigationMenuItem key={i}>
-                          <DropdownMenu
-                            open={openDropdownIndex === i}
-                            onOpenChange={(open) => setOpenDropdownIndex(open ? i : null)}
-                          >
-                            <DropdownMenuTrigger asChild>
-                              <button
-                                type="button"
-                                className="relative group text-slate-700 hover:text-blue-600 inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-slate-100 focus:bg-slate-100 focus:outline-hidden"
+                          <div className="relative inline-flex items-center group">
+                            <Link
+                              href={item.url as any}
+                              target={item.target}
+                              className="text-slate-700 hover:text-blue-600 inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-slate-100 focus:bg-slate-100 focus:outline-hidden"
+                              onMouseEnter={() => setOpenDropdownIndex(i)}
+                            >
+                              {item.icon && (
+                                <Icon name={item.icon} className="size-4 shrink-0 mr-2" />
+                              )}
+                              <span>{item.title}</span>
+                            </Link>
+                            <DropdownMenu
+                              open={openDropdownIndex === i}
+                              onOpenChange={(open) => setOpenDropdownIndex(open ? i : null)}
+                            >
+                              <DropdownMenuTrigger asChild>
+                                <button
+                                  type="button"
+                                  className="h-10 w-6 flex items-center justify-center text-slate-700 hover:text-blue-600 rounded-md hover:bg-slate-100 transition-colors"
+                                  onMouseEnter={() => setOpenDropdownIndex(i)}
+                                  onMouseLeave={() => setOpenDropdownIndex(null)}
+                                >
+                                  <Icon name="RiArrowDownSLine" className="size-4" />
+                                </button>
+                              </DropdownMenuTrigger>
+                              <DropdownMenuContent
+                                sideOffset={8}
+                                align="start"
+                                className="min-w-[200px]"
                                 onMouseEnter={() => setOpenDropdownIndex(i)}
                                 onMouseLeave={() => setOpenDropdownIndex(null)}
                               >
-                                {item.icon && (
-                                  <Icon name={item.icon} className="size-4 shrink-0 mr-2" />
-                                )}
-                                <span>{item.title}</span>
-                              </button>
-                            </DropdownMenuTrigger>
-                            <DropdownMenuContent
-                              sideOffset={8}
-                              align="start"
-                              className="min-w-[200px]"
-                              onMouseEnter={() => setOpenDropdownIndex(i)}
-                              onMouseLeave={() => setOpenDropdownIndex(null)}
-                            >
-                              {item.children.map((iitem, ii) => (
-                                <DropdownMenuItem key={ii} asChild>
-                                  <Link
-                                    className={cn(
-                                      "flex flex-col select-none gap-1 rounded-md p-3 leading-none no-underline outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                                    )}
-                                    href={iitem.url as any}
-                                    target={iitem.target}
-                                  >
-                                    <span className="text-sm font-semibold text-slate-700">
-                                      {iitem.title}
-                                    </span>
-                                    {iitem.description && (
-                                      <span className="text-sm leading-snug text-slate-500">
-                                        {iitem.description}
+                                {item.children.map((iitem, ii) => (
+                                  <DropdownMenuItem key={ii} asChild>
+                                    <Link
+                                      className={cn(
+                                        "flex flex-col select-none gap-1 rounded-md p-3 leading-none no-underline outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                                      )}
+                                      href={iitem.url as any}
+                                      target={iitem.target}
+                                    >
+                                      <span className="text-sm font-semibold text-slate-700">
+                                        {iitem.title}
                                       </span>
-                                    )}
-                                  </Link>
-                                </DropdownMenuItem>
-                              ))}
-                            </DropdownMenuContent>
-                          </DropdownMenu>
+                                      {iitem.description && (
+                                        <span className="text-sm leading-snug text-slate-500">
+                                          {iitem.description}
+                                        </span>
+                                      )}
+                                    </Link>
+                                  </DropdownMenuItem>
+                                ))}
+                              </DropdownMenuContent>
+                            </DropdownMenu>
+                          </div>
                         </NavigationMenuItem>
                       );
                     }
