@@ -774,7 +774,7 @@ export default function Sora2VideoGeneratorClient() {
                       <div className="space-y-6">
                         <h2 className="text-2xl font-bold text-foreground">FAQ: Common Questions About the Sora 2 AI Video Generator</h2>
                         <div className="space-y-4">
-                          {section.items.map((item, itemIndex) => (
+                          {section.items?.map((item, itemIndex) => (
                             <div key={itemIndex} className="space-y-2">
                             <h3 className="text-lg font-semibold text-foreground">{item.question}</h3>
                             <div className="prose prose-slate dark:prose-invert max-w-none">
