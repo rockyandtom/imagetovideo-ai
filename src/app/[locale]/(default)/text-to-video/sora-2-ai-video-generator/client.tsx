@@ -111,6 +111,8 @@ export default function Sora2VideoGeneratorClient() {
   const pollTaskStatus = async (taskId: string, sessionId?: string) => {
     const maxAttempts = 360; // 最多轮询12分钟 (360 * 2秒 = 720秒 = 12分钟)
     let attempts = 0;
+    let retryCount = 0;
+    const maxRetries = 5; // 最多重试5次
     const logPrefix = sessionId ? `[${sessionId}]` : '[POLL]';
     
     console.log(`${logPrefix} Starting status polling for task: ${taskId}`);
@@ -120,15 +122,40 @@ export default function Sora2VideoGeneratorClient() {
         attempts++;
         console.log(`${logPrefix} Polling attempt ${attempts}/${maxAttempts}`);
         
-        const response = await fetch(`/api/runninghub/status/${taskId}`);
+        // 创建超时控制器
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 10000); // 10秒超时
+        
+        let response;
+        try {
+          response = await fetch(`/api/runninghub/status/${taskId}`, {
+            signal: controller.signal
+          });
+        } finally {
+          clearTimeout(timeoutId);
+        }
+        
         console.log(`${logPrefix} Status API response status:`, response.status);
         
         if (!response.ok) {
-          throw new Error('Failed to get task status');
+          throw new Error(`Failed to get task status: ${response.status}`);
         }
         
         const data = await response.json();
         console.log(`${logPrefix} Status API response:`, data);
+        
+        // 重置重试计数（成功响应）
+        retryCount = 0;
+        
+        // Update progress
+        if (data.progress !== undefined) {
+          setProgress(data.progress);
+          console.log(`${logPrefix} Updated progress to:`, data.progress);
+        }
+        
+        if (data.estimatedTime) {
+          setEstimatedTime(data.estimatedTime);
+        }
         
         if (data.status === 'completed') {
           console.log(`${logPrefix} Task completed! Video URL:`, data.videoUrl);
@@ -137,6 +164,7 @@ export default function Sora2VideoGeneratorClient() {
             setIsGenerating(false);
             setProgress(100);
             setEstimatedTime("Completed");
+            toast.success("Video generated successfully!");
             console.log(`${logPrefix} ===== Video Generation Completed Successfully =====`);
             return;
           } else {
@@ -197,7 +225,29 @@ export default function Sora2VideoGeneratorClient() {
         
       } catch (error) {
         console.error(`${logPrefix} Task status polling failed:`, error);
-        alert(error instanceof Error ? error.message : 'Failed to get task status');
+        const errorMessage = error instanceof Error ? error.message : 'Failed to get task status';
+        
+        // 检查是否是网络错误（fetch失败、连接关闭等）
+        const isNetworkError = 
+          errorMessage.includes('fetch') || 
+          errorMessage.includes('network') || 
+          errorMessage.includes('Failed to fetch') ||
+          errorMessage.includes('ERR_CONNECTION_CLOSED') ||
+          errorMessage.includes('timeout') ||
+          error instanceof TypeError;
+        
+        // 如果是网络错误且重试次数未超过限制，则自动重试
+        if (isNetworkError && retryCount < maxRetries) {
+          retryCount++;
+          const retryDelay = Math.min(5000 * retryCount, 20000); // 递增延迟，最多20秒
+          console.log(`${logPrefix} Network error detected, retrying in ${retryDelay/1000}s... (retry ${retryCount}/${maxRetries})`);
+          setEstimatedTime(`Connection error, retrying... (${retryCount}/${maxRetries})`);
+          setTimeout(poll, retryDelay);
+          return;
+        }
+        
+        // 如果重试次数已满或不是网络错误，则显示错误
+        toast.error(errorMessage);
         setIsGenerating(false);
         setTaskId(null);
         setProgress(0);
