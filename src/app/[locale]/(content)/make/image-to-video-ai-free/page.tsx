@@ -5,6 +5,7 @@ import Testimonial from "@/components/blocks/testimonial";
 import FAQ from "@/components/blocks/faq";
 import CTA from "@/components/blocks/cta";
 import { Metadata } from "next";
+import { getCanonicalUrlWithLocale } from "@/lib/constants";
 
 // 为这个页面生成SEO友好的元数据
 export async function generateMetadata({
@@ -21,7 +22,7 @@ export async function generateMetadata({
     title: title,
     description: description,
     alternates: {
-      canonical: `https://imagetovideo-ai.net/${locale}/make/image-to-video-ai-free`,
+      canonical: getCanonicalUrlWithLocale(locale, "make/image-to-video-ai-free"),
     },
   };
 }

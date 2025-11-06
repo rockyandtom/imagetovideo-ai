@@ -1,5 +1,6 @@
 import { setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
+import { getCanonicalUrlWithLocale } from "@/lib/constants";
 
 export async function generateMetadata({
   params,
@@ -13,7 +14,7 @@ export async function generateMetadata({
     description: "Professional AI-powered image editing tools. Edit, enhance, and transform images with advanced artificial intelligence technology.",
     keywords: "image editor, AI image editing, photo editor, image enhancement, background removal, AI filters",
     alternates: {
-      canonical: `https://imagetovideo-ai.net/${locale}/image-editor`,
+      canonical: getCanonicalUrlWithLocale(locale, "image-editor"),
     },
     openGraph: {
       title: "Image Editor - AI-Powered Image Editing Tools",

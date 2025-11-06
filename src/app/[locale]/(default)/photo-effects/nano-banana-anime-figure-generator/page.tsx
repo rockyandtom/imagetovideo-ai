@@ -1,6 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
 import NanoBananaClient from "./client";
+import { getCanonicalUrlWithLocale } from "@/lib/constants";
 
 export async function generateMetadata({
   params,
@@ -14,7 +15,7 @@ export async function generateMetadata({
     description: "Create stunning anime figures with AI-powered Nano Banana generator. Transform text into unique, high-quality anime characters instantly.",
     keywords: "Nano Banana, AI anime figure generator, anime figure creator, AI character generator, anime art generator, figure generator, anime character creation",
     alternates: {
-      canonical: `https://imagetovideo-ai.net/${locale}/photo-effects/nano-banana-anime-figure-generator`,
+      canonical: getCanonicalUrlWithLocale(locale, "photo-effects/nano-banana-anime-figure-generator"),
     },
     openGraph: {
       title: "Nano Banana: AI Anime Figure Generator",

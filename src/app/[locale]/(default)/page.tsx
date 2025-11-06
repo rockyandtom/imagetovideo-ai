@@ -10,6 +10,7 @@ import Pricing from "@/components/blocks/pricing";
 import Stats from "@/components/blocks/stats";
 import Testimonial from "@/components/blocks/testimonial";
 import { getLandingPage } from "@/services/page";
+import { getCanonicalUrlWithLocale } from "@/lib/constants";
 
 export async function generateMetadata({
   params,
@@ -17,12 +18,24 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  // 设置 canonical URL 为 https://imagetovideo-ai.net/
-  const canonicalUrl = "https://imagetovideo-ai.net/";
+  // 使用统一的规范URL生成函数
+  const canonicalUrl = getCanonicalUrlWithLocale(locale, "");
 
   return {
     alternates: {
       canonical: canonicalUrl,
+    },
+    // 明确设置 robots 索引规则
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
     },
   };
 }

@@ -11,6 +11,7 @@ import Script from "next/script";
 import Header from "@/components/blocks/header";
 import Footer from "@/components/blocks/footer";
 import { getLandingPage } from "@/services/page";
+import { getCanonicalUrlWithLocale } from "@/lib/constants";
 // ThemeProvider removed
 
 export async function generateMetadata({
@@ -23,8 +24,8 @@ export async function generateMetadata({
 
   const t = await getTranslations();
 
-  // 设置 canonical URL 为 https://imagetovideo-ai.net/
-  const canonicalUrl = "https://imagetovideo-ai.net/";
+  // 使用统一的规范URL生成函数，确保与sitemap一致（带www）
+  const canonicalUrl = getCanonicalUrlWithLocale(locale, "");
 
   return {
     title: {
@@ -35,6 +36,18 @@ export async function generateMetadata({
     keywords: t("metadata.keywords") || "",
     alternates: {
       canonical: canonicalUrl,
+    },
+    // 明确设置 robots 索引规则，确保页面可以被索引
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
     },
   };
 }

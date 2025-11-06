@@ -1,6 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
 import Sora2VideoGeneratorClient from "./client";
+import { getCanonicalUrlWithLocale } from "@/lib/constants";
 
 export async function generateMetadata({
   params,
@@ -14,7 +15,7 @@ export async function generateMetadata({
     description: "Explore the revolutionary potential of the Sora 2 AI Video Generator. Transform your concepts into cinematic scenes instantly with imagetovideo-ai, your go-to platform for advanced AI-driven video and image generation.",
     keywords: "Sora 2 AI Video Generator, AI video generation, text to video, AI video creator, cinematic video generation, Sora 2, AI video maker",
     alternates: {
-      canonical: `https://imagetovideo-ai.net/${locale}/text-to-video/sora-2-ai-video-generator`,
+      canonical: getCanonicalUrlWithLocale(locale, "text-to-video/sora-2-ai-video-generator"),
     },
     openGraph: {
       title: "Sora 2 AI Video Generator: The Future of Video Creation",

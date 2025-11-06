@@ -209,7 +209,7 @@ export default function TextToImageClient() {
             "@type": "WebApplication",
             "name": "Text to Image AI Generator",
             "description": "Advanced AI-powered text to image generator that transforms descriptive text prompts into stunning AI-generated images",
-            "url": "https://www.imagetovideo-ai.net/text-to-image",
+            "url": "https://imagetovideo-ai.net/text-to-image",
             "applicationCategory": "MultimediaApplication",
             "operatingSystem": "Web Browser",
             "offers": {

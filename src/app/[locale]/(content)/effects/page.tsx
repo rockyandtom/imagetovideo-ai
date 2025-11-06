@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Metadata } from "next";
 import Icon from "@/components/icon";
 import { Link } from "@/i18n/navigation";
+import { getCanonicalUrlWithLocale } from "@/lib/constants";
 
 export async function generateMetadata({
   params,
@@ -18,7 +19,7 @@ export async function generateMetadata({
     title: title,
     description: description,
     alternates: {
-      canonical: `https://imagetovideo-ai.net/${locale}/effects`,
+      canonical: getCanonicalUrlWithLocale(locale, "effects"),
     },
   };
 }

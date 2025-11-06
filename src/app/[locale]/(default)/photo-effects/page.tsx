@@ -1,6 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
 import Link from "next/link";
+import { getCanonicalUrlWithLocale } from "@/lib/constants";
 
 export async function generateMetadata({
   params,
@@ -14,7 +15,7 @@ export async function generateMetadata({
     description: "Transform photos with AI-powered effects. Apply filters, background effects, and artistic style transfers using advanced AI technology.",
     keywords: "photo effects, AI photo filters, background effects, style transfer, photo enhancement, AI filters, artistic effects",
     alternates: {
-      canonical: `https://imagetovideo-ai.net/${locale}/photo-effects`,
+      canonical: getCanonicalUrlWithLocale(locale, "photo-effects"),
     },
     openGraph: {
       title: "Photo Effects - AI-Powered Photo Enhancement Tools",

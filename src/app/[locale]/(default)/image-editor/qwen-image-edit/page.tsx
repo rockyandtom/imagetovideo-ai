@@ -1,6 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
 import QwenImageEditClient from "./client";
+import { getCanonicalUrlWithLocale } from "@/lib/constants";
 
 export async function generateMetadata({
   params,
@@ -14,7 +15,7 @@ export async function generateMetadata({
     description: "Transform images with Qwen AI technology. Free AI editor with background removal, object manipulation, and style transfer. No registration required.",
     keywords: "free AI image editor, Qwen image edit, AI photo editor, intelligent image editing, AI image enhancement, background removal AI, object manipulation, style transfer, free photo editor, AI image tools, imagetovideo-ai",
     alternates: {
-      canonical: `https://imagetovideo-ai.net/${locale}/image-editor/qwen-image-edit`,
+      canonical: getCanonicalUrlWithLocale(locale, "image-editor/qwen-image-edit"),
     },
     openGraph: {
       title: "Free AI Image Editor - Qwen Image Edit Tool | imagetovideo-ai",

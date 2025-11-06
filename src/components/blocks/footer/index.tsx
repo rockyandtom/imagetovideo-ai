@@ -1,31 +1,44 @@
 import { Footer as FooterType } from "@/types/blocks/footer";
 import Icon from "@/components/icon";
+import { Link } from "@/i18n/navigation";
 
 export default function Footer({ footer }: { footer: FooterType }) {
   if (footer.disabled) {
     return null;
   }
 
+  // 获取品牌链接，如果没有则默认为首页
+  const brandUrl = footer.brand?.url || "/";
+
   return (
     <section id={footer.name} className="py-16">
       <div className="container pl-2 lg:pl-4">
         <footer>
-          {/* Logo 和品牌信息放在顶部 */}
+          {/* Logo 和品牌信息放在顶部，添加链接以传递权重回首页 */}
           {footer.brand && (
             <div className="mb-8 text-left">
               {footer.brand.logo && (
                 <div className="mb-3">
-                  <img 
-                    src={footer.brand.logo.src} 
-                    alt={footer.brand.logo.alt || footer.brand.title} 
-                    className="h-8 w-auto"
-                  />
+                  <Link
+                    href={brandUrl as any}
+                    className="inline-block hover:opacity-80 transition-opacity"
+                    title={footer.brand.title || "Home"}
+                  >
+                    <img 
+                      src={footer.brand.logo.src} 
+                      alt={footer.brand.logo.alt || footer.brand.title} 
+                      className="h-8 w-auto"
+                    />
+                  </Link>
                 </div>
               )}
               {footer.brand.title && (
-                <p className="font-bold text-lg mb-2 text-gray-900">
+                <Link
+                  href={brandUrl as any}
+                  className="font-bold text-lg mb-2 text-gray-900 hover:text-primary transition-colors block"
+                >
                   {footer.brand.title}
-                </p>
+                </Link>
               )}
               {footer.brand.description && (
                 <p className="text-sm text-gray-600 max-w-md">

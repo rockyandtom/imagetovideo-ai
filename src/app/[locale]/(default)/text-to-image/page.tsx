@@ -1,6 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
 import TextToImageClient from "./client";
+import { getCanonicalUrlWithLocale } from "@/lib/constants";
 
 export async function generateMetadata({
   params,
@@ -14,7 +15,7 @@ export async function generateMetadata({
     description: "Transform text into stunning AI images instantly! Free AI image generator with no registration. Supports multiple languages. Convert to video with one click.",
     keywords: "free AI image generator, text to image, AI image generation, free AI art generator, AI image creator, text to image generator, artificial intelligence images, free image generation, AI art tools, imagetovideo-ai, online AI generator",
     alternates: {
-      canonical: `https://imagetovideo-ai.net/${locale}/text-to-image`,
+      canonical: getCanonicalUrlWithLocale(locale, "text-to-image"),
     },
     openGraph: {
       title: "Free AI Text to Image Generator - Best AI Image Creator | imagetovideo-ai",

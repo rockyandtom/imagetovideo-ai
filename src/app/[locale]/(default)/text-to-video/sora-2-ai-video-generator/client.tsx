@@ -52,7 +52,7 @@ export default function Sora2VideoGeneratorClient() {
 
     if (!textPrompt.trim()) {
       console.log(`[${sessionId}] Validation failed: Empty prompt`);
-      alert("Please enter a text prompt");
+      toast.error("请输入视频描述文本");
       return;
     }
 
@@ -80,7 +80,15 @@ export default function Sora2VideoGeneratorClient() {
       if (!response.ok) {
         const errorData = await response.json();
         console.error(`[${sessionId}] API request failed:`, errorData);
-        throw new Error(errorData.error || 'Generation failed');
+        
+        // 检查是否是队列满的错误，提供更友好的提示
+        const errorMessage = errorData.error || 'Generation failed';
+        if (errorMessage.includes('queue is full') || errorMessage.includes('queue') || errorMessage.includes('队列')) {
+          toast.error("当前队列已满，请稍后再试。如果有正在处理的任务，请等待完成后再提交新任务。");
+          throw new Error("队列已满，请稍后再试");
+        }
+        
+        throw new Error(errorMessage);
       }
 
       const data = await response.json();
@@ -100,7 +108,13 @@ export default function Sora2VideoGeneratorClient() {
       
     } catch (error) {
       console.error(`[${sessionId}] Video generation failed:`, error);
-      alert(error instanceof Error ? error.message : 'Video generation failed, please try again later');
+      const errorMessage = error instanceof Error ? error.message : 'Video generation failed, please try again later';
+      
+      // 如果还没有显示 toast（在 if (!response.ok) 中已经显示过），则显示错误提示
+      if (!errorMessage.includes('队列已满')) {
+        toast.error(errorMessage);
+      }
+      
       setIsGenerating(false);
       setTaskId(null);
       setProgress(0);
@@ -289,9 +303,10 @@ export default function Sora2VideoGeneratorClient() {
       window.URL.revokeObjectURL(url);
       
       console.log('视频下载已开始');
+      toast.success('视频下载已开始');
     } catch (error) {
       console.error('下载视频失败:', error);
-      alert('Failed to download video. Please try again.');
+      toast.error('视频下载失败，请重试');
       
       // 如果fetch失败，尝试直接链接下载（不设置target，避免新窗口）
       const link = document.createElement('a');

@@ -2,6 +2,7 @@ import Blog from "@/components/blocks/blog";
 import { BlogItem, Blog as BlogType } from "@/types/blocks/blog";
 import { getPostsByLocale } from "@/models/post";
 import { getTranslations } from "next-intl/server";
+import { getCanonicalUrlWithLocale } from "@/lib/constants";
 
 export async function generateMetadata({
   params,
@@ -11,12 +12,8 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations();
 
-  // 设置 canonical URL 为完整的绝对 URL
-  let canonicalUrl = `https://imagetovideo-ai.net/posts`;
-
-  if (locale !== "en") {
-    canonicalUrl = `https://imagetovideo-ai.net/${locale}/posts`;
-  }
+  // 使用统一的规范URL生成函数，防止locale为undefined导致URL错误
+  const canonicalUrl = getCanonicalUrlWithLocale(locale, "posts");
 
   return {
     title: t("blog.title"),

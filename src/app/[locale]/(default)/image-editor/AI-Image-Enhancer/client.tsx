@@ -459,7 +459,7 @@ export default function AIImageEnhancerClient() {
             "@type": "WebApplication",
             "name": "AI Image Enhancer",
             "description": "Ultimate AI Image Enhancer that elevates your images to stunning quality with advanced artificial intelligence technology",
-            "url": "https://www.imagetovideo-ai.net/image-editor/AI-Image-Enhancer",
+            "url": "https://imagetovideo-ai.net/image-editor/AI-Image-Enhancer",
             "applicationCategory": "MultimediaApplication",
             "operatingSystem": "Web Browser",
             "offers": {

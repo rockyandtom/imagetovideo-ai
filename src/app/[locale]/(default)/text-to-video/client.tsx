@@ -255,7 +255,7 @@ export default function TextToVideoClient() {
             "@type": "WebApplication",
             "name": "AI Text to Video Generator",
             "description": "Advanced AI-powered text to video generator that transforms descriptive text prompts into stunning AI-generated videos",
-            "url": "https://www.imagetovideo-ai.net/text-to-video",
+            "url": "https://imagetovideo-ai.net/text-to-video",
             "applicationCategory": "MultimediaApplication",
             "operatingSystem": "Web Browser",
             "offers": {

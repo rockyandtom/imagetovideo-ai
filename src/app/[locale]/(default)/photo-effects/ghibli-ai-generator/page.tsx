@@ -1,6 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
 import GhibliAIGeneratorClient from "./client";
+import { getCanonicalUrlWithLocale } from "@/lib/constants";
 
 export async function generateMetadata({
   params,
@@ -14,7 +15,7 @@ export async function generateMetadata({
     description: "Create stunning Ghibli-style anime art with AI. Transform text into beautiful Studio Ghibli-inspired artwork using cutting-edge AI technology.",
     keywords: "Ghibli AI generator, Studio Ghibli art, anime AI generator, Ghibli style art, AI art generator, Miyazaki style, anime art creation, Ghibli AI art",
     alternates: {
-      canonical: `https://imagetovideo-ai.net/${locale}/photo-effects/ghibli-ai-generator`,
+      canonical: getCanonicalUrlWithLocale(locale, "photo-effects/ghibli-ai-generator"),
     },
     openGraph: {
       title: "Ghibli AI Generator: Create Anime Art with ImageToVideo AI",

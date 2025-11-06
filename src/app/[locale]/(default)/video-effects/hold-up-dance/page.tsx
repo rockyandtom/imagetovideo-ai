@@ -1,6 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
 import HoldUpDanceClient from "./client";
+import { getCanonicalUrlWithLocale } from "@/lib/constants";
 
 export async function generateMetadata({
   params,
@@ -14,7 +15,7 @@ export async function generateMetadata({
     description: "Generate stunning Hold Up Dance images with AI. Create captivating visuals for any project using our AI image generator.",
     keywords: "Hold Up Dance, AI image generator, dance images, AI art, image to video, dance poses, AI creativity",
     alternates: {
-      canonical: `https://imagetovideo-ai.net/${locale}/video-effects/hold-up-dance`,
+      canonical: getCanonicalUrlWithLocale(locale, "video-effects/hold-up-dance"),
     },
     openGraph: {
       title: "Create Hold Up Dance Images with AI - ImageToVideoAI",

@@ -1,6 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
 import ImageToVideoClient from "./client";
+import { getCanonicalUrlWithLocale } from "@/lib/constants";
 
 export async function generateMetadata({
   params,
@@ -14,7 +15,7 @@ export async function generateMetadata({
     description: "Transform static images into dynamic videos instantly. Free AI-powered image to video generator. Create professional videos with no signup required.",
     keywords: "ImageToVideoAI, image to video AI, free video generator, AI video creation, photo to video converter, image animation, video maker online",
     alternates: {
-      canonical: `https://imagetovideo-ai.net/${locale}/Image-to-Video`,
+      canonical: getCanonicalUrlWithLocale(locale, "Image-to-Video"),
     },
     openGraph: {
       title: "ImageToVideoAI - Free AI Image to Video Generator",

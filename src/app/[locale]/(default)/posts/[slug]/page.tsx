@@ -3,6 +3,7 @@ import { PostStatus, findPostBySlug } from "@/models/post";
 import BlogDetail from "@/components/blocks/blog-detail";
 import Empty from "@/components/blocks/empty";
 import { Post } from "@/types/post";
+import { getCanonicalUrlWithLocale } from "@/lib/constants";
 
 export async function generateMetadata({
   params,
@@ -13,12 +14,8 @@ export async function generateMetadata({
 
   const post = await findPostBySlug(slug, locale);
 
-  // 设置 canonical URL 为完整的绝对 URL
-  let canonicalUrl = `https://imagetovideo-ai.net/posts/${slug}`;
-
-  if (locale !== "en") {
-    canonicalUrl = `https://imagetovideo-ai.net/${locale}/posts/${slug}`;
-  }
+  // 使用统一的规范URL生成函数，防止locale为undefined导致URL错误
+  const canonicalUrl = getCanonicalUrlWithLocale(locale, `posts/${slug}`);
 
   return {
     title: post?.title,
