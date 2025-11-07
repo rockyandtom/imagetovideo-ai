@@ -78,36 +78,40 @@ export default function AIPhotoBackgroundChangerClient() {
   };
 
   const renderShowcase = (pair: ShowcasePair) => (
-    <div className="mx-auto grid max-w-3xl gap-6 md:grid-cols-2">
-      <figure className="group relative mx-auto w-full max-w-[240px] overflow-hidden rounded-2xl border border-border/50 bg-card/80 p-4 shadow-sm transition-transform duration-500 hover:-translate-y-1">
-        <span className="absolute left-4 top-4 rounded-full bg-background/80 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-foreground backdrop-blur">
-          {pair.originalLabel}
-        </span>
-        <div className="relative flex h-full min-h-[160px] w-full items-center justify-center">
+    <div className="mx-auto my-8 grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2">
+      <figure className="space-y-3">
+        <div className="flex items-center gap-2 text-sm font-semibold text-muted-foreground">
+          <span className="inline-flex items-center rounded-full bg-background px-3 py-1 text-xs uppercase tracking-wide text-foreground">
+            {pair.originalLabel}
+          </span>
+        </div>
+        <div className="overflow-hidden rounded-xl border border-border/20 bg-muted/10 shadow-sm">
           <img
             src={pair.originalSrc}
             alt={pair.originalAlt}
             loading="lazy"
-            className="max-h-44 w-auto object-contain transition-transform duration-500 group-hover:scale-[1.02]"
+            className="w-full h-auto object-cover"
           />
         </div>
-        <figcaption className="px-2 pt-2 text-[10px] text-muted-foreground sm:text-xs">
+        <figcaption className="text-xs text-muted-foreground lg:text-sm">
           {pair.originalAlt}
         </figcaption>
       </figure>
-      <figure className="group relative mx-auto w-full max-w-[240px] overflow-hidden rounded-2xl border border-border/50 bg-card/80 p-4 shadow-sm transition-transform duration-500 hover:-translate-y-1">
-        <span className="absolute left-4 top-4 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary backdrop-blur">
-          {pair.resultLabel}
-        </span>
-        <div className="relative flex h-full min-h-[160px] w-full items-center justify-center">
+      <figure className="space-y-3">
+        <div className="flex items-center gap-2 text-sm font-semibold text-muted-foreground">
+          <span className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs uppercase tracking-wide text-primary">
+            {pair.resultLabel}
+          </span>
+        </div>
+        <div className="overflow-hidden rounded-xl border border-border/20 bg-muted/10 shadow-sm">
           <img
             src={pair.resultSrc}
             alt={pair.resultAlt}
             loading="lazy"
-            className="max-h-44 w-auto object-contain transition-transform duration-500 group-hover:scale-[1.02]"
+            className="w-full h-auto object-cover"
           />
         </div>
-        <figcaption className="px-2 pt-2 text-[10px] text-muted-foreground sm:text-xs">
+        <figcaption className="text-xs text-muted-foreground lg:text-sm">
           {pair.resultAlt}
         </figcaption>
       </figure>
