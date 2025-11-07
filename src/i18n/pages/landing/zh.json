@@ -77,6 +77,11 @@
               "title": "AI图片放大",
               "url": "/image-editor/image-upscaler",
               "description": "使用强大的AI放大技术增强您的图片"
+            },
+            {
+              "title": "AI照片背景更换",
+              "url": "/image-editor/ai-photo-background-changer",
+              "description": "使用强大的AI照片背景更换工具革新您的图片"
             }
           ]
         },
@@ -445,6 +450,11 @@
             {
               "title": "AI图片放大",
               "url": "/image-editor/image-upscaler",
+              "target": "_self"
+            },
+            {
+              "title": "AI照片背景更换",
+              "url": "/image-editor/ai-photo-background-changer",
               "target": "_self"
             }
           ]

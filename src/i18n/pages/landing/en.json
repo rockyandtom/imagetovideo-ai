@@ -77,6 +77,11 @@
               "title": "AI Image Upscaler",
               "url": "/image-editor/image-upscaler",
               "description": "Enhance your images with powerful AI upscaling technology"
+            },
+            {
+              "title": "AI Photo Background Changer",
+              "url": "/image-editor/ai-photo-background-changer",
+              "description": "Revolutionize your images with powerful AI photo background changer"
             }
           ]
         },
@@ -466,6 +471,11 @@
             {
               "title": "AI Image Upscaler",
               "url": "/image-editor/image-upscaler",
+              "target": "_self"
+            },
+            {
+              "title": "AI Photo Background Changer",
+              "url": "/image-editor/ai-photo-background-changer",
               "target": "_self"
             }
           ]

@@ -23,13 +23,6 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-
 import { Header as HeaderType } from "@/types/blocks/header";
 import Icon from "@/components/icon";
 import { Link } from "@/i18n/navigation";
@@ -38,16 +31,13 @@ import { Menu } from "lucide-react";
 import SignToggle from "@/components/sign/toggle";
 import ThemeToggle from "@/components/theme/toggle";
 import { cn } from "@/lib/utils";
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 
 export default function Header({ header = {} }: { header?: HeaderType }) {
   if (header.disabled) {
     return null;
   }
-
-  // 用于控制所有下拉菜单的展开状态
-  const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(null);
 
   return (
     <section className="py-3 bg-white/90 backdrop-blur-sm border-b border-slate-100/60">
@@ -83,87 +73,79 @@ export default function Header({ header = {} }: { header?: HeaderType }) {
                     if (item.children && item.children.length > 0) {
                       return (
                         <NavigationMenuItem key={i}>
-                          <div className="relative inline-flex items-center group">
-                            <Link
-                              href={item.url as any}
-                              target={item.target}
-                              className="text-slate-700 hover:text-blue-600 inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-slate-100 focus:bg-slate-100 focus:outline-hidden"
-                              onMouseEnter={() => setOpenDropdownIndex(i)}
-                            >
-                              {item.icon && (
-                                <Icon name={item.icon} className="size-4 shrink-0 mr-2" />
-                              )}
-                              <span>{item.title}</span>
-                            </Link>
-                            <DropdownMenu
-                              open={openDropdownIndex === i}
-                              onOpenChange={(open) => setOpenDropdownIndex(open ? i : null)}
-                            >
-                              <DropdownMenuTrigger asChild>
-                                <button
-                                  type="button"
-                                  className="h-10 w-6 flex items-center justify-center text-slate-700 hover:text-blue-600 rounded-md hover:bg-slate-100 transition-colors"
-                                  onMouseEnter={() => setOpenDropdownIndex(i)}
-                                  onMouseLeave={() => setOpenDropdownIndex(null)}
+                          <NavigationMenuTrigger
+                            className={cn(
+                              "inline-flex h-10 items-center gap-2 rounded-md border border-transparent bg-background px-4 py-2 text-sm font-medium text-slate-700 transition-colors hover:border-slate-200 hover:bg-slate-100 hover:text-blue-600 focus-visible:outline-hidden"
+                            )}
+                          >
+                            {item.icon && (
+                              <Icon name={item.icon} className="size-4 shrink-0" />
+                            )}
+                            <span>{item.title}</span>
+                          </NavigationMenuTrigger>
+                          <NavigationMenuContent className="min-w-[320px] rounded-xl border border-slate-100 bg-white/90 p-4 shadow-lg backdrop-blur">
+                            <div className="flex flex-col gap-3">
+                              <NavigationMenuLink asChild>
+                                <Link
+                                  href={item.url as any}
+                                  target={item.target}
+                                  className="flex flex-col rounded-lg border border-slate-200/70 bg-slate-50/80 p-3 text-left transition-colors hover:border-blue-200 hover:bg-blue-50/80"
                                 >
-                                  <Icon name="RiArrowDownSLine" className="size-4" />
-                                </button>
-                              </DropdownMenuTrigger>
-                              <DropdownMenuContent
-                                sideOffset={8}
-                                align="start"
-                                className="min-w-[200px]"
-                                onMouseEnter={() => setOpenDropdownIndex(i)}
-                                onMouseLeave={() => setOpenDropdownIndex(null)}
-                              >
-                                {item.children.map((iitem, ii) => (
-                                  <DropdownMenuItem key={ii} asChild>
-                                    <Link
-                                      className={cn(
-                                        "flex flex-col select-none gap-1 rounded-md p-3 leading-none no-underline outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                                      )}
-                                      href={iitem.url as any}
-                                      target={iitem.target}
-                                    >
-                                      <span className="text-sm font-semibold text-slate-700">
-                                        {iitem.title}
+                                  <span className="text-sm font-semibold text-slate-700">
+                                    Explore {item.title}
+                                  </span>
+                                  <span className="text-xs text-slate-500">
+                                    View the complete {item.title?.toLowerCase()} experience
+                                  </span>
+                                </Link>
+                              </NavigationMenuLink>
+                              {item.children.map((child, ii) => (
+                                <NavigationMenuLink asChild key={ii}>
+                                  <Link
+                                    className="flex flex-col gap-1 rounded-lg border border-transparent p-3 transition-colors hover:border-blue-100 hover:bg-blue-50/70"
+                                    href={child.url as any}
+                                    target={child.target}
+                                  >
+                                    <span className="text-sm font-semibold text-slate-700">
+                                      {child.title}
+                                    </span>
+                                    {child.description && (
+                                      <span className="text-xs leading-snug text-slate-500">
+                                        {child.description}
                                       </span>
-                                      {iitem.description && (
-                                        <span className="text-sm leading-snug text-slate-500">
-                                          {iitem.description}
-                                        </span>
-                                      )}
-                                    </Link>
-                                  </DropdownMenuItem>
-                                ))}
-                              </DropdownMenuContent>
-                            </DropdownMenu>
-                          </div>
+                                    )}
+                                  </Link>
+                                </NavigationMenuLink>
+                              ))}
+                            </div>
+                          </NavigationMenuContent>
                         </NavigationMenuItem>
                       );
                     }
 
                     return (
                       <NavigationMenuItem key={i}>
-                        <Link
-                          className={cn(
-                            "text-slate-700 hover:text-blue-600 font-medium",
-                            navigationMenuTriggerStyle,
-                            buttonVariants({
-                              variant: "ghost",
-                            })
-                          )}
-                          href={item.url as any}
-                          target={item.target}
-                        >
-                          {item.icon && (
-                            <Icon
-                              name={item.icon}
-                              className="size-4 shrink-0 mr-2"
-                            />
-                          )}
-                          {item.title}
-                        </Link>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            className={cn(
+                              "text-slate-700 hover:text-blue-600 font-medium",
+                              navigationMenuTriggerStyle,
+                              buttonVariants({
+                                variant: "ghost",
+                              })
+                            )}
+                            href={item.url as any}
+                            target={item.target}
+                          >
+                            {item.icon && (
+                              <Icon
+                                name={item.icon}
+                                className="size-4 shrink-0 mr-2"
+                              />
+                            )}
+                            {item.title}
+                          </Link>
+                        </NavigationMenuLink>
                       </NavigationMenuItem>
                     );
                   })}

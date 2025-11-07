@@ -21,8 +21,10 @@ export default function middleware(request: NextRequest) {
     return NextResponse.redirect(url, 308);
   }
 
-  // 处理HTTP到HTTPS重定向（如果请求是HTTP）
-  if (request.nextUrl.protocol === "http:") {
+  // 处理HTTP到HTTPS重定向（仅在生产环境，非localhost时）
+  // 本地开发环境允许使用HTTP，避免SSL错误
+  const isLocalhost = hostname.includes("localhost") || hostname.includes("127.0.0.1") || hostname.startsWith("192.168.") || hostname.startsWith("10.") || hostname.startsWith("172.");
+  if (request.nextUrl.protocol === "http:" && !isLocalhost) {
     url.protocol = "https:";
     // 使用308永久重定向（SEO友好）
     return NextResponse.redirect(url, 308);

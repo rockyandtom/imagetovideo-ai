@@ -261,6 +261,11 @@ Ship Any AI SaaS Startups in hours. Now featuring advanced Text to Image generat
 - ✅ 集成现有的导航组件和页面布局系统
 - ✅ 修正导航结构，删除不必要的子页面和子菜单
 
+### AI Photo Background Changer 页面展示更新 (2025-11-07)
+- 修改内容：重命名 showcase 原图/生成图双图组，并在页面核心段落中新增四组对比展示卡片。
+- 原因：确保图片命名与 SEO 关键词一致，同时让用户直观理解各项能力与落地场景。
+- 影响：页面视觉层次更清晰，提升案例转化效果，并改善搜索引擎收录质量。
+
 ### AI Image Upscaler 功能完整实现 (2025-10-25)
 - ✅ 创建完整的Image Upscaler页面 (`/image-editor/image-upscaler`)
 - ✅ 实现专业的工作区界面，包含图片上传、预览和下载功能
