@@ -6,6 +6,8 @@ const RUNNINGHUB_CONFIG = {
     apiKey: 'fb88fac46b0349c1986c9cbb4f14d44e'
 }
 
+const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB
+
 export async function POST(request: NextRequest) {
     try {
         const formData = await request.formData()
@@ -19,6 +21,17 @@ export async function POST(request: NextRequest) {
         }
 
         console.log('Uploading file to RunningHub:', file.name, file.size, file.type)
+
+        if (file.size > MAX_FILE_SIZE) {
+            console.warn(`File too large: ${file.name} (${file.size} bytes)`)
+            return NextResponse.json(
+                {
+                    success: false,
+                    error: 'File is too large. Maximum allowed size is 10MB.'
+                },
+                { status: 413 }
+            )
+        }
 
         // 创建新的FormData发送给RunningHub
         const runningHubFormData = new FormData()

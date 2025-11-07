@@ -153,6 +153,10 @@ export default function AIPhotoBackgroundChangerClient() {
 
   // 上传图片到服务器
   const uploadImageToServer = async (file: File): Promise<string> => {
+    if (file.size > 10 * 1024 * 1024) {
+      throw new Error("File is too large. Maximum allowed size is 10MB.");
+    }
+
     const formData = new FormData();
     formData.append('file', file);
 
@@ -169,7 +173,7 @@ export default function AIPhotoBackgroundChangerClient() {
     const result = await response.json();
     
     if (!result.success || !result.fileId) {
-      throw new Error('Upload did not return file ID');
+      throw new Error(result.error || 'Upload did not return file ID');
     }
     
     return result.fileId;
