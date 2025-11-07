@@ -9,11 +9,9 @@ import {
 import { Button, buttonVariants } from "@/components/ui/button";
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import {
@@ -31,13 +29,15 @@ import { Menu } from "lucide-react";
 import SignToggle from "@/components/sign/toggle";
 import ThemeToggle from "@/components/theme/toggle";
 import { cn } from "@/lib/utils";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 
 export default function Header({ header = {} }: { header?: HeaderType }) {
   if (header.disabled) {
     return null;
   }
+
+  const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(null);
 
   return (
     <section className="py-3 bg-white/90 backdrop-blur-sm border-b border-slate-100/60">
@@ -73,36 +73,40 @@ export default function Header({ header = {} }: { header?: HeaderType }) {
                     if (item.children && item.children.length > 0) {
                       return (
                         <NavigationMenuItem key={i}>
-                          <NavigationMenuTrigger
-                            className={cn(
-                              "inline-flex h-10 items-center gap-2 rounded-md border border-transparent bg-background px-4 py-2 text-sm font-medium text-slate-700 transition-colors hover:border-slate-200 hover:bg-slate-100 hover:text-blue-600 focus-visible:outline-hidden"
-                            )}
-                          >
-                            {item.icon && (
-                              <Icon name={item.icon} className="size-4 shrink-0" />
-                            )}
-                            <span>{item.title}</span>
-                          </NavigationMenuTrigger>
-                          <NavigationMenuContent className="min-w-[320px] rounded-xl border border-slate-100 bg-white/90 p-4 shadow-lg backdrop-blur">
-                            <div className="flex flex-col gap-3">
-                              <NavigationMenuLink asChild>
-                                <Link
-                                  href={item.url as any}
-                                  target={item.target}
-                                  className="flex flex-col rounded-lg border border-slate-200/70 bg-slate-50/80 p-3 text-left transition-colors hover:border-blue-200 hover:bg-blue-50/80"
-                                >
-                                  <span className="text-sm font-semibold text-slate-700">
-                                    Explore {item.title}
-                                  </span>
-                                  <span className="text-xs text-slate-500">
-                                    View the complete {item.title?.toLowerCase()} experience
-                                  </span>
-                                </Link>
-                              </NavigationMenuLink>
-                              {item.children.map((child, ii) => (
-                                <NavigationMenuLink asChild key={ii}>
+                          <div className="relative inline-flex items-center group">
+                            <Link
+                              href={item.url as any}
+                              target={item.target}
+                              className="text-slate-700 hover:text-blue-600 inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-slate-100 focus:bg-slate-100 focus:outline-hidden"
+                              onMouseEnter={() => setOpenDropdownIndex(i)}
+                            >
+                              {item.icon && (
+                                <Icon name={item.icon} className="size-4 shrink-0 mr-2" />
+                              )}
+                              <span>{item.title}</span>
+                            </Link>
+                            <div
+                              className={cn(
+                                "absolute left-0 top-full z-40 mt-2 min-w-[220px] rounded-xl border border-slate-200 bg-white/95 p-3 shadow-lg backdrop-blur transition-opacity duration-150",
+                                openDropdownIndex === i
+                                  ? "pointer-events-auto opacity-100"
+                                  : "pointer-events-none opacity-0"
+                              )}
+                              onMouseEnter={() => setOpenDropdownIndex(i)}
+                              onMouseLeave={() => setOpenDropdownIndex(null)}
+                            >
+                              <Link
+                                href={item.url as any}
+                                target={item.target}
+                                className="flex flex-col rounded-lg border border-slate-200/70 bg-slate-50/70 p-3 text-left text-sm font-semibold text-slate-700 transition-colors hover:border-blue-200 hover:bg-blue-50/70"
+                              >
+                                Explore {item.title}
+                              </Link>
+                              <div className="mt-2 flex flex-col gap-2">
+                                {item.children.map((child, ii) => (
                                   <Link
-                                    className="flex flex-col gap-1 rounded-lg border border-transparent p-3 transition-colors hover:border-blue-100 hover:bg-blue-50/70"
+                                    key={ii}
+                                    className="flex flex-col gap-1 rounded-lg border border-transparent p-3 text-left transition-colors hover:border-blue-100 hover:bg-blue-50/70"
                                     href={child.url as any}
                                     target={child.target}
                                   >
@@ -115,10 +119,10 @@ export default function Header({ header = {} }: { header?: HeaderType }) {
                                       </span>
                                     )}
                                   </Link>
-                                </NavigationMenuLink>
-                              ))}
+                                ))}
+                              </div>
                             </div>
-                          </NavigationMenuContent>
+                          </div>
                         </NavigationMenuItem>
                       );
                     }
