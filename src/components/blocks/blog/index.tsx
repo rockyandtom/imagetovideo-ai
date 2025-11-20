@@ -24,7 +24,12 @@ export default function Blog({ blog }: { blog: BlogType }) {
           {blog.items?.map((item, idx) => (
             <a
               key={idx}
-              href={item.url || `/${item.locale}/posts/${item.slug}`}
+              href={
+                item.url ||
+                `${
+                  item.locale && item.locale !== "en" ? `/${item.locale}` : ""
+                }/posts/${item.slug}`
+              }
               target={item.target || "_self"}
               className="w-full md:w-1/3 p-4"
             >

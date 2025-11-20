@@ -18,14 +18,20 @@ export default function Crumb({ post }: { post: Post }) {
     <Breadcrumb>
       <BreadcrumbList>
         <BreadcrumbItem>
-          <BreadcrumbLink href={post.locale === "en" ? "/" : `/${post.locale}`}>
+          <BreadcrumbLink
+            href={!post.locale || post.locale === "en" ? "/" : `/${post.locale}`}
+          >
             <Home className="h-4 w-4" />
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
           <BreadcrumbLink
-            href={post.locale === "en" ? "/posts" : `/${post.locale}/posts`}
+            href={
+              !post.locale || post.locale === "en"
+                ? "/posts"
+                : `/${post.locale}/posts`
+            }
           >
             {t("blog.title")}
           </BreadcrumbLink>

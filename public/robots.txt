@@ -1,5 +1,8 @@
 User-agent: *
 Disallow: /*?*q=
-# 允许索引法律页面（隐私政策和服务条款应该被索引以便用户和搜索引擎找到）
-# Disallow: /privacy-policy
-# Disallow: /terms-of-service
+
+# Allow all other pages
+Allow: /
+
+Sitemap: https://imagetovideo-ai.net/sitemap.xml
+
