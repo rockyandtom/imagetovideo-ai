@@ -6,6 +6,29 @@ Ship Any AI SaaS Startups in hours. Now featuring advanced Text to Image generat
 
 ## 🆕 Latest Updates
 
+### Qwen Image Edit, Ghibli AI Generator & AI Background Changer SEO 优化 (2025-11-20)
+
+#### Qwen Image Edit 页面优化
+- ✅ 优化元数据 Title，增加 "No Signup" 等高点击率关键词
+- ✅ 重写 Description，强调具体技术词汇和应用场景
+- ✅ 添加 FAQPage 和 BreadcrumbList 结构化数据 (JSON-LD)
+- ✅ 增强内部链接，关联 Image to Video 和 Sora 2 Video Generator
+- ✅ 修正结构化数据中的域名问题
+
+#### Ghibli AI Generator 页面优化
+- ✅ 优化元数据 Title，增加 "Free" 和核心功能描述
+- ✅ 完善 Description 和 Keywords，覆盖更多长尾词
+- ✅ 添加 FAQPage 和 BreadcrumbList 结构化数据
+- ✅ 建立产品生态闭环，引导用户流向视频生成工具
+- ✅ 修正结构化数据域名
+
+#### AI Photo Background Changer 页面优化
+- ✅ 优化元数据 Title，增加 "Online (Free)"
+- ✅ 针对电商和职场场景定制 Description
+- ✅ 添加 FAQPage 和 BreadcrumbList 结构化数据
+- ✅ 完善用户路径引导，推荐相关工具
+- ✅ 修正结构化数据域名
+
 ### AI Image Enhancer 页面展示案例集成完成 (2025-10-31)
 
 #### 图片文件优化
