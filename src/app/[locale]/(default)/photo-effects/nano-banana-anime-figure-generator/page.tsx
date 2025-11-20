@@ -11,22 +11,22 @@ export async function generateMetadata({
   const { locale } = await params;
 
   return {
-    title: "Nano Banana: AI Anime Figure Generator",
-    description: "Create stunning anime figures with AI-powered Nano Banana generator. Transform text into unique, high-quality anime characters instantly.",
-    keywords: "Nano Banana, AI anime figure generator, anime figure creator, AI character generator, anime art generator, figure generator, anime character creation",
+    title: "Nano Banana: AI Anime Figure Generator | Google Gemini Image Generation",
+    description: "Create stunning anime figures with AI-powered Nano Banana generator. Experience the advanced Google Gemini image generation technology to transform text into unique, high-quality anime characters instantly.",
+    keywords: "Nano Banana, AI anime figure generator, anime figure creator, AI character generator, anime art generator, figure generator, anime character creation, Google Gemini Image Generation",
     alternates: {
       canonical: getCanonicalUrlWithLocale(locale, "photo-effects/nano-banana-anime-figure-generator"),
     },
     openGraph: {
-      title: "Nano Banana: AI Anime Figure Generator",
-      description: "Create stunning anime figures with our AI-powered Nano Banana generator. imagetovideo-ai brings your anime dreams to life.",
+      title: "Nano Banana: AI Anime Figure Generator | Google Gemini Image Generation",
+      description: "Create stunning anime figures with our AI-powered Nano Banana generator. imagetovideo-ai brings your anime dreams to life using Google Gemini image generation.",
       type: "website",
       locale: locale,
     },
     twitter: {
       card: "summary_large_image",
-      title: "Nano Banana: AI Anime Figure Generator",
-      description: "Transform images into stunning anime figures with our AI-powered generator. Create unique characters instantly.",
+      title: "Nano Banana: AI Anime Figure Generator | Google Gemini Image Generation",
+      description: "Transform images into stunning anime figures with our AI-powered generator using Google Gemini technology. Create unique characters instantly.",
     },
     robots: {
       index: true,

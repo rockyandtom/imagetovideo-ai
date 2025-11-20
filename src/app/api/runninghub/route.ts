@@ -59,11 +59,13 @@ export async function POST(request: NextRequest) {
             return await handleGenerate(image, lastImage, prompt)
         } else if (action === 'qwen-image-edit') {
             return await handleQwenImageEdit(webappId, apiKey, nodeInfoList)
+        } else if (action === 'kirkify-ai') {
+            return await handleKirkifyAi(webappId, apiKey, nodeInfoList)
         } else if (action === 'enhance-image') {
             return await handleImageEnhancement(webappId, apiKey, nodeInfoList)
         } else {
             return NextResponse.json(
-                { error: 'Invalid action. Use "generate", "qwen-image-edit", "enhance-image", or "status"' },
+                { error: 'Invalid action. Use "generate", "qwen-image-edit", "kirkify-ai", "enhance-image", or "status"' },
                 { status: 400 }
             )
         }
@@ -445,6 +447,72 @@ async function handleQwenImageEdit(webappId: string, apiKey: string, nodeInfoLis
         return NextResponse.json({
             success: false,
             error: 'Failed to process Qwen Image Edit',
+            details: error instanceof Error ? error.message : 'Unknown error'
+        }, { status: 500 })
+    }
+}
+
+// 处理Kirkify AI请求
+async function handleKirkifyAi(webappId: string, apiKey: string, nodeInfoList: any[]) {
+    if (!webappId || !apiKey || !nodeInfoList) {
+        return NextResponse.json(
+            { error: 'webappId, apiKey, and nodeInfoList are required for Kirkify AI' },
+            { status: 400 }
+        )
+    }
+
+    console.log('Starting Kirkify AI:', {
+        webappId,
+        nodeInfoList
+    })
+
+    try {
+        const requestBody = {
+            webappId,
+            apiKey,
+            nodeInfoList
+        };
+
+        console.log('Sending Kirkify AI request to RunningHub:', JSON.stringify(requestBody, null, 2));
+
+        const response = await fetch(`${RUNNINGHUB_CONFIG.baseUrl}/ai-app/run`, {
+            method: 'POST',
+            headers: RUNNINGHUB_CONFIG.headers,
+            body: JSON.stringify(requestBody)
+        })
+
+        console.log('RunningHub Kirkify AI response status:', response.status);
+
+        if (!response.ok) {
+            const errorText = await response.text();
+            console.error('RunningHub Kirkify AI API error response:', errorText);
+            throw new Error(`RunningHub API failed with HTTP ${response.status}: ${errorText}`);
+        }
+
+        const data = await response.json()
+        console.log('RunningHub Kirkify AI response:', data)
+
+        if (data.code === 0 && data.data && data.data.taskId) {
+            return NextResponse.json({
+                success: true,
+                data: {
+                    taskId: data.data.taskId,
+                    status: 'started',
+                    message: 'Kirkify AI task started'
+                }
+            })
+        } else {
+            return NextResponse.json({
+                success: false,
+                error: data.msg || 'Failed to start Kirkify AI task'
+            }, { status: 500 })
+        }
+
+    } catch (error) {
+        console.error('Kirkify AI error:', error)
+        return NextResponse.json({
+            success: false,
+            error: 'Failed to process Kirkify AI',
             details: error instanceof Error ? error.message : 'Unknown error'
         }, { status: 500 })
     }

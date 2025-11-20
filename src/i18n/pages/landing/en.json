@@ -114,6 +114,13 @@
               "url": "/photo-effects/face-swap-online-free",
               "icon": "RiSwapLine",
               "target": "_self"
+            },
+            {
+              "title": "Kirkify AI",
+              "description": "Create Neon Avatars with Kirkify AI",
+              "url": "/photo-effects/kirkify-ai",
+              "icon": "RiFlashlightFill",
+              "target": "_self"
             }
           ]
         },
@@ -497,6 +504,11 @@
             {
               "title": "Face Swap Online Free",
               "url": "/photo-effects/face-swap-online-free",
+              "target": "_self"
+            },
+            {
+              "title": "Kirkify AI",
+              "url": "/photo-effects/kirkify-ai",
               "target": "_self"
             }
           ]

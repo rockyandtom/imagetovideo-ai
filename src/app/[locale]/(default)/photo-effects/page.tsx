@@ -146,6 +146,32 @@ export default async function PhotoEffectsPage({
             </div>
           </Link>
 
+          {/* Kirkify AI 功能卡片 */}
+          <Link href="/photo-effects/kirkify-ai" className="block">
+            <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+              <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <div className="flex items-center gap-2 mb-2">
+                <h3 className="text-xl font-semibold text-gray-900">Kirkify AI</h3>
+                <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs px-2 py-1 rounded-full font-medium">
+                  LIVE
+                </span>
+              </div>
+              <p className="text-gray-600">
+                Transform your photos with Kirkify AI. Generate stunning neon-effect avatars instantly using our advanced Kirkify AI technology.
+              </p>
+              <div className="mt-4 flex items-center justify-between">
+                <span className="bg-green-100 text-green-600 px-2 py-1 rounded-full text-xs font-medium">Available Now</span>
+                <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </div>
+          </Link>
+
           {/* AI Photo Filters 功能卡片 */}
           <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
             <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
