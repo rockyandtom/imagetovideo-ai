@@ -11,15 +11,15 @@ export async function generateMetadata({
   const { locale } = await params;
 
   return {
-    title: "Ghibli AI Generator: Create Anime Art | AI",
-    description: "Create stunning Ghibli-style anime art with AI. Transform text into beautiful Studio Ghibli-inspired artwork using cutting-edge AI technology.",
-    keywords: "Ghibli AI generator, Studio Ghibli art, anime AI generator, Ghibli style art, AI art generator, Miyazaki style, anime art creation, Ghibli AI art",
+    title: "Ghibli AI Generator: Photo to Studio Ghibli Style Art (Free)",
+    description: "Turn your photos into Studio Ghibli style art instantly with our Free Ghibli AI Generator. Create Miyazaki-inspired anime backgrounds and characters. No sign-up required.",
+    keywords: "Ghibli AI generator, Studio Ghibli filter, photo to anime, Ghibli style art, AI art generator, Miyazaki style, anime background generator, image to ghibli, free anime filter, imagetovideo-ai",
     alternates: {
       canonical: getCanonicalUrlWithLocale(locale, "photo-effects/ghibli-ai-generator"),
     },
     openGraph: {
-      title: "Ghibli AI Generator: Create Anime Art with ImageToVideo AI",
-      description: "Unleash your creativity with our Ghibli AI Generator. ImageToVideo-AI brings your imagination to life, turning text into stunning Ghibli-style art with cutting-edge AI.",
+      title: "Ghibli AI Generator: Turn Photos into Anime Art | imagetovideo-ai",
+      description: "Transform your real photos into stunning Studio Ghibli style art. Free online tool to create Miyazaki-inspired anime scenes from your images.",
       type: "website",
       locale: locale,
     },

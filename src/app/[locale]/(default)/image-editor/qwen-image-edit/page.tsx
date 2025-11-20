@@ -11,9 +11,9 @@ export async function generateMetadata({
   const { locale } = await params;
 
   return {
-    title: "Free AI Image Editor - Qwen Image Edit",
-    description: "Transform images with Qwen AI technology. Free AI editor with background removal, object manipulation, and style transfer. No registration required.",
-    keywords: "free AI image editor, Qwen image edit, AI photo editor, intelligent image editing, AI image enhancement, background removal AI, object manipulation, style transfer, free photo editor, AI image tools, imagetovideo-ai",
+    title: "Free AI Image Editor: Qwen Image Edit Tool (No Signup)",
+    description: "Use our Free AI Image Editor powered by Qwen VL. Edit photos, remove backgrounds, and change styles instantly. No login required. Perfect for preparing images for video generation.",
+    keywords: "free AI image editor, Qwen image edit, Qwen-VL, AI photo editor online, intelligent image editing, AI image enhancement, background removal AI, object manipulation, style transfer, free photo editor no watermark, AI image tools, imagetovideo-ai, edit image for video",
     alternates: {
       canonical: getCanonicalUrlWithLocale(locale, "image-editor/qwen-image-edit"),
     },

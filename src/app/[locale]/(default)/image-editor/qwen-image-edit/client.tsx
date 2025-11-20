@@ -348,31 +348,96 @@ export default function QwenImageEditClient() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebApplication",
-            "name": "Qwen Image Edit",
-            "description": "Transform your imagination with Qwen Image Edit - powerful AI tools for image editing and video creation",
-            "url": "https://imagetovideoai.com/image-editor/qwen-image-edit",
-            "applicationCategory": "MultimediaApplication",
-            "operatingSystem": "Web Browser",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD"
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "WebApplication",
+              "name": "Qwen Image Edit",
+              "description": "Transform your imagination with Qwen Image Edit - powerful AI tools for image editing and video creation",
+              "url": "https://imagetovideo-ai.net/image-editor/qwen-image-edit",
+              "applicationCategory": "MultimediaApplication",
+              "operatingSystem": "Web Browser",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+              },
+              "featureList": [
+                "AI-powered image editing",
+                "Qwen Image Edit technology",
+                "ComfyUI integration",
+                "Free to use",
+                "No registration required"
+              ],
+              "creator": {
+                "@type": "Organization",
+                "name": "ImageToVideoAI",
+                "url": "https://imagetovideo-ai.net"
+              }
             },
-            "featureList": [
-              "AI-powered image editing",
-              "Qwen Image Edit technology",
-              "ComfyUI integration",
-              "Free to use",
-              "No registration required"
-            ],
-            "creator": {
-              "@type": "Organization",
-              "name": "ImageToVideoAI"
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What is Qwen Image Edit?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Qwen Image Edit is a cutting-edge AI-powered tool offered by ImageToVideo-AI that allows you to edit, modify, and generate images with incredible precision and creativity for video conversion."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is the Qwen Image Edit platform really free?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, our Qwen Image Edit platform is completely free to use. We believe in democratizing access to powerful AI tools, and we are committed to providing our core services without any cost or hidden fees."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What kind of edits can I perform with Qwen Image Edit?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Qwen Image Edit can handle a wide range of tasks, including but not limited to: removing objects, changing backgrounds, applying stylistic effects, generating new content within an image, and much more for video pre-production."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Do I need to download any software to use Qwen Image Edit?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No, our Qwen Image Edit platform is entirely web-based. You can access all the tools directly from your browser without needing to download or install any software."
+                  }
+                }
+              ]
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://imagetovideo-ai.net"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Image Editor",
+                  "item": "https://imagetovideo-ai.net/image-editor"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Qwen Image Edit",
+                  "item": "https://imagetovideo-ai.net/image-editor/qwen-image-edit"
+                }
+              ]
             }
-          })
+          ])
         }}
       />
       
@@ -696,8 +761,8 @@ export default function QwenImageEditClient() {
                     At the heart of <strong>ImageToVideo-AI</strong> lies a robust <strong>Qwen Image Edit</strong> model, meticulously trained for a wide array of creative applications. 
                     This model is built on the latest advancements in AI and machine learning, allowing it to understand context and intent with remarkable precision. 
                     Unlike generic tools, our <strong>Qwen Image Edit</strong> system has been fine-tuned to handle everything from subtle color corrections to dramatic stylistic changes, 
-                    all while maintaining the integrity of the image for video conversion. This means whether you are trying to give your photo a cinematic feel or a vibrant comic book look, 
-                    the <strong>Qwen Image Edit</strong> engine can deliver.
+                    all while maintaining the integrity of the image for video conversion. This makes it the perfect companion tool for our <a href="/image-to-video" className="text-primary hover:underline">Image to Video AI</a> generator. 
+                    Whether you are trying to give your photo a cinematic feel or a vibrant comic book look before animating it, the <strong>Qwen Image Edit</strong> engine can deliver.
                   </p>
                   
                   {/* 展示案例 1 */}
@@ -1019,7 +1084,8 @@ export default function QwenImageEditClient() {
                           <h4 className="font-semibold text-primary mb-2">Social Media Content</h4>
                           <p className="text-sm text-muted-foreground">
                             Create eye-catching social media posts with style transfer, object manipulation, 
-                            and artistic effects powered by our <strong>free AI image editor</strong>.
+                            and artistic effects powered by our <strong>free AI image editor</strong>. 
+                            Perfect for Instagram and TikTok creators who need to refine visuals before using our <a href="/sora-2-ai-video-generator" className="text-primary hover:underline">Sora 2 Video Generator</a>.
                           </p>
                         </div>
                         

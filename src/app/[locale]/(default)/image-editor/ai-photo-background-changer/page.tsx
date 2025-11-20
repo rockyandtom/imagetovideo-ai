@@ -11,15 +11,15 @@ export async function generateMetadata({
   const { locale } = await params;
 
   return {
-    title: "AI Photo Background Changer | imagetovideo-ai",
-    description: "Transform photo backgrounds with AI. Free online tool for e-commerce, social media, and professional use. Change backgrounds instantly with advanced AI.",
-    keywords: "AI photo background changer, background removal, AI image generation, photo editor, background replacement, AI tools, image editing",
+    title: "AI Photo Background Changer: Replace Image Background Online (Free)",
+    description: "Use our Free AI Photo Background Changer to replace image backgrounds instantly. Perfect for e-commerce products, professional headshots, and social media posts. No signup required.",
+    keywords: "AI photo background changer, replace image background, change photo background online, background removal, AI background generator, e-commerce product photography, professional headshot background, free background changer, imagetovideo-ai",
     alternates: {
       canonical: getCanonicalUrlWithLocale(locale, "image-editor/ai-photo-background-changer"),
     },
     openGraph: {
-      title: "AI Photo Background Changer | imagetovideo-ai",
-      description: "Transform photo backgrounds with AI. Free online tool for e-commerce, social media, and professional use. Change backgrounds instantly with advanced AI.",
+      title: "AI Photo Background Changer: Replace Image Background Online (Free)",
+      description: "Transform your photos with our Free AI Background Changer. Instantly replace backgrounds for products, portraits, and creative projects. No registration needed.",
       type: "website",
       locale: locale,
     },

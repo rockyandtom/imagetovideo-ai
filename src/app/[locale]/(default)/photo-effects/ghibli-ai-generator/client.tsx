@@ -400,31 +400,88 @@ export default function GhibliAIGeneratorClient() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebApplication",
-            "name": "Ghibli AI Generator",
-            "description": "Transform your images into stunning Ghibli-style art with AI-powered generator",
-            "url": "https://imagetovideoai.com/photo-effects/ghibli-ai-generator",
-            "applicationCategory": "MultimediaApplication",
-            "operatingSystem": "Web Browser",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD"
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "WebApplication",
+              "name": "Ghibli AI Generator",
+              "description": "Transform your images into stunning Ghibli-style art with AI-powered generator",
+              "url": "https://imagetovideo-ai.net/photo-effects/ghibli-ai-generator",
+              "applicationCategory": "MultimediaApplication",
+              "operatingSystem": "Web Browser",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+              },
+              "featureList": [
+                "AI-powered Ghibli style transformation",
+                "Studio Ghibli art generation",
+                "Anime art creation",
+                "Free to use",
+                "No registration required"
+              ],
+              "creator": {
+                "@type": "Organization",
+                "name": "ImageToVideoAI",
+                "url": "https://imagetovideo-ai.net"
+              }
             },
-            "featureList": [
-              "AI-powered Ghibli style transformation",
-              "Studio Ghibli art generation",
-              "Anime art creation",
-              "Free to use",
-              "No registration required"
-            ],
-            "creator": {
-              "@type": "Organization",
-              "name": "ImageToVideoAI"
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What exactly is the Ghibli AI Generator?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The Ghibli AI Generator is an AI-powered tool on the imagetovideo-ai platform that transforms your uploaded images into the iconic art style of Studio Ghibli using advanced machine learning."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is the Ghibli AI Generator free to use?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, our Ghibli AI Generator is available with a generous free tier. This allows you to generate images and explore all the features before deciding on a paid plan."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How long does it take to generate an image?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Image generation with our Ghibli AI Generator typically takes 3-5 minutes, with a maximum of 10 minutes depending on the complexity of the image and current server load."
+                  }
+                }
+              ]
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://imagetovideo-ai.net"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Photo Effects",
+                  "item": "https://imagetovideo-ai.net/photo-effects"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Ghibli AI Generator",
+                  "item": "https://imagetovideo-ai.net/photo-effects/ghibli-ai-generator"
+                }
+              ]
             }
-          })
+          ])
         }}
       />
       
@@ -443,6 +500,7 @@ export default function GhibliAIGeneratorClient() {
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                 Welcome to the enchanting world of <strong>imagetovideo-ai</strong>, where your artistic dreams become a reality. 
                 Transform your images into stunning Ghibli-style art that perfectly captures that iconic aesthetic.
+                This tool is a perfect first step before animating your creations with our <a href="/image-to-video" className="text-primary hover:underline">Image to Video</a> AI.
               </p>
             </div>
 
@@ -694,9 +752,9 @@ export default function GhibliAIGeneratorClient() {
                 <p className="text-muted-foreground leading-relaxed mb-8">
                   The applications for the <strong>Ghibli AI Generator</strong> are as boundless as your imagination. This tool isn't just for 
                   creating static images; it's a launchpad for countless creative projects. You can design original characters for your own 
-                  Ghibli-inspired narrative, generate breathtaking wallpapers for your devices, or create unique concept art for a personal project. 
-                  Content creators can use the generated images for social media posts, blog headers, video thumbnails, or as visual stories to 
-                  captivate their audience.
+                  Ghibli-inspired narrative, generate breathtaking wallpapers, or create unique concept art. 
+                  For even better results, try editing your source photos first with our <a href="/image-editor/qwen-image-edit" className="text-primary hover:underline">Qwen Image Editor</a>. 
+                  Once you have your Ghibli-style masterpieces, you can bring them to life using our advanced <a href="/sora-2-ai-video-generator" className="text-primary hover:underline">Sora 2 Video Generator</a> to create magical anime scenes.
                 </p>
                 
                 {/* 展示案例 2 */}

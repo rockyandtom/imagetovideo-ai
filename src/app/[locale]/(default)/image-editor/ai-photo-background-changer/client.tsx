@@ -411,31 +411,96 @@ export default function AIPhotoBackgroundChangerClient() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebApplication",
-            "name": "AI Photo Background Changer",
-            "description": "Revolutionize your images with imagetovideo-ai's powerful AI photo background changer. Effortlessly transform any photo background using advanced AI generation.",
-            "url": "https://imagetovideoai.com/image-editor/ai-photo-background-changer",
-            "applicationCategory": "MultimediaApplication",
-            "operatingSystem": "Web Browser",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD"
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "WebApplication",
+              "name": "AI Photo Background Changer",
+              "description": "Revolutionize your images with imagetovideo-ai's powerful AI photo background changer. Effortlessly transform any photo background using advanced AI generation.",
+              "url": "https://imagetovideo-ai.net/image-editor/ai-photo-background-changer",
+              "applicationCategory": "MultimediaApplication",
+              "operatingSystem": "Web Browser",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+              },
+              "featureList": [
+                "AI-powered background changing",
+                "One-click background removal",
+                "AI-generated backgrounds",
+                "Free to use",
+                "No registration required"
+              ],
+              "creator": {
+                "@type": "Organization",
+                "name": "ImageToVideoAI",
+                "url": "https://imagetovideo-ai.net"
+              }
             },
-            "featureList": [
-              "AI-powered background changing",
-              "One-click background removal",
-              "AI-generated backgrounds",
-              "Free to use",
-              "No registration required"
-            ],
-            "creator": {
-              "@type": "Organization",
-              "name": "ImageToVideoAI"
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "How accurate is the subject removal feature of the AI photo background changer?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Our proprietary AI model is trained for pixel-perfect edge detection, handling complex details like flyaway hair, translucent objects (glass/water), and fine textures with industry-leading precision."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Does the AI photo background changer work with all types of images?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, it is designed to work with photos of products, people, animals, and objects. The best results are achieved when the subject is clearly defined in the original image."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How does the AI ensure realistic lighting and shadows with the new background?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The AI analyzes the light source, intensity, and color temperature of the newly generated background and applies corresponding adjustments to the foreground subject, including generating appropriate contact shadows."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can the AI photo background changer be used for commercial purposes?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, all images generated using the imagetovideo-ai AI photo background changer are safe for commercial use, provided you adhere to our terms of service and have the rights to the original subject image."
+                  }
+                }
+              ]
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://imagetovideo-ai.net"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Image Editor",
+                  "item": "https://imagetovideo-ai.net/image-editor"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "AI Photo Background Changer",
+                  "item": "https://imagetovideo-ai.net/image-editor/ai-photo-background-changer"
+                }
+              ]
             }
-          })
+          ])
         }}
       />
       
@@ -668,7 +733,8 @@ export default function AIPhotoBackgroundChangerClient() {
                   <p className="text-muted-foreground leading-relaxed mb-6">
                     <strong>imagetovideo-ai</strong> stands out in a crowded market because our <strong>AI photo background changer</strong> 
                     is built on a foundation of proprietary <strong>AI image generation</strong> models. We offer a suite of features 
-                    designed for both power and ease of use.
+                    designed for both power and ease of use. If you need to make specific edits to your subject before changing the background, 
+                    try our <a href="/image-editor/qwen-image-edit" className="text-primary hover:underline">Qwen Image Editor</a> first.
                   </p>
                   <ul className="space-y-4 text-muted-foreground">
                     <li>
@@ -735,7 +801,8 @@ export default function AIPhotoBackgroundChangerClient() {
                     </li>
                     <li>
                       <strong>Social Media Content Creation:</strong> Keep your feed fresh and engaging. Quickly swap mundane backgrounds 
-                      for trending, aesthetic, or conceptual scenes that capture attention and drive engagement.
+                      for trending, aesthetic, or conceptual scenes that capture attention and drive engagement. Once you have the perfect background, 
+                      bring your image to life with our <a href="/image-to-video" className="text-primary hover:underline">Image to Video</a> tool.
                     </li>
                     <li>
                       <strong>Real Estate & Interior Design:</strong> Stage empty rooms virtually. Add furniture, change wall colors, or 
