@@ -18,6 +18,7 @@ const routes = [
   "/photo-effects",
   "/photo-effects/ghibli-ai-generator",
   "/photo-effects/nano-banana-anime-figure-generator",
+  "/photo-effects/free-nano-banana-pro",
   "/photo-effects/face-swap-online-free",
   "/photo-effects/kirkify-ai",
   "/video-effects",
