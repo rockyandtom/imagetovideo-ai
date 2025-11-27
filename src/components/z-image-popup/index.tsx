@@ -19,6 +19,11 @@ export default function ZImagePopup() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
+    // 确保在客户端环境运行
+    if (typeof window === 'undefined') {
+      return;
+    }
+
     // 检查用户是否已经看过这个弹窗
     const checkShouldShow = () => {
       try {
@@ -42,8 +47,7 @@ export default function ZImagePopup() {
         // 未过期，不显示
         return false;
       } catch (error) {
-        // localStorage 可能不可用（SSR环境），不显示
-        console.error("Error checking popup status:", error);
+        // localStorage 可能不可用，不显示
         return false;
       }
     };
@@ -52,7 +56,7 @@ export default function ZImagePopup() {
       // 延迟一点显示，让页面先加载完成
       const timer = setTimeout(() => {
         setOpen(true);
-      }, 1500); // 1.5秒后显示
+      }, 2000); // 2秒后显示，给页面更多加载时间
 
       return () => clearTimeout(timer);
     }

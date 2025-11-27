@@ -15,6 +15,7 @@ import { User } from "@/types/user";
 import moment from "moment";
 import useOneTapLogin from "@/hooks/useOneTapLogin";
 import { useSession } from "next-auth/react";
+import ZImagePopup from "@/components/z-image-popup";
 
 const AppContext = createContext({} as ContextValue);
 
@@ -134,6 +135,7 @@ export const AppContextProvider = ({ children }: { children: ReactNode }) => {
       }}
     >
       {children}
+      <ZImagePopup />
     </AppContext.Provider>
   );
 };
