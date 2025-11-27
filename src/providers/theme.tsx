@@ -4,6 +4,7 @@ import Analytics from "@/components/analytics";
 import { CacheKey } from "@/services/constant";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import SignModal from "@/components/sign/modal";
+import ZImagePopup from "@/components/z-image-popup";
 import type { ThemeProviderProps } from "next-themes";
 import { Toaster } from "@/components/ui/sonner";
 import { cacheGet } from "@/lib/cache";
@@ -49,6 +50,7 @@ export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
 
       <Toaster position="top-center" richColors />
       <SignModal />
+      <ZImagePopup />
       <Analytics />
     </NextThemesProvider>
   );
