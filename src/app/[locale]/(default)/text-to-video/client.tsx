@@ -292,6 +292,54 @@ export default function TextToVideoClient() {
         </p>
       </div>
 
+      {/* Text to Video Tools Grid */}
+      <div className="mb-16">
+        <h2 className="text-2xl font-bold text-foreground mb-6 text-center">Available Text to Video Tools</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Sora 2 AI Video Generator Card */}
+          <Card className="group hover:shadow-lg transition-shadow cursor-pointer" onClick={() => window.location.href = '/text-to-video/sora-2-ai-video-generator'}>
+            <CardHeader>
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                  <Icon name="RiVideoLine" className="w-5 h-5 text-white" />
+                </div>
+                <CardTitle className="group-hover:text-primary transition-colors">Sora 2 AI Video Generator</CardTitle>
+              </div>
+              <CardDescription>
+                Transform your text prompts into cinematic videos with the Sora 2 AI Video Generator
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-muted-foreground">Professional video generation</span>
+                <Icon name="RiArrowRightLine" className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Z Image Card */}
+          <Card className="group hover:shadow-lg transition-shadow cursor-pointer" onClick={() => window.location.href = '/text-to-video/z-image'}>
+            <CardHeader>
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-blue-600 rounded-lg flex items-center justify-center">
+                  <Icon name="RiImageAddLine" className="w-5 h-5 text-white" />
+                </div>
+                <CardTitle className="group-hover:text-primary transition-colors">Z Image</CardTitle>
+              </div>
+              <CardDescription>
+                Generate high-fidelity images using Alibaba's open-source Z Image AI model
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-muted-foreground">AI image generation</span>
+                <Icon name="RiArrowRightLine" className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+
       <div className="grid grid-cols-1 xl:grid-cols-5 lg:grid-cols-1 gap-8">
         {/* Left Workspace */}
         <div className="xl:col-span-3 lg:col-span-1 space-y-6">

@@ -9,6 +9,7 @@ const routes = [
   "/text-to-image",
   "/text-to-video",
   "/text-to-video/sora-2-ai-video-generator",
+  "/text-to-video/z-image",
   "/Image-to-Video",
   "/image-editor",
   "/image-editor/qwen-image-edit",

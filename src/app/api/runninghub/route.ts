@@ -63,9 +63,11 @@ export async function POST(request: NextRequest) {
             return await handleKirkifyAi(webappId, apiKey, nodeInfoList)
         } else if (action === 'enhance-image') {
             return await handleImageEnhancement(webappId, apiKey, nodeInfoList)
+        } else if (action === 'z-image') {
+            return await handleZImage(webappId, apiKey, nodeInfoList)
         } else {
             return NextResponse.json(
-                { error: 'Invalid action. Use "generate", "qwen-image-edit", "kirkify-ai", "enhance-image", or "status"' },
+                { error: 'Invalid action. Use "generate", "qwen-image-edit", "kirkify-ai", "enhance-image", "z-image", or "status"' },
                 { status: 400 }
             )
         }
@@ -579,6 +581,73 @@ async function handleImageEnhancement(webappId: string, apiKey: string, nodeInfo
         return NextResponse.json({
             success: false,
             error: 'Failed to process AI Image Enhancement',
+            details: error instanceof Error ? error.message : 'Unknown error'
+        }, { status: 500 })
+    }
+}
+
+// 处理 Z Image 请求
+async function handleZImage(webappId: string, apiKey: string, nodeInfoList: any[]) {
+    if (!webappId || !apiKey || !nodeInfoList) {
+        return NextResponse.json(
+            { error: 'webappId, apiKey, and nodeInfoList are required for Z Image' },
+            { status: 400 }
+        )
+    }
+
+    console.log('Starting Z Image:', {
+        webappId,
+        nodeInfoList
+    })
+
+    try {
+        const requestBody = {
+            webappId,
+            apiKey,
+            instanceType: "plus",
+            nodeInfoList
+        };
+
+        console.log('Sending Z Image request to RunningHub:', JSON.stringify(requestBody, null, 2));
+
+        const response = await fetch(`${RUNNINGHUB_CONFIG.baseUrl}/ai-app/run`, {
+            method: 'POST',
+            headers: RUNNINGHUB_CONFIG.headers,
+            body: JSON.stringify(requestBody)
+        })
+
+        console.log('RunningHub Z Image response status:', response.status);
+
+        if (!response.ok) {
+            const errorText = await response.text();
+            console.error('RunningHub Z Image API error response:', errorText);
+            throw new Error(`RunningHub API failed with HTTP ${response.status}: ${errorText}`);
+        }
+
+        const data = await response.json()
+        console.log('RunningHub Z Image response:', data)
+
+        if (data.code === 0 && data.data && data.data.taskId) {
+            return NextResponse.json({
+                success: true,
+                data: {
+                    taskId: data.data.taskId,
+                    status: 'started',
+                    message: 'Z Image task started'
+                }
+            })
+        } else {
+            return NextResponse.json({
+                success: false,
+                error: data.msg || 'Failed to start Z Image task'
+            }, { status: 500 })
+        }
+
+    } catch (error) {
+        console.error('Z Image error:', error)
+        return NextResponse.json({
+            success: false,
+            error: 'Failed to process Z Image',
             details: error instanceof Error ? error.message : 'Unknown error'
         }, { status: 500 })
     }

@@ -42,6 +42,12 @@
               "url": "/text-to-video/sora-2-ai-video-generator",
               "description": "Transform your text prompts into cinematic videos with the Sora 2 AI Video Generator",
               "target": "_self"
+            },
+            {
+              "title": "Z Image",
+              "url": "/text-to-video/z-image",
+              "description": "Generate high-fidelity images using Alibaba's open-source Z Image AI model",
+              "target": "_self"
             }
           ]
         },
@@ -459,6 +465,11 @@
             {
               "title": "Sora 2 AI Video Generator",
               "url": "/text-to-video/sora-2-ai-video-generator",
+              "target": "_self"
+            },
+            {
+              "title": "Z Image",
+              "url": "/text-to-video/z-image",
               "target": "_self"
             }
           ]
