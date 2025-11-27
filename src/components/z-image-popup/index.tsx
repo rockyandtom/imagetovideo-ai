@@ -87,17 +87,17 @@ export default function ZImagePopup() {
         setOpen(isOpen);
       }
     }}>
-      <DialogContent className="sm:max-w-[600px] p-0 overflow-hidden">
-        <div className="relative">
+      <DialogContent className="w-[90vw] sm:w-[50vw] max-w-[800px] min-w-[90vw] sm:min-w-[600px] p-0 overflow-hidden aspect-video">
+        <div className="relative w-full h-full flex flex-col">
           {/* 背景图片 */}
-          <div className="relative h-48 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 overflow-hidden">
+          <div className="relative h-24 flex-shrink-0 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 overflow-hidden">
             <div className="absolute inset-0 bg-black/20" />
             <div className="absolute inset-0 flex items-center justify-center">
-              <Icon name="RiImageAddLine" className="w-20 h-20 text-white/80" />
+              <Icon name="RiImageAddLine" className="w-16 h-16 text-white/80" />
             </div>
             {/* 新功能标签 */}
-            <div className="absolute top-4 left-4">
-              <Badge className="bg-green-500 text-white border-none shadow-lg">
+            <div className="absolute top-2 left-2">
+              <Badge className="bg-green-500 text-white border-none shadow-lg text-xs px-2 py-0.5">
                 <Icon name="RiSparklingLine" className="w-3 h-3 mr-1" />
                 New Feature
               </Badge>
@@ -105,59 +105,62 @@ export default function ZImagePopup() {
           </div>
 
           {/* 内容区域 */}
-          <div className="p-6 space-y-4">
-            <DialogHeader>
-              <DialogTitle className="text-2xl font-bold text-center">
+          <div className="flex-1 flex flex-col p-4 space-y-3 overflow-y-auto">
+            <DialogHeader className="flex-shrink-0">
+              <DialogTitle className="text-xl font-bold text-center">
                 🎨 Introducing Z Image - AI Image Generation
               </DialogTitle>
-              <DialogDescription className="text-center text-base">
+              <DialogDescription className="text-center text-sm">
                 Generate high-fidelity images using Alibaba's open-source Z Image AI model
               </DialogDescription>
             </DialogHeader>
 
-            {/* 功能特点 */}
-            <div className="grid grid-cols-2 gap-3 py-4">
-              <div className="flex items-center gap-2 text-sm">
-                <Icon name="RiCheckboxCircleLine" className="w-5 h-5 text-green-500" />
-                <span>Open-source AI model</span>
+            {/* 功能特点和预览图片并排显示 */}
+            <div className="flex-1 grid grid-cols-2 gap-3">
+              {/* 左侧：功能特点 */}
+              <div className="flex flex-col justify-center space-y-2">
+                <div className="flex items-center gap-2 text-xs">
+                  <Icon name="RiCheckboxCircleLine" className="w-4 h-4 text-green-500 flex-shrink-0" />
+                  <span>Open-source AI model</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs">
+                  <Icon name="RiCheckboxCircleLine" className="w-4 h-4 text-green-500 flex-shrink-0" />
+                  <span>Multiple aspect ratios</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs">
+                  <Icon name="RiCheckboxCircleLine" className="w-4 h-4 text-green-500 flex-shrink-0" />
+                  <span>High-quality output</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs">
+                  <Icon name="RiCheckboxCircleLine" className="w-4 h-4 text-green-500 flex-shrink-0" />
+                  <span>Free to use</span>
+                </div>
               </div>
-              <div className="flex items-center gap-2 text-sm">
-                <Icon name="RiCheckboxCircleLine" className="w-5 h-5 text-green-500" />
-                <span>Multiple aspect ratios</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm">
-                <Icon name="RiCheckboxCircleLine" className="w-5 h-5 text-green-500" />
-                <span>High-quality output</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm">
-                <Icon name="RiCheckboxCircleLine" className="w-5 h-5 text-green-500" />
-                <span>Free to use</span>
-              </div>
-            </div>
 
-            {/* 预览图片 */}
-            <div className="rounded-lg overflow-hidden border border-border/20 bg-muted/10">
-              <img
-                src="/imgs/showcases/z-image-core-technology-diffusion-architecture-generated-result-example-1.webp"
-                alt="Z Image AI generation example - showcasing advanced image generation capabilities"
-                className="w-full h-auto object-contain"
-                loading="lazy"
-              />
+              {/* 右侧：预览图片 */}
+              <div className="rounded-lg overflow-hidden border border-border/20 bg-muted/10">
+                <img
+                  src="/imgs/showcases/z-image-core-technology-diffusion-architecture-generated-result-example-1.webp"
+                  alt="Z Image AI generation example - showcasing advanced image generation capabilities"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
             </div>
 
             {/* 操作按钮 */}
-            <div className="flex gap-3 pt-4">
+            <div className="flex gap-3 pt-2 flex-shrink-0">
               <Button
                 variant="outline"
                 onClick={handleClose}
-                className="flex-1"
+                className="flex-1 text-sm h-9"
               >
                 Maybe Later
               </Button>
               <Link href="/text-to-video/z-image" className="flex-1">
                 <Button
                   onClick={handleGoToZImage}
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-sm h-9"
                 >
                   <Icon name="RiArrowRightLine" className="w-4 h-4 mr-2" />
                   Try Z Image Now
