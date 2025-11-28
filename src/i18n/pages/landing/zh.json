@@ -33,6 +33,12 @@
               "url": "/text-to-image",
               "description": "使用我们的免费AI图片生成器，瞬间将文本转换为令人惊艳的AI图片",
               "target": "_self"
+            },
+            {
+              "title": "Z Image",
+              "url": "/text-to-image/z-image",
+              "description": "使用阿里巴巴开源 Z Image AI 模型生成高保真图像",
+              "target": "_self"
             }
           ]
         },
@@ -49,12 +55,6 @@
               "title": "Sora 2 AI Video Generator",
               "url": "/text-to-video/sora-2-ai-video-generator",
               "description": "使用 Sora 2 AI Video Generator 将文本提示转换为电影级视频",
-              "target": "_self"
-            },
-            {
-              "title": "Z Image",
-              "url": "/text-to-video/z-image",
-              "description": "使用阿里巴巴开源 Z Image AI 模型生成高保真图像",
               "target": "_self"
             }
           ]
@@ -434,6 +434,11 @@
               "title": "AI图片生成器",
               "url": "/text-to-image",
               "target": "_self"
+            },
+            {
+              "title": "Z Image",
+              "url": "/text-to-image/z-image",
+              "target": "_self"
             }
           ]
         },
@@ -444,11 +449,6 @@
             {
               "title": "Sora 2 AI Video Generator",
               "url": "/text-to-video/sora-2-ai-video-generator",
-              "target": "_self"
-            },
-            {
-              "title": "Z Image",
-              "url": "/text-to-video/z-image",
               "target": "_self"
             }
           ]
