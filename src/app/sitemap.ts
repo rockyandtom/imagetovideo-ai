@@ -7,6 +7,7 @@ import { CANONICAL_DOMAIN } from "@/lib/constants";
 const routes = [
   "", // 首页
   "/text-to-image",
+  "/text-to-image/flux-2",
   "/text-to-video",
   "/text-to-video/sora-2-ai-video-generator",
   "/text-to-video/z-image",

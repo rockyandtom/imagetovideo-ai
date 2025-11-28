@@ -249,6 +249,72 @@ export default function TextToImageClient() {
               </p>
             </div>
 
+            {/* 工具卡片展示区域 */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+              {/* AI Image Generator 卡片 */}
+              <a 
+                href="/text-to-image"
+                className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer group border border-border"
+              >
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:from-blue-600 group-hover:to-purple-700 transition-all duration-300">
+                  <Icon name="RiImageLine" className="w-6 h-6 text-white" />
+                </div>
+                <div className="flex items-center gap-2 mb-2">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">AI Image Generator</h3>
+                </div>
+                <p className="text-gray-600 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors duration-300">
+                  Transform text into stunning AI images instantly with our free AI image generator
+                </p>
+                <div className="mt-4 flex items-center text-blue-600 dark:text-blue-400 text-sm font-medium group-hover:text-blue-700 dark:group-hover:text-blue-500 transition-colors duration-300">
+                  <span>Try Now</span>
+                  <Icon name="RiArrowRightLine" className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
+                </div>
+              </a>
+
+              {/* Flux 2 卡片 */}
+              <a 
+                href="/text-to-image/flux-2"
+                className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer group border border-border"
+              >
+                <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-pink-600 rounded-lg flex items-center justify-center mb-4 group-hover:from-indigo-600 group-hover:to-pink-700 transition-all duration-300">
+                  <Icon name="RiSparklingLine" className="w-6 h-6 text-white" />
+                </div>
+                <div className="flex items-center gap-2 mb-2">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">Flux 2</h3>
+                  <span className="bg-gradient-to-r from-indigo-500 to-pink-600 text-white text-xs px-2 py-1 rounded-full font-medium">
+                    NEW
+                  </span>
+                </div>
+                <p className="text-gray-600 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors duration-300">
+                  Create stunning art with Flux 2 AI Image Generator - the ultimate open-source model for hyper-realistic AI generation
+                </p>
+                <div className="mt-4 flex items-center text-indigo-600 dark:text-indigo-400 text-sm font-medium group-hover:text-indigo-700 dark:group-hover:text-indigo-500 transition-colors duration-300">
+                  <span>Try Flux 2</span>
+                  <Icon name="RiArrowRightLine" className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
+                </div>
+              </a>
+
+              {/* Z Image 卡片 */}
+              <a 
+                href="/text-to-video/z-image"
+                className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer group border border-border"
+              >
+                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-600 rounded-lg flex items-center justify-center mb-4 group-hover:from-green-600 group-hover:to-teal-700 transition-all duration-300">
+                  <Icon name="RiImageAddLine" className="w-6 h-6 text-white" />
+                </div>
+                <div className="flex items-center gap-2 mb-2">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors duration-300">Z Image</h3>
+                </div>
+                <p className="text-gray-600 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors duration-300">
+                  Generate high-fidelity images using Alibaba's open-source Z Image AI model
+                </p>
+                <div className="mt-4 flex items-center text-green-600 dark:text-green-400 text-sm font-medium group-hover:text-green-700 dark:group-hover:text-green-500 transition-colors duration-300">
+                  <span>Try Z Image</span>
+                  <Icon name="RiArrowRightLine" className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
+                </div>
+              </a>
+            </div>
+
             {/* 主要工作区 */}
             <Card className="shadow-lg">
               <CardHeader>

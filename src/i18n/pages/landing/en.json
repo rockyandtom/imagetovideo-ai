@@ -35,6 +35,12 @@
               "target": "_self"
             },
             {
+              "title": "Flux 2",
+              "url": "/text-to-image/flux-2",
+              "description": "Create stunning art with Flux 2 AI Image Generator - the ultimate open-source model for hyper-realistic AI generation",
+              "target": "_self"
+            },
+            {
               "title": "Z Image",
               "url": "/text-to-image/z-image",
               "description": "Generate high-fidelity images using Alibaba's open-source Z Image AI model",
@@ -468,6 +474,11 @@
             {
               "title": "AI Image Generator",
               "url": "/text-to-image",
+              "target": "_self"
+            },
+            {
+              "title": "Flux 2",
+              "url": "/text-to-image/flux-2",
               "target": "_self"
             },
             {
