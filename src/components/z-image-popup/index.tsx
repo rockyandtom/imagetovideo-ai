@@ -87,13 +87,13 @@ export default function ZImagePopup() {
         setOpen(isOpen);
       }
     }}>
-      <DialogContent className="w-[90vw] sm:w-[50vw] max-w-[800px] min-w-[90vw] sm:min-w-[600px] p-0 overflow-hidden aspect-video">
-        <div className="relative w-full h-full flex flex-col">
+      <DialogContent className="w-[90vw] sm:w-[50vw] max-w-[800px] min-w-[90vw] sm:min-w-[600px] p-0 overflow-hidden max-h-[90vh] flex flex-col">
+        <div className="relative w-full flex flex-col flex-1 min-h-0">
           {/* 背景图片 */}
-          <div className="relative h-24 flex-shrink-0 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 overflow-hidden">
+          <div className="relative h-20 flex-shrink-0 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 overflow-hidden">
             <div className="absolute inset-0 bg-black/20" />
             <div className="absolute inset-0 flex items-center justify-center">
-              <Icon name="RiImageAddLine" className="w-16 h-16 text-white/80" />
+              <Icon name="RiImageAddLine" className="w-12 h-12 text-white/80" />
             </div>
             {/* 新功能标签 */}
             <div className="absolute top-2 left-2">
@@ -105,18 +105,18 @@ export default function ZImagePopup() {
           </div>
 
           {/* 内容区域 */}
-          <div className="flex-1 flex flex-col p-4 space-y-3 overflow-y-auto">
+          <div className="flex-1 flex flex-col p-4 space-y-3 min-h-0 overflow-y-auto">
             <DialogHeader className="flex-shrink-0">
-              <DialogTitle className="text-xl font-bold text-center">
+              <DialogTitle className="text-lg font-bold text-center">
                 🎨 Introducing Z Image - AI Image Generation
               </DialogTitle>
-              <DialogDescription className="text-center text-sm">
+              <DialogDescription className="text-center text-xs">
                 Generate high-fidelity images using Alibaba's open-source Z Image AI model
               </DialogDescription>
             </DialogHeader>
 
             {/* 功能特点和预览图片并排显示 */}
-            <div className="flex-1 grid grid-cols-2 gap-3">
+            <div className="flex-1 grid grid-cols-2 gap-3 min-h-0">
               {/* 左侧：功能特点 */}
               <div className="flex flex-col justify-center space-y-2">
                 <div className="flex items-center gap-2 text-xs">
@@ -148,8 +148,8 @@ export default function ZImagePopup() {
               </div>
             </div>
 
-            {/* 操作按钮 */}
-            <div className="flex gap-3 pt-2 flex-shrink-0">
+            {/* 操作按钮 - 确保始终可见 */}
+            <div className="flex gap-3 pt-2 flex-shrink-0 border-t border-border/20">
               <Button
                 variant="outline"
                 onClick={handleClose}
