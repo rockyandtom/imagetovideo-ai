@@ -26,7 +26,15 @@
           "trigger": "hover",
           "highlightOnHover": true,
           "align": "center",
-          "sideOffset": 4
+          "sideOffset": 4,
+          "children": [
+            {
+              "title": "AI图片生成器",
+              "url": "/text-to-image",
+              "description": "使用我们的免费AI图片生成器，瞬间将文本转换为令人惊艳的AI图片",
+              "target": "_self"
+            }
+          ]
         },
         {
           "title": "文字生视频",
@@ -421,7 +429,13 @@
         {
           "title": "文字生图",
           "url": "/text-to-image",
-          "children": []
+          "children": [
+            {
+              "title": "AI图片生成器",
+              "url": "/text-to-image",
+              "target": "_self"
+            }
+          ]
         },
         {
           "title": "文字生视频", 
